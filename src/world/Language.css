@@ -1,0 +1,153 @@
+.languagegame-container {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  max-width: 900px;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-row .title-section {
+  text-align: left;
+}
+
+.header-row h2 {
+  font-size: 24px;
+  color: #3a7bd5;
+  margin: 0;
+}
+
+.header-row .instructions {
+  font-size: 14px;
+  color: #555;
+  margin: 4px 0 0 0;
+}
+
+.header-row .right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.header-row .score-text {
+  font-weight: 600;
+  color: #079140;
+  font-size: 16px;
+  margin: 0;
+}
+
+.restart-btn9 {
+   margin-left: auto;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* your original color */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.restart-btn9:hover {
+transform: scale(1.07);
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
+
+
+.languagegame-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.countries,
+.languages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.country-card {
+  padding: 10px 15px;
+  border: 2px solid #3a7bd5;
+  border-radius: 12px;
+  background: #fff5e6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.3s;
+  min-height: 50px;
+  position: relative;
+}
+
+.country-card img {
+  width: 30px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 3px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+.country-card.matched {
+  background: #d4f7dc;
+  border-color: #079140;
+  color: #079140;
+  justify-content: space-between;
+}
+
+.language-card {
+  padding: 10px 15px;
+  border: 2px solid #3a7bd5;
+  border-radius: 12px;
+  background: #fff5e6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  min-height: 73px;
+  user-select: none;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.language-card:hover {
+  background: #e0f0ff;
+  border-color: #00aaff;
+  transform: translateY(-2px);
+}
+
+.language-card.selected {
+  background: #fff0e0;
+  border-color: #ff7f50;
+}
+
+.language-card.matched {
+  background: #d4f7dc;
+  border-color: #079140;
+  color: #079140;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
+
+.matched-lang {
+  font-weight: bold;
+  color: #079140;
+  margin-left: 10px;
+}

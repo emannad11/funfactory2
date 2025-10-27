@@ -1,0 +1,137 @@
+.drag-drop-container {
+  text-align: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+.drag-title1 {
+  color: var(--nav-dark, #3a7bd5);
+  font-size: clamp(1.3rem, 2.5vw, 1.9rem);
+  font-weight: 600;
+  margin: 0;
+}
+
+.restart-btn-l {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: white;
+  border: none;
+  padding: clamp(5px, 1vw, 8px) clamp(14px, 2vw, 18px);
+  border-radius: 50px;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.restart-btn-l:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+}
+
+.instructions1 {
+   font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 12px auto 18px auto; 
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.title-row1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; 
+  gap: 12px; 
+  margin-bottom: 10px;
+}
+
+
+.items-container-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.draggable-item {
+  background: white;
+  border: 2px solid var(--nav);
+  border-radius: 12px;
+  padding: 6px;
+  text-align: center;
+  cursor: grab;
+  width: 100px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.draggable-item:hover {
+  transform: scale(1.05);
+}
+
+.draggable-item.dragging-touch {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.item-image.small {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.bins-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.bin {
+  width: 160px;
+  min-height: 160px;
+  background: #f9f9f9;
+  border: 3px dashed var(--nav-dark);
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.bin:hover {
+  background: #e6f7ff;
+}
+
+.bin h3 {
+  color: var(--nav-dark);
+  margin-bottom: 10px;
+  flex-shrink: 0;
+}
+
+.bin-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+}
+
+.item-image-bin.small {
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 8px;
+  object-fit: cover;
+}

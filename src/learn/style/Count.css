@@ -1,0 +1,123 @@
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(60px, 8vw, 100px), 1fr));
+  gap: clamp(12px, 2vw, 25px);
+  margin: 15px auto;
+  width: 95%;
+  flex-grow: 1;
+  padding-bottom: 5px;
+}
+
+
+.number-card {
+  position: relative;
+  width: clamp(60px, 8vw, 100px);
+  height: clamp(60px, 8vw, 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(14px, 2vw, 22px);
+  font-weight: bold;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.number-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 14px 25px rgba(0, 0, 0, 0.25);
+}
+
+.number-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: skewX(-25deg);
+  transition: left 0.5s ease;
+}
+
+.number-card:hover::after {
+  left: 120%;
+}
+
+.number-card:nth-child(1) { background: red; }
+.number-card:nth-child(2) { background: blue; }
+.number-card:nth-child(3) { background: green; }
+.number-card:nth-child(4) { background: orange; }
+.number-card:nth-child(5) { background: purple; }
+.number-card:nth-child(6) { background: teal; }
+.number-card:nth-child(7) { background: brown; }
+.number-card:nth-child(8) { background: pink; }
+.number-card:nth-child(9) { background: navy; }
+.number-card:nth-child(10) { background: gold; }
+.number-card:nth-child(11) { background: lime; }
+.number-card:nth-child(12) { background: cyan; }
+.number-card:nth-child(13) { background: coral; }
+.number-card:nth-child(14) { background: violet; }
+.number-card:nth-child(15) { background: olive; }
+.number-card:nth-child(16) { background: tomato; }
+.number-card:nth-child(17) { background: skyblue; }
+.number-card:nth-child(18) { background: salmon; }
+.number-card:nth-child(19) { background: indigo; }
+.number-card:nth-child(20) { background: darkgreen; }
+.number-card:nth-child(21) { background: hotpink; }
+.number-card:nth-child(22) { background: royalblue; }
+.number-card:nth-child(23) { background: mediumseagreen; }
+.number-card:nth-child(24) { background: chocolate; }
+.number-card:nth-child(25) { background: crimson; }
+
+.number-card:nth-child(n+26):nth-child(-n+100) {
+  background: #555;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 2vw, 20px);
+  font-weight: bold;
+  flex-wrap: wrap;
+  margin: 20px 0 8px;
+  flex-shrink: 0; 
+}
+
+.nav-btn {
+  padding: clamp(8px, 1vw, 10px) clamp(15px, 2vw, 20px);
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: clamp(13px, 1.5vw, 16px);
+  transition: background 0.3s;
+}
+
+.nav-btn:hover:not(:disabled) {
+  background: rgb(1, 202, 21);
+}
+
+.nav-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.counting-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 14px 70px;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+
+

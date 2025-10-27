@@ -1,0 +1,108 @@
+.turtle-container {
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 600px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.heading-row h2 {
+  font-size: 28px;
+  margin: 0;
+  color: var(--nav-dark);
+  font-weight: 700;
+}
+
+.reset-btn-t {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.reset-btn-t:hover {
+ transform: scale(1.05);
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+}
+
+.play-area {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 20px auto;
+  background: #b2ebf2;
+  border: 3px dashed #006064;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+.turtle {
+  position: absolute;
+  font-size: 40px;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.start {
+  position: absolute;
+  left: 50px;
+  top: 350px;
+  font-size: 18px;
+  background: #81c784;
+  padding: 5px 12px;
+  border-radius: 8px;
+  color: #004d40;
+  font-weight: bold;
+  z-index: 1;
+}
+
+
+.end {
+  position: absolute;
+  left: 350px;
+  top: 50px;
+  font-size: 35px;
+}
+
+.obstacle {
+  position: absolute;
+  font-size: 28px;
+  user-select: none;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.obstacle:hover {
+  transform: scale(1.2);
+}
+
+.game-title-p{
+   font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 12px auto 18px auto; 
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+.white-toast.Toastify__toast--success {
+  background: white !important;
+  color: black !important;
+  font-weight: bold !important;
+}

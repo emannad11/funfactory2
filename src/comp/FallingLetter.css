@@ -1,0 +1,102 @@
+
+.falling-container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; 
+  gap: 12px; 
+  margin-bottom: 10px;
+}
+
+.header-section h2 {
+  font-size: 1.4rem;
+  color: #3a7bd5;
+  margin: 0;
+  white-space: nowrap; 
+}
+
+.restart-btn-f {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: #fff;
+  border: none;
+  padding: 7px 18px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.restart-btn-f:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+}
+
+.game-instructions {
+  font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 12px auto 18px auto; 
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.game-box {
+  width: 250px;
+  height: 300px;
+  border: 3px solid #4b9ae7;
+  margin: 10px auto;
+  position: relative;
+  background: linear-gradient(to top, #b3e5fc, #e1f5fe);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.falling-letter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 60px;
+  color: #ff4081;
+  font-weight: bold;
+  transition: top 0.2s linear;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.game-over-section {
+  display: none;
+}
+
+.white-toast.Toastify__toast--success {
+  background: white !important;
+  color: black !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

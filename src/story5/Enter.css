@@ -1,0 +1,105 @@
+
+.heading3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 20px 0;
+  color: var(--nav-dark);
+}
+
+
+.container-cards4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  min-height: 80vh;
+  padding: 10px;
+}
+
+
+.card-cards4 {
+  position: relative;
+  background: var(--card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 280px;
+  height: 280px;
+  padding: 16px;
+  animation: popIn 0.8s ease both;
+  transform-origin: center;
+}
+
+
+.card-cards4:nth-child(1) { animation-delay: 0.1s; }
+.card-cards4:nth-child(2) { animation-delay: 0.2s; }
+.card-cards4:nth-child(3) { animation-delay: 0.3s; }
+.card-cards4:nth-child(4) { animation-delay: 0.4s; }
+.card-cards4:nth-child(5) { animation-delay: 0.5s; }
+
+
+.card-cards4:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+.card-cards4:active {
+  animation: clickBounce 0.3s ease;
+}
+
+
+.card-cards4 img {
+  width: 100%;
+  height: clamp(120px, 20vw, 170px);
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+
+.card-cards4 h3 {
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--nav-dark);
+  text-align: center;
+}
+
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(25px);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes clickBounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(0.9) rotate(1deg); }
+  60% { transform: scale(1.05) rotate(-1deg); }
+  100% { transform: scale(1); }
+}

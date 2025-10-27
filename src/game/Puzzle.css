@@ -1,0 +1,110 @@
+.puzzle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 25px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.puzzle-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.puzzle-heading {
+  font-size: 36px;
+  color: var(--nav-dark);
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  margin: 0;
+  text-align: left;
+}
+
+.restart-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  background-color: #2196F3;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.restart-btn:hover {
+  background-color: #1976D2;
+  transform: scale(1.05);
+}
+
+.puzzle-instruction {
+ font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 15px auto;
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 15px;
+  justify-content: center;
+}
+
+.number-btn {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 2px solid var(--nav);
+  background: linear-gradient(145deg, #00d2ff, #3a7bd5);
+  color: var(--card);
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s, box-shadow 0.2s;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+
+.number-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(145deg, #3a7bd5, #00d2ff);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.white-toast.Toastify__toast {
+  background: white !important;
+  color: black !important;
+  font-weight: bold;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .puzzle-header-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .puzzle-heading {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .number-btn {
+    font-size: 24px;
+    padding: 16px;
+  }
+
+  .puzzle-grid {
+    grid-template-columns: repeat(3, 80px);
+    gap: 12px;
+  }
+}

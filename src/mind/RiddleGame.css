@@ -1,0 +1,146 @@
+:root {
+  --nav: #00d2ff;
+  --nav-dark: #3a7bd5;
+  --accent: #079140;
+  --text: #333;
+  --card: #ffffff;
+  --radius: 14px;
+  --shadow: rgba(0, 0, 0, 0.15);
+}
+
+.riddle-container {
+  text-align: center;
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+}
+.riddle-intro {
+  font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 15px auto;
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.riddle-question {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  color: var(--nav-dark);
+}
+
+
+.riddle-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+
+.riddle-btn {
+  width: 280px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border: 3px solid var(--nav);
+  background: white;
+  border-radius: var(--radius);
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: all 0.25s ease;
+}
+
+.riddle-btn:hover {
+  transform: scale(1.05);
+  background-color: #f8fcff;
+}
+
+
+.riddle-btn.correct {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+  animation: bounce 0.5s ease;
+}
+
+.riddle-btn.wrong {
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+
+.option-text {
+  font-weight: 600;
+}
+
+.option-icon {
+  font-size: 22px;
+}
+
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.2); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+
+.Toastify__toast--success {
+  background-color: #4caf50 !important;
+  color: white !important;
+}
+
+.Toastify__toast--warn {
+  background-color: goldenrod !important;
+  color: white !important;
+}
+
+
+.game-over {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.game-over h3 {
+  font-size: 26px;
+  color: var(--nav-dark);
+  margin-bottom: 10px;
+}
+
+.game-over p {
+  font-size: 18px;
+  color: red;
+  margin-bottom: 20px;
+}
+
+.game-over .riddle-btn {
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.white-toast {
+  background: white !important;
+  color: black !important;
+  font-weight: bold !important;
+  border-radius: 10px !important;
+}
+
+
+.white-toast.success-toast .Toastify__toast-icon svg {
+  fill: green !important;
+}
+
+.white-toast.warn-toast .Toastify__toast-icon svg {
+  fill: orange !important;
+}

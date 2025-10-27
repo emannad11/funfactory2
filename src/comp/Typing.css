@@ -1,0 +1,102 @@
+.typing-container {
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.header-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.header-section h2 {
+  font-size: 1.4rem;
+  color: #3a7bd5;
+  margin: 0;
+}
+
+.restart-btn-t {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.restart-btn-t:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+}
+
+.game-description {
+  font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 10px auto 20px auto;
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.word {
+  font-size: 40px;
+  color: #ff4081;
+  font-weight: bold;
+  margin: 20px 0 15px 0;
+}
+
+.typing-input {
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 2px solid #4b9ae7;
+  border-radius: 10px;
+  outline: none;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.typing-input:focus {
+  border-color: #00d2ff;
+  box-shadow: 0 0 5px rgba(0, 210, 255, 0.5);
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+}
+
+.game-over {
+  margin-top: 25px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.white-toast.Toastify__toast--success {
+  background: white !important;
+  color: black !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

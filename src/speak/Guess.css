@@ -1,0 +1,141 @@
+.gwam-container {
+  max-width: 750px;
+  margin: 10px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+
+.gwam-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.gwam-title {
+  font-size: 30px;
+  color: #3a7bd5;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  margin: 0; 
+}
+
+
+.gwam-restart-btn {
+ margin-left: auto;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* your original color */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+
+}
+
+.gwam-restart-btn:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
+
+
+.gwam-intro {
+  font-size: 14px;
+  color: #444;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 8px 12px;
+  line-height: 1.5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin: 5px auto 15px auto; 
+}
+
+
+.gwam-info {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+
+.gwam-clue-box {
+  padding: 10px;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+  background: #f0f7ff;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.gwam-options1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px 20px;
+  justify-items: center;
+}
+
+
+.gwam-option1 {
+  font-size: 20px;
+  background-color: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  width: 85%;
+  max-width: 260px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.gwam-option1:hover {
+  transform: scale(1.1);
+  background-color: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
+
+
+.gwam-option1.correct {
+  background-color: #6fcf97;
+}
+
+.gwam-option1.wrong {
+  background-color: #eb5757;
+}
+
+
+.gwam-next-btn {
+  margin-top: 20px;
+  padding: 10px 22px;
+  font-size: 18px;
+  background-color: #6fcf97;
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gwam-next-btn:hover {
+  transform: scale(1.07);
+  background-color: #45b26b;
+}
+
+
+.gwam-score {
+  font-size: 22px;
+  color: #079140;
+  font-weight: 600;
+  margin-top: 10px;
+}

@@ -1,0 +1,389 @@
+:root {
+  --bg: #fff7e6 !important;
+  --nav: #00d2ff !important;
+  --nav-dark: #3a7bd5 !important;
+  --accent: #079140 !important;
+  --text: #333 !important;
+  --card: #ffffff !important;
+  --shadow: rgba(0, 0, 0, 0.12) !important;
+  --radius: 14px !important;
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif !important;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+  min-height: 100vh;
+  color: var(--text);
+  background: url("/src/assets/bg1.jpg") no-repeat center center fixed;
+  background-size: cover;
+  animation: bgMove 30s ease-in-out infinite alternate;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.page {
+  padding-top: 20px;
+  background: transparent;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 25px auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background: transparent !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+@keyframes bgMove {
+  0% { background-position: center top; }
+  50% { background-position: center center; }
+  100% { background-position: center bottom; }
+}
+
+.kids-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, var(--nav), var(--nav-dark));
+  border-radius: 0 0 18px 18px;
+  box-shadow: 0 6px 18px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.kids-logo {
+  display: flex;
+  align-items: center;
+}
+
+.kids-logo .logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff !important;
+  text-decoration: none;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s ease;
+}
+
+.kids-logo .logo-link:hover {
+  transform: scale(1.05);
+}
+
+.kids-logo img {
+  height: 38px;
+  width: 38px;
+}
+
+.kids-logo h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+.home-link-container {
+  margin-left: auto;
+}
+
+.home-link {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 14px;
+  background: rgba(0, 210, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  background: rgba(0, 210, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.home-link.active {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.8), 0 4px 10px rgba(58, 123, 213, 0.5);
+  transform: scale(1.05);
+  animation: pulseActive 1.5s infinite ease-in-out;
+}
+
+@keyframes pulseActive {
+  0% { box-shadow: 0 0 8px rgba(0, 210, 255, 0.6); }
+  50% { box-shadow: 0 0 16px rgba(0, 180, 255, 0.9); }
+  100% { box-shadow: 0 0 8px rgba(0, 210, 255, 0.6); }
+}
+
+.home-link.active:hover {
+  box-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 6px 12px rgba(58, 123, 213, 0.6);
+}
+
+body.home-page .kids-navbar {
+  justify-content: center;
+}
+
+body.home-page .home-link-container {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .kids-navbar {
+    padding: 10px 15px;
+  }
+
+  .kids-logo h2 {
+    font-size: 20px;
+  }
+
+  .home-link {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+.home-card {
+  position: relative;
+  background: var(--card);
+  border-radius: 15px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: var(--text);
+  height: 210px;
+  padding-bottom: 8px;
+}
+
+.home-card:hover {
+  transform: scale(1.04);
+}
+
+.home-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+}
+
+.home-card h3 {
+  margin: 6px 0 3px;
+  font-size: 16px;
+  color: #333;
+}
+
+.home-card p {
+  color: #333;
+  font-size: 14px;
+  margin: 4px;
+  display: none;
+}
+
+.home-card:hover p {
+  display: block;
+}
+
+.home-card button,
+.home-card .btn {
+  display: none !important;
+}
+
+.welcome-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.welcome-text marquee {
+  display: inline-block;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 750;
+  color: #3a7bd5;
+  letter-spacing: 1px;
+}
+.hamburger-btn {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.hamburger-btn:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .hamburger-btn {
+    display: block;
+  }
+
+
+  .home-link-container {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px var(--shadow);
+    padding: 12px;
+    z-index: 100;
+  }
+
+  .home-link-container.show {
+    display: flex;
+  }
+
+  .home-link {
+    margin: 6px 0;
+    text-decoration: none;
+    background: var(--nav-dark);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: var(--radius);
+    text-align: center;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  }
+
+  .home-link:hover {
+    background: var(--accent);
+    transform: scale(1.05);
+  }
+
+  .kids-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.home-card {
+  position: relative;
+  background: var(--card);
+  border-radius: 15px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center;
+  animation: popIn 0.8s ease both;
+}
+
+
+.home-card:nth-child(1) { animation-delay: 0.2s; }
+.home-card:nth-child(2) { animation-delay: 0.4s; }
+.home-card:nth-child(3) { animation-delay: 0.6s; }
+.home-card:nth-child(4) { animation-delay: 0.8s; }
+
+
+.home-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+.home-card:active {
+  animation: clickBounce 0.4s ease;
+}
+
+
+.home-card[data-clicked="true"] {
+  animation: wiggle 0.4s ease;
+}
+
+
+.home-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+
+.home-card h3 {
+  margin: 6px 0 3px;
+  font-size: 16px;
+  color: var(--nav-dark);
+  font-weight: 700;
+  transition: color 0.3s ease;
+  animation: textFadeIn 1s ease forwards;
+}
+
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatImage {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes clickBounce {
+  0% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(0.95) rotate(1deg); }
+  50% { transform: scale(1.05) rotate(-1deg); }
+  75% { transform: scale(0.98) rotate(1deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+}

@@ -1,0 +1,141 @@
+:root {
+  --bg: #fff7e6;
+  --nav: #00d2ff;
+  --nav-dark: #3a7bd5;
+  --accent: #079140;
+  --text: #333;
+  --card: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.12);
+  --radius: 14px;
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
+}
+
+.playful-root {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+}
+
+
+.playful-card {
+  width: 380px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px var(--shadow);
+  padding: 14px;
+  position: relative;
+}
+
+.playful-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.title-block-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.title-emoji { font-size:28px; margin:0; }
+.title { font-size:18px; margin:0; color: var(--nav-dark); }
+.instructions {
+  font-size: 14px;
+  color: #444;
+  max-width: 220px;
+  margin: 4px 0 0 0;
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.controls-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.modes { display: flex; gap: 8px; }
+.mode-btn {
+  background: var(--bg);
+  border: 1px solid var(--nav-dark);
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+.mode-btn.active { background: var(--nav-dark); color: #fff; border-color: var(--nav-dark); }
+.btn-row { display: flex; gap: 8px; margin-top: 6px; }
+.small-btn {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 14px var(--shadow);
+  font-size: 12px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.small-btn:hover { background: #2ecc71; transform: translateY(-2px); }
+.small-btn.ghost { background: transparent; border: 1px solid var(--accent); color: var(--text); box-shadow: none; }
+
+
+.scoreboard { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--text); margin-top: 10px; }
+.score-pill { display: inline-block; min-width: 26px; text-align: center; background: var(--card); border-radius: var(--radius); padding: 4px 6px; border: 1px solid var(--shadow); font-weight: 700; color: var(--text); }
+
+.board-grid {
+  margin-top:12px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:10px;
+  user-select:none;
+}
+.tt-cell {
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 2px solid var(--shadow);
+  aspect-ratio: 1 / 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  padding:6px;
+  transition: transform .12s ease, box-shadow .12s ease, background .18s;
+  box-shadow: 0 6px 14px var(--shadow);
+}
+.tt-cell.empty:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 12px 28px var(--nav); }
+.tt-cell.filled:hover { transform: none; box-shadow: 0 6px 14px var(--shadow); }
+
+.mark { font-size:34px; transform-origin:center; display:inline-block; }
+.mark.x { color: var(--nav); transform: translateY(-2px); }
+.mark.o { color: var(--nav); transform: translateY(-2px); }
+
+.tt-cell.win {
+  animation: winPulse 0.9s ease-in-out infinite;
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+@keyframes winPulse { 0%{transform:scale(1);}50%{transform:scale(1.03) rotate(-1deg);}100%{transform:scale(1);} }
+
+.confetti-wrap { position:absolute; top:-10px; left:0; right:0; height: 100%; pointer-events:none; overflow:visible; }
+.confetti { position:absolute; top:8px; border-radius:2px; opacity:0.95; animation-name: confettiFall, confettiSpin; animation-timing-function: linear; }
+@keyframes confettiFall { 0% { transform: translateY(-40px) rotate(0deg); opacity:1; } 100% { transform: translateY(260px) rotate(360deg); opacity:0; } }
+@keyframes confettiSpin { 0%{ transform: rotate(0deg);}100%{transform: rotate(720deg);}}
+
+@media (max-width:420px) {
+  .playful-card { width: 92vw; padding:12px; }
+  .playful-top { flex-direction: column; align-items: center; gap: 12px; }
+  .title-block-left, .controls-right { align-items: center; }
+  .instructions { max-width: 92vw; text-align: center; }
+  .mark { font-size: 30px; }
+}

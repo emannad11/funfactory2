@@ -1,0 +1,25 @@
+.kid-footer {
+  text-align: right;           
+  padding: 0.9rem 1rem;       
+  color: #333;                 
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
+  width: 100%;
+  background-color: #ffffff;   
+  font-size: 1rem;           
+  box-sizing: border-box;
+}
+
+.footer-text {
+  margin: 0;                   
+}
+
+.heart-icon {
+  color: red;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--nav-dark);
+}

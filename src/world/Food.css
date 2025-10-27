@@ -1,0 +1,182 @@
+
+.foodquiz-container {
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 15px 20px;
+  max-width: 700px;
+  margin: 5px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+}
+
+
+.foodquiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+
+.foodquiz-title {
+  color: var(--nav-dark);
+  font-size: 32px;
+  margin: 0;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px var(--nav-dark);
+}
+
+.foodquiz-toprow {
+  display: flex;
+  align-items: baseline; 
+  justify-content: space-between;
+  margin: 8px 0 10px;
+  padding: 0 12px;
+}
+
+
+.foodquiz-qno {
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+
+.foodquiz-score {
+  font-size: 18px;
+  font-weight: 600;
+  color: #079140;
+  margin: 0;
+  text-shadow: 1px 1px 2px #d4f7dc;
+}
+
+
+
+
+.foodquiz-restart {
+  margin-left: auto;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* your original color */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.foodquiz-restart:hover {
+ transform: scale(1.07);
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
+
+.foodquiz-intro {
+  font-size: 14px;
+  color: #444;
+  background: #fffbe6;
+  border-radius: 10px;
+  padding: 8px 12px;
+  line-height: 1.5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.foodquiz-question {
+  font-size: 22px;
+  color: #3a7bd5;
+  margin-bottom: 5px;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #ffd580;
+}
+
+
+.foodquiz-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.foodquiz-image img {
+  width: 220px;
+  height: 180px;
+  border-radius: 15px;
+  border: 3px solid var(--nav-dark);
+  object-fit: cover;
+  box-shadow: 2px 2px 6px var(--nav-dark);
+  transition: transform 0.3s;
+}
+
+.foodquiz-image img:hover {
+  transform: scale(1.05);
+}
+
+
+.foodquiz-options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.foodquiz-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: var(--nav-dark);
+  border: 2px solid var(--nav-dark);
+  border-radius: 12px;
+  padding: 8px 14px;
+  margin: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.foodquiz-option:hover {
+  background: var(--nav-dark);
+  transform: scale(1.05);
+}
+
+
+.flag-img {
+  width: 24px;
+  height: 16px;
+  border-radius: 3px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .foodquiz-header {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .foodquiz-image img {
+    width: 160px;
+    height: 120px;
+  }
+  .foodquiz-option {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+  .foodquiz-question {
+    font-size: 18px;
+  }
+  .foodquiz-restart {
+    width: 100%;
+  }
+}

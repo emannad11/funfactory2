@@ -1,0 +1,139 @@
+.buildings-container {
+  font-family: "Poppins", sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+
+.header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+
+.title-section {
+  text-align: left;
+  flex: 1;
+}
+
+.title-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #3a7bd5;
+  margin-bottom: 6px;
+}
+
+.instructions {
+ font-size: 14px;
+  color: #444;
+  max-width: 800px;
+  margin: 0 auto 15px auto;
+  line-height: 1.5;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 6px;
+  min-width: 140px;
+}
+
+
+.score-text {
+  font-size: 18px;
+  color: #079140;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.restart-btn0 {
+  margin-left: auto;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5); /* your original color */
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.restart-btn0:hover {
+ transform: scale(1.07);
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
+
+
+.buildings-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.countries,
+.buildings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.country-card,
+.building-card {
+  padding: 10px;
+  border: 2px solid #3a7bd5;
+  border-radius: 12px;
+  background: #fff5e6;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: 0.3s;
+  position: relative;
+}
+
+.country-card img,
+.building-card img.building-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.building-card.matched {
+  background: #d4f7dc;
+  border-color: #079140;
+  color: #079140;
+}
+
+.building-card.selected {
+  border-color: #ff7f50;
+  background: #fff0e0;
+}
+
+.matched-building {
+  position: absolute;
+  right: 10px;
+  color: #079140;
+  font-weight: bold;
+  font-size: 14px;
+}

@@ -1,0 +1,193 @@
+:root {
+  --bg: #fff7e6;
+  --nav: #00d2ff;
+  --nav-dark: #3a7bd5;
+  --accent: #079140;
+  --text: #333;
+  --card: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.12);
+  --radius: 14px;
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
+}
+
+.drawing-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(15px, 3vw, 30px);
+  margin: clamp(15px, 5vw, 40px);
+  flex-direction: column;
+  font-family: var(--font-family);
+}
+
+@media(min-width: 768px) {
+  .drawing-container {
+    flex-direction: row;
+  }
+}
+
+canvas {
+  width: clamp(300px, 60vw, 600px);
+  height: clamp(250px, 50vw, 500px);
+  border: 3px solid var(--text);
+  border-radius: var(--radius);
+  cursor: crosshair;
+  background-color: var(--bg);
+  box-shadow: 0 4px 8px var(--shadow);
+  transition: transform 0.2s;
+}
+
+canvas:hover {
+  transform: scale(1.02);
+}
+
+.tools-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: transform 0.2s;
+}
+
+.tools-side:hover {
+  transform: translateY(-3px);
+}
+
+.tools-side h3 {
+  margin-bottom: clamp(5px, 1vw, 15px);
+  color: var(--nav-dark);
+  font-size: clamp(16px, 2vw, 24px);
+  text-shadow: 1px 1px 2px #86dcf7;
+}
+
+.tool-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(8px, 2vw, 12px);
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.tool-buttons button {
+  padding: clamp(8px, 1.5vw, 14px) clamp(12px, 3vw, 18px);
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--nav);
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(14px, 1.8vw, 16px);
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.tool-buttons button:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+.selected-tool {
+  border: 3px solid var(--accent);
+  background-color: var(--nav-dark);
+  box-shadow: 0 0 12px var(--accent);
+}
+
+.palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(5px, 1vw, 10px);
+  justify-content: center;
+}
+
+.color-block {
+  width: clamp(30px, 5vw, 50px);
+  height: clamp(30px, 5vw, 50px);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--text);
+  box-shadow: 0 2px 5px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.color-block:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px var(--shadow);
+}
+
+.color-block.selected {
+  border: 3px solid var(--nav-dark);
+  box-shadow: 0 0 12px var(--nav-dark);
+}
+
+.tools-side input[type="range"] {
+  width: clamp(100px, 15vw, 150px);
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px var(--shadow);
+  transition: transform 0.2s;
+}
+
+.tools-side input[type="range"]:hover {
+  transform: scale(1.05);
+}
+
+.clear-undo-redo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.clear-undo-redo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-btn {
+  font-size: clamp(20px, 4vw, 28px);
+  color: #fff;
+  background-color: var(--nav);
+  padding: clamp(6px,1vw,10px);
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(40px, 8vw, 50px);
+  height: clamp(40px, 8vw, 50px);
+}
+
+.icon-btn:hover {
+  background-color: var(--nav-dark);
+  color: #fff;
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 8px 16px var(--shadow);
+}
+
+button.clear-btn {
+  background-color: var(--nav);
+  color: #fff;
+  border: none;
+  padding: clamp(6px,1vw,10px);
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 12px var(--shadow);
+  transition: all 0.3s ease;
+  width: clamp(40px, 8vw, 50px);
+  height: clamp(40px, 8vw, 50px);
+}
+
+button.clear-btn:hover {
+  background-color: var(--nav-dark);
+  transform: scale(1.1) rotate(2deg);
+}
+

@@ -1,0 +1,126 @@
+:root {
+  --primary: #00d2ff;
+  --secondary: #3a7bd5;
+  --bg: #fff7e6;
+  --text: #333;
+  --colors: #FF6B6B, #FFD93D, #6BCB77, #4D96FF, #FF6EC7, #FF9F1C, #9D4EDD, #00F5D4;
+}
+
+.word-builder-container {
+  max-width: clamp(350px, 90%, 800px);
+  margin: clamp(5px, 2vw, 15px) auto;
+  text-align: center;
+  padding: clamp(15px, 4vw, 30px);
+  
+  
+}
+
+.word-builder-container h2 {
+  font-size: clamp(24px, 5vw, 36px);
+  margin-bottom: clamp(15px, 3vw, 20px);
+  color: var(--secondary);
+  text-shadow: 1px 1px 2px #aaa;
+}
+.instructionss{
+   font-size: 14px;
+  color: #444;
+  background: #fffbe6;
+  border-radius: 12px;
+  padding: 10px 15px;
+  max-width: 800px;
+  margin: 10px auto 15px auto;
+  line-height: 1.5;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.word-image {
+  margin-bottom: clamp(20px, 4vw, 25px);
+}
+
+.word-image img {
+  width: clamp(120px, 25vw, 200px);
+  height: clamp(120px, 25vw, 200px);
+  object-fit: contain;
+  border-radius: clamp(12px, 3vw, 20px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.word-image img:hover {
+  transform: scale(1.05);
+}
+
+.built-word {
+  display: flex;
+  justify-content: center;
+  gap: clamp(10px, 3vw, 20px);
+  margin-bottom: clamp(25px, 4vw, 35px);
+}
+
+.built-word .letter {
+  width: clamp(50px, 10vw, 70px);
+  height: clamp(50px, 10vw, 70px);
+  line-height: clamp(50px, 10vw, 70px);
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: bold;
+  border-radius: clamp(12px, 3vw, 20px);
+  display: inline-block;
+  text-align: center;
+  background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.built-word .letter:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(50px, 10vw, 60px), 1fr));
+  gap: clamp(10px, 2vw, 15px);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.options button,
+.options-button {
+  padding: clamp(10px, 2vw, 14px) 0;
+  font-size: clamp(14px, 2.5vw, 18px);
+  font-weight: bold;
+  border-radius: clamp(12px, 3vw, 20px);
+  border: none;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.options button:hover,
+.options-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+.options-button {
+  padding: clamp(10px, 2vw, 14px) clamp(20px, 4vw, 28px);
+  margin-top: clamp(10px, 2vw, 15px);
+}
+.back-btnnn{
+ margin-left: auto;
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5); 
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+.back-btnnn:hover {
+   transform: scale(1.07);
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
