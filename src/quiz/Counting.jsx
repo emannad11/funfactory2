@@ -4,6 +4,23 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style/Alphabets.css";
 
+
+import PizzaImg from "../assets/pizza.jpg";
+import BalloonsImg from "../assets/5.jpg";
+import FlowersImg from "../assets/car.jpg";
+import CandiesImg from "../assets/7.webp";
+import BallsImg from "../assets/ball.jpg";
+import PencilImg from "../assets/pencil.jpeg";
+import CatsImg from "../assets/cats.jpg";
+import BananaImg from "../assets/banana.webp";
+import BottleImg from "../assets/bottle.jpg";
+import TeddyImg from "../assets/teddy.webp";
+
+
+import CorrectSoundFile from "../assets/sounds/correct.mp3";
+import WrongSoundFile from "../assets/sounds/no.mp3";
+import NextSoundFile from "../assets/sounds/next.mp3";
+
 export default function Counting() {
   const questions = [
     {
@@ -11,80 +28,81 @@ export default function Counting() {
       question: "How many pizza slices are there?",
       options: ["3", "1", "5", "6"],
       answer: "1",
-      img: "/src/assets/pizza.jpg",
+      img: PizzaImg,
     },
     {
       id: 2,
       question: "How many balloons are there?",
       options: ["2", "3", "4", "5"],
       answer: "5",
-      img: "/src/assets/5.jpg",
+      img: BalloonsImg,
     },
     {
       id: 3,
       question: "How many flowers are there?",
       options: ["1", "2", "10", "4"],
       answer: "10",
-      img: "/src/assets/car.jpg",
+      img: FlowersImg,
     },
     {
       id: 4,
       question: "How many candies are there?",
       options: ["1", "2", "3", "7"],
       answer: "7",
-      img: "/src/assets/7.webp",
+      img: CandiesImg,
     },
     {
       id: 5,
       question: "How many balls are there?",
       options: ["5", "2", "7", "8"],
       answer: "2",
-      img: "/src/assets/ball.jpg",
+      img: BallsImg,
     },
     {
       id: 6,
       question: "How many pencils are there?",
       options: ["10", "3", "12", "13"],
       answer: "3",
-      img: "/src/assets/pencil.jpeg",
+      img: PencilImg,
     },
     {
       id: 7,
       question: "How many cats are there?",
       options: ["4", "6", "7", "8"],
       answer: "4",
-      img: "/src/assets/cats.jpg",
+      img: CatsImg,
     },
     {
       id: 8,
       question: "How many bananas are there?",
       options: ["6", "4", "10", "12"],
       answer: "6",
-      img: "/src/assets/banana.webp",
+      img: BananaImg,
     },
     {
       id: 9,
       question: "How many bottles are there?",
       options: ["8", "4", "2", "7"],
       answer: "4",
-      img: "/src/assets/bottle.jpg",
+      img: BottleImg,
     },
     {
       id: 10,
-      question: "How many teddy bear are there?",
+      question: "How many teddy bears are there?",
       options: ["3", "8", "5", "12"],
       answer: "5",
-      img: "/src/assets/teddy.webp",
+      img: TeddyImg,
     },
   ];
+
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const correctSound = new Audio("/src/assets/sounds/correct.mp3");
-  const wrongSound = new Audio("/src/assets/sounds/no.mp3");
-  const nextSound = new Audio("/src/assets/sounds/next.mp3");
+  const correctSound = new Audio(CorrectSoundFile);
+  const wrongSound = new Audio(WrongSoundFile);
+  const nextSound = new Audio(NextSoundFile);
 
   function handleAnswer(option) {
     if (answers[current] !== undefined) return;
@@ -124,7 +142,7 @@ export default function Counting() {
     }
   }
 
-  function goBack() {
+  function handleBack() {
     if (current === 0) {
       toast.warn("Back to Home Page 🏠", {
         position: "top-left",
@@ -159,13 +177,13 @@ export default function Counting() {
 
           <div className="options-alp">
             {questions[current].options.map((opt, index) => {
-              const isCorrect = opt.text === questions[current].answer;
-              const isSelected = answers[current] === opt.text;
+              const isCorrect = opt === questions[current].answer;
+              const isSelected = answers[current] === opt;
 
               return (
                 <button
                   key={index}
-                  onClick={() => handleAnswer(opt.text)}
+                  onClick={() => handleAnswer(opt)}
                   className={`option-btn-alp ${
                     answers[current] !== undefined
                       ? isCorrect
@@ -176,10 +194,7 @@ export default function Counting() {
                       : ""
                   }`}
                 >
-                  <span className="option-text-alp">{opt.text}</span>
-                  {opt.icon && (
-                    <img src={opt.icon} alt="icon" className="icon" />
-                  )}
+                  {opt}
                 </button>
               );
             })}

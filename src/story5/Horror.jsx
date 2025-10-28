@@ -1,66 +1,78 @@
 import { useState } from "react";
 import "./Adventure.css";
 
+
+import Horror1 from "../assets/horror1.png";
+import Horror2 from "../assets/horror2.png";
+import Horror3 from "../assets/horror3.png";
+import Horror4 from "../assets/horror4.png";
+import Horror5 from "../assets/horror5.png";
+import Horror6 from "../assets/horror6.png";
+import Horror7 from "../assets/horror7.png";
+import Horror8 from "../assets/horror8.png";
+
+import clickSoundFile from "../assets/sounds/click.mp3";
+
 export default function Horror() {
   const experiments = [
     {
       id: 2,
       title: "Shaitaan Ki Nani",
-      img: "/src/assets/horror1.png",
+      img: Horror1,
       videoUrl: "https://www.youtube.com/embed/z8lyPPRW0Ik",
     },
     {
       id: 3,
       title: "Labubu Ka Saaya",
-      img: "/src/assets/horror2.png",
+      img: Horror2,
       videoUrl: "https://www.youtube.com/embed/79neoh2e1L0",
     },
     {
       id: 4,
       title: "Bhootni Ka Dupatta",
-      img: "/src/assets/horror3.png",
-      videoUrl: "https://www.youtube.com/embed/18TzZazeHlg?",
+      img: Horror3,
+      videoUrl: "https://www.youtube.com/embed/18TzZazeHlg",
     },
     {
       id: 5,
       title: "Shaitani Khilona",
-      img: "/src/assets/horror4.png",
+      img: Horror4,
       videoUrl: "https://www.youtube.com/embed/H5tfz_5tJM8",
     },
     {
       id: 7,
       title: "Laal Pari Ka Fitnah",
-      img: "/src/assets/horror5.png",
+      img: Horror5,
       videoUrl: "https://www.youtube.com/embed/c8yduR_xYxs",
     },
     {
       id: 8,
       title: "Shaitan Ki Chaal",
-      img: "/src/assets/horror6.png",
+      img: Horror6,
       videoUrl: "https://www.youtube.com/embed/zegAzpZu5R0",
     },
     {
       id: 9,
       title: "Khoofnaak Rani",
-      img: "/src/assets/horror7.png",
+      img: Horror7,
       videoUrl: "https://www.youtube.com/embed/7A4vKFOYJi0",
     },
     {
       id: 10,
       title: "Shaitaan Ka War",
-      img: "/src/assets/horror8.png",
+      img: Horror8,
       videoUrl: "https://www.youtube.com/embed/4z0OYJ_vZYM",
     },
   ];
 
-const [selectedExp, setSelectedExp] = useState(null);
+  const [selectedExp, setSelectedExp] = useState(null);
 
-  
-  const clickSound = new Audio("/src/assets/sounds/click.mp3");
+  // ✅ Create audio object once
+  const clickSound = new Audio(clickSoundFile);
 
   const openModal = (exp) => {
-    clickSound.currentTime = 0; 
-    clickSound.play(); 
+    clickSound.currentTime = 0;
+    clickSound.play();
     setSelectedExp(exp);
   };
 

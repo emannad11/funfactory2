@@ -4,145 +4,176 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style/Alphabets.css";
 
+import AppleImg from "../assets/Apple.jpeg";
+import BanImg from "../assets/ban.webp";
+import MangoImg from "../assets/mango.jpeg";
+import StrawberryImg from "../assets/strawberry.jpeg";
+import PineappleImg from "../assets/pineapple.webp";
+import GrapesImg from "../assets/grap.jpeg";
+import OrangeImg from "../assets/orangeee.jpeg";
+import GuavaImg from "../assets/guava.jpeg";
+import PeachImg from "../assets/peach.jpg";
+import LycheeImg from "../assets/lyche.webp";
+
+
+import AppleIcon from "../assets/icons/apple.png";
+import MangoIcon from "../assets/icons/mango.png";
+import BananaIcon from "../assets/icons/bananas.png";
+import PeachIcon from "../assets/icons/peach.png";
+import OrangeIcon from "../assets/icons/orangee.png";
+import GrapeIcon from "../assets/icons/grape.png";
+import KiwiIcon from "../assets/icons/kiwi.png";
+import PineappleIcon from "../assets/icons/pineapple.png";
+import CherryIcon from "../assets/icons/cherry.png";
+import StrawberryIcon from "../assets/icons/strawberry.png";
+import PapayaIcon from "../assets/icons/papaya.png";
+import LemonIcon from "../assets/icons/lemon.png";
+import GuavaIcon from "../assets/icons/guava.png";
+import LycheeIcon from "../assets/icons/lychee.png";
+import WatermelonIcon from "../assets/icons/watermelon.png";
+
+
+import CorrectSound from "../assets/sounds/correct.mp3";
+import WrongSound from "../assets/sounds/no.mp3";
+import NextSound from "../assets/sounds/next.mp3";
+
 export default function Fruits() {
- const questions = [
-  {
-    id: 1,
-    question: "Which fruit is this?",
-    options: [
-      { text: "Apple", icon: "/src/assets/icons/apple.png" },
-      { text: "Mango", icon: "/src/assets/icons/mango.png" },
-      { text: "Banana", icon: "/src/assets/icons/bananas.png" },
-      { text: "Peach", icon: "/src/assets/icons/peach.png" },
-    ],
-    answer: "Apple",
-    img: "/src/assets/Apple.jpeg",
-  },
-  {
-    id: 2,
-    question: "Which fruit is this?",
-    options: [
-      { text: "Orange", icon: "/src/assets/icons/orangee.png" },
-      { text: "Grapes", icon: "/src/assets/icons/grape.png" },
-      { text: "Kiwi", icon: "/src/assets/icons/kiwi.png" },
-      { text: "Banana", icon: "/src/assets/icons/bananas.png" },
-    ],
-    answer: "Banana",
-    img: "/src/assets/ban.webp",
-  },
-  {
-    id: 3,
-    question: "Which fruit is this?",
-    options: [
-      { text: "Mango", icon: "/src/assets/icons/mango.png" },
-      { text: "Peach", icon: "/src/assets/icons/peach.png" },
-      { text: "Guava", icon: "/src/assets/icons/guava.png" },
-      { text: "Pineapple", icon: "/src/assets/icons/pineapple.png" },
-    ],
-    answer: "Mango",
-    img: "/src/assets/mango.jpeg",
-  },
-  {
-    id: 4,
-    question: "Which fruit is this?",
-    options: [
-      
-      { text: "Cherry", icon: "/src/assets/icons/cherry.png" },
-      { text: "Strawberry", icon: "/src/assets/icons/strawberry.png" },
-      { text: "Apple", icon: "/src/assets/icons/apple.png" },
-      { text: "Mango", icon: "/src/assets/icons/mango.png" },
-    ],
-    answer: "Strawberry",
-    img: "/src/assets/strawberry.jpeg",
-  },
-  {
-    id: 5,
-    question: "Which fruit is this?",
-    options: [
-      
-      { text: "Papaya", icon: "/src/assets/icons/papaya.png" },
-      { text: "Peach", icon: "/src/assets/icons/peach.png" },
-      { text: "Pineapple", icon: "/src/assets/icons/pineapple.png" },
-      { text: "Orange", icon: "/src/assets/icons/orangee.png" },
-    ],
-    answer: "Pineapple",
-    img: "/src/assets/pineapple.webp",
-  },
-  {
-    id: 6,
-    question: "Which fruit is this?",
-    options: [
-      { text: "Watermelon", icon: "/src/assets/icons/watermelon.png" },
-      { text: "Mango", icon: "/src/assets/icons/mango.png" },
-      { text: "Apple", icon: "/src/assets/icons/apple.png" },
-      { text: "Grapes", icon: "/src/assets/icons/grape.png" },
-    ],
-    answer: "Grapes",
-    img: "/src/assets/grap.jpeg",
-  },
-  {
-    id: 7,
-    question: "Which fruit is this?",
-    options: [
-      { text: "Orange", icon: "/src/assets/icons/orangee.png" },
-      { text: "Lemon", icon: "/src/assets/icons/lemon.png" },
-      { text: "Peach", icon: "/src/assets/icons/peach.png" },
-      { text: "Guava", icon: "/src/assets/icons/guava.png" },
-    ],
-    answer: "Orange",
-    img: "/src/assets/orangeee.jpeg",
-  },
-  {
-    id: 8,
-    question: "Which fruit is this?",
-    options: [
-      
-      { text: "Cherry", icon: "/src/assets/icons/cherry.png" },
-      { text: "Guava", icon: "/src/assets/icons/guava.png" },
-      { text: "Mango", icon: "/src/assets/icons/mango.png" },
-      { text: "Banana", icon: "/src/assets/icons/bananas.png" },
-    ],
-    answer: "Guava",
-    img: "/src/assets/guava.jpeg",
-  },
-  {
-    id: 9,
-    question: "Which fruit is this?",
-    options: [
-      { text: "Papaya", icon: "/src/assets/icons/papaya.png" },
-      { text: "Apple", icon: "/src/assets/icons/apple.png" },
-      { text: "Peach", icon: "/src/assets/icons/peach.png" },
-      { text: "Mango", icon: "/src/assets/icons/mango.png" },
-    ],
-    answer: "Peach",
-    img: "/src/assets/peach.jpg",
-  },
-  {
-    id: 10,
-    question: "Which fruit is this?",
-    options: [
-      
-      { text: "Guava", icon: "/src/assets/icons/guava.png" },
-      { text: "Mango", icon: "/src/assets/icons/mango.png" },
-      { text: "Pine", icon: "/src/assets/icons/pineapple.png" },
-      { text: "Litchi", icon: "/src/assets/icons/lychee.png" },
-    ],
-    answer: "Litchi",
-    img: "/src/assets/lyche.webp",
-  },
-];
-const [current, setCurrent] = useState(0);
+  const questions = [
+    {
+      id: 1,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Apple", icon: AppleIcon },
+        { text: "Mango", icon: MangoIcon },
+        { text: "Banana", icon: BananaIcon },
+        { text: "Peach", icon: PeachIcon },
+      ],
+      answer: "Apple",
+      img: AppleImg,
+    },
+    {
+      id: 2,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Orange", icon: OrangeIcon },
+        { text: "Grapes", icon: GrapeIcon },
+        { text: "Kiwi", icon: KiwiIcon },
+        { text: "Banana", icon: BananaIcon },
+      ],
+      answer: "Banana",
+      img: BanImg,
+    },
+    {
+      id: 3,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Mango", icon: MangoIcon },
+        { text: "Peach", icon: PeachIcon },
+        { text: "Guava", icon: GuavaIcon },
+        { text: "Pineapple", icon: PineappleIcon },
+      ],
+      answer: "Mango",
+      img: MangoImg,
+    },
+    {
+      id: 4,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Cherry", icon: CherryIcon },
+        { text: "Strawberry", icon: StrawberryIcon },
+        { text: "Apple", icon: AppleIcon },
+        { text: "Mango", icon: MangoIcon },
+      ],
+      answer: "Strawberry",
+      img: StrawberryImg,
+    },
+    {
+      id: 5,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Papaya", icon: PapayaIcon },
+        { text: "Peach", icon: PeachIcon },
+        { text: "Pineapple", icon: PineappleIcon },
+        { text: "Orange", icon: OrangeIcon },
+      ],
+      answer: "Pineapple",
+      img: PineappleImg,
+    },
+    {
+      id: 6,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Watermelon", icon: WatermelonIcon },
+        { text: "Mango", icon: MangoIcon },
+        { text: "Apple", icon: AppleIcon },
+        { text: "Grapes", icon: GrapeIcon },
+      ],
+      answer: "Grapes",
+      img: GrapesImg,
+    },
+    {
+      id: 7,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Orange", icon: OrangeIcon },
+        { text: "Lemon", icon: LemonIcon },
+        { text: "Peach", icon: PeachIcon },
+        { text: "Guava", icon: GuavaIcon },
+      ],
+      answer: "Orange",
+      img: OrangeImg,
+    },
+    {
+      id: 8,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Cherry", icon: CherryIcon },
+        { text: "Guava", icon: GuavaIcon },
+        { text: "Mango", icon: MangoIcon },
+        { text: "Banana", icon: BananaIcon },
+      ],
+      answer: "Guava",
+      img: GuavaImg,
+    },
+    {
+      id: 9,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Papaya", icon: PapayaIcon },
+        { text: "Apple", icon: AppleIcon },
+        { text: "Peach", icon: PeachIcon },
+        { text: "Mango", icon: MangoIcon },
+      ],
+      answer: "Peach",
+      img: PeachImg,
+    },
+    {
+      id: 10,
+      question: "Which fruit is this?",
+      options: [
+        { text: "Guava", icon: GuavaIcon },
+        { text: "Mango", icon: MangoIcon },
+        { text: "Pine", icon: PineappleIcon },
+        { text: "Litchi", icon: LycheeIcon },
+      ],
+      answer: "Litchi",
+      img: LycheeImg,
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const correctSound = new Audio("/src/assets/sounds/correct.mp3");
-  const wrongSound = new Audio("/src/assets/sounds/no.mp3");
-  const nextSound = new Audio("/src/assets/sounds/next.mp3");
+  const correctSound = new Audio(CorrectSound);
+  const wrongSound = new Audio(WrongSound);
+  const nextSound = new Audio(NextSound);
 
   function handleAnswer(option) {
     if (answers[current] !== undefined) return;
     setAnswers({ ...answers, [current]: option });
+
     if (option === questions[current].answer) {
       setScore(score + 1);
       correctSound.play();
@@ -162,14 +193,18 @@ const [current, setCurrent] = useState(0);
     if (answers[current] === undefined) {
       toast.info("Please select an option 😊", {
         position: "top-right",
-        autoClose: 3000,
+        autoClose: 2000,
         theme: "colored",
       });
       return;
     }
     nextSound.play();
-    if (current + 1 < questions.length) setCurrent(current + 1);
-    else setFinished(true);
+
+    if (current + 1 < questions.length) {
+      setCurrent(current + 1);
+    } else {
+      setFinished(true);
+    }
   }
 
   function handleBack() {
@@ -185,10 +220,9 @@ const [current, setCurrent] = useState(0);
     }
   }
 
- return (
+  return (
     <div className="quiz-container-alp">
       <ToastContainer />
-
       {!finished ? (
         <div key={current} className="question-card-alp animate-question-alp">
           <h2>
@@ -224,9 +258,7 @@ const [current, setCurrent] = useState(0);
                   }`}
                 >
                   <span className="option-text-alp">{opt.text}</span>
-                  {opt.icon && (
-                    <img src={opt.icon} alt="icon" className="icon" />
-                  )}
+                  {opt.icon && <img src={opt.icon} alt="icon" className="icon" />}
                 </button>
               );
             })}

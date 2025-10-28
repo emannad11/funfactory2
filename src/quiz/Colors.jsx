@@ -4,138 +4,168 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style/Alphabets.css";
 
+
+import BlueImg from "../assets/bluee.webp";
+import PinkImg from "../assets/pink.jpg";
+import RedImg from "../assets/red.webp";
+import GreenImg from "../assets/green.jpg";
+import OrangeImg from "../assets/orange.jpg";
+import GreyImg from "../assets/grey.png";
+import PurpleImg from "../assets/purple.webp";
+import BrownImg from "../assets/brown.png";
+import BlackImg from "../assets/black.jpg";
+import YellowImg from "../assets/yellow.jpg";
+
+
+import BlueIcon from "../assets/icons/blue.png";
+import GreenIcon from "../assets/icons/green.png";
+import RedIcon from "../assets/icons/red.png";
+import YellowIcon from "../assets/icons/yellow.png";
+import PinkIcon from "../assets/icons/pink.png";
+import PurpleIcon from "../assets/icons/purple.png";
+import BlackIcon from "../assets/icons/black.png";
+import WhiteIcon from "../assets/icons/white.png";
+import BrownIcon from "../assets/icons/brown.png";
+import GreyIcon from "../assets/icons/grey.png";
+import OrangeIcon from "../assets/icons/orangeee.webp";
+
+
+import CorrectSoundFile from "../assets/sounds/correct.mp3";
+import WrongSoundFile from "../assets/sounds/no.mp3";
+import NextSoundFile from "../assets/sounds/next.mp3";
+
 export default function Colors() {
   const questions = [
     {
       id: 1,
       question: "What color is this?",
       options: [
-        { text: "Blue", icon: "/src/assets/icons/blue.png" },
-        { text: "Green", icon: "/src/assets/icons/green.png" },
-        { text: "Red", icon: "/src/assets/icons/red.png" },
-        { text: "Yellow", icon: "/src/assets/icons/yellow.png" },
+        { text: "Blue", icon: BlueIcon },
+        { text: "Green", icon: GreenIcon },
+        { text: "Red", icon: RedIcon },
+        { text: "Yellow", icon: YellowIcon },
       ],
       answer: "Blue",
-      img: "/src/assets/bluee.webp",
+      img: BlueImg,
     },
     {
       id: 2,
       question: "What color is this?",
       options: [
-        { text: "Red", icon: "/src/assets/icons/red.png" },
-        { text: "Pink", icon: "/src/assets/icons/pink.png" },
-        { text: "Purple", icon: "/src/assets/icons/purple.png" },
-        { text: "Black", icon: "/src/assets/icons/black.png" },
+        { text: "Red", icon: RedIcon },
+        { text: "Pink", icon: PinkIcon },
+        { text: "Purple", icon: PurpleIcon },
+        { text: "Black", icon: BlackIcon },
       ],
       answer: "Pink",
-      img: "/src/assets/pink.jpg",
+      img: PinkImg,
     },
     {
       id: 3,
       question: "What color is this?",
       options: [
-        { text: "Blue", icon: "/src/assets/icons/blue.png" },
-        { text: "Red", icon: "/src/assets/icons/red.png" },
-        { text: "Orange", icon: "/src/assets/icons/orangeee.webp" },
-        { text: "Pink", icon: "/src/assets/icons/pink.png" },
+        { text: "Blue", icon: BlueIcon },
+        { text: "Red", icon: RedIcon },
+        { text: "Orange", icon: OrangeIcon },
+        { text: "Pink", icon: PinkIcon },
       ],
       answer: "Red",
-      img: "/src/assets/red.webp",
+      img: RedImg,
     },
     {
       id: 4,
       question: "What color is this?",
       options: [
-        { text: "Green", icon: "/src/assets/icons/green.png" },
-        { text: "Brown", icon: "/src/assets/icons/brown.png" },
-        { text: "Purple", icon: "/src/assets/icons/purple.png" },
-        { text: "White", icon: "/src/assets/icons/white.png" },
+        { text: "Green", icon: GreenIcon },
+        { text: "Brown", icon: BrownIcon },
+        { text: "Purple", icon: PurpleIcon },
+        { text: "White", icon: WhiteIcon },
       ],
       answer: "Green",
-      img: "/src/assets/green.jpg",
+      img: GreenImg,
     },
     {
       id: 5,
       question: "What color is this?",
       options: [
-        { text: "Pink", icon: "/src/assets/icons/pink.png" },
-        { text: "Blue", icon: "/src/assets/icons/blue.png" },
-        { text: "Orange", icon: "/src/assets/icons/orangeee.webp" },
-        { text: "Yellow", icon: "/src/assets/icons/yellow.png" },
+        { text: "Pink", icon: PinkIcon },
+        { text: "Blue", icon: BlueIcon },
+        { text: "Orange", icon: OrangeIcon },
+        { text: "Yellow", icon: YellowIcon },
       ],
       answer: "Orange",
-      img: "/src/assets/orange.jpg",
+      img: OrangeImg,
     },
     {
       id: 6,
-      question: "What is color this?",
+      question: "What color is this?",
       options: [
-        { text: "White", icon: "/src/assets/icons/white.png" },
-        { text: "Yellow", icon: "/src/assets/icons/yellow.png" },
-        { text: "Black", icon: "/src/assets/icons/black.png" },
-        { text: "Grey", icon: "/src/assets/icons/grey.png" },
+        { text: "White", icon: WhiteIcon },
+        { text: "Yellow", icon: YellowIcon },
+        { text: "Black", icon: BlackIcon },
+        { text: "Grey", icon: GreyIcon },
       ],
       answer: "Grey",
-      img: "/src/assets/grey.png",
+      img: GreyImg,
     },
     {
       id: 7,
       question: "What color is this?",
       options: [
-        { text: "Purple", icon: "/src/assets/icons/purple.png" },
-        { text: "Red", icon: "/src/assets/icons/red.png" },
-        { text: "Yellow", icon: "/src/assets/icons/yellow.png" },
-        { text: "Green", icon: "/src/assets/icons/green.png" },
+        { text: "Purple", icon: PurpleIcon },
+        { text: "Red", icon: RedIcon },
+        { text: "Yellow", icon: YellowIcon },
+        { text: "Green", icon: GreenIcon },
       ],
       answer: "Purple",
-      img: "/src/assets/purple.webp",
+      img: PurpleImg,
     },
     {
       id: 8,
       question: "What color is this?",
       options: [
-        { text: "Brown", icon: "/src/assets/icons/brown.png" },
-        { text: "Black", icon: "/src/assets/icons/black.png" },
-        { text: "Yellow", icon: "/src/assets/icons/yellow.png" },
-        { text: "Pink", icon: "/src/assets/icons/pink.png" },
+        { text: "Brown", icon: BrownIcon },
+        { text: "Black", icon: BlackIcon },
+        { text: "Yellow", icon: YellowIcon },
+        { text: "Pink", icon: PinkIcon },
       ],
       answer: "Brown",
-      img: "/src/assets/brown.png",
+      img: BrownImg,
     },
     {
       id: 9,
       question: "What color is this?",
       options: [
-        { text: "Blue", icon: "/src/assets/icons/blue.png" },
-        { text: "White", icon: "/src/assets/icons/white.png" },
-        { text: "Red", icon: "/src/assets/icons/red.png" },
-        { text: "Black", icon: "/src/assets/icons/black.png" },
+        { text: "Blue", icon: BlueIcon },
+        { text: "White", icon: WhiteIcon },
+        { text: "Red", icon: RedIcon },
+        { text: "Black", icon: BlackIcon },
       ],
       answer: "Black",
-      img: "/src/assets/black.jpg",
+      img: BlackImg,
     },
     {
       id: 10,
       question: "What color is this?",
       options: [
-        { text: "Green", icon: "/src/assets/icons/green.png" },
-        { text: "Yellow", icon: "/src/assets/icons/yellow.png" },
-        { text: "Orange", icon: "/src/assets/icons/orangeee.webp" },
-        { text: "Red", icon: "/src/assets/icons/red.png" },
+        { text: "Green", icon: GreenIcon },
+        { text: "Yellow", icon: YellowIcon },
+        { text: "Orange", icon: OrangeIcon },
+        { text: "Red", icon: RedIcon },
       ],
       answer: "Yellow",
-      img: "/src/assets/yellow.jpg",
+      img: YellowImg,
     },
   ];
 
- const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const correctSound = new Audio("/src/assets/sounds/correct.mp3");
-  const wrongSound = new Audio("/src/assets/sounds/no.mp3");
-  const nextSound = new Audio("/src/assets/sounds/next.mp3");
+  const correctSound = new Audio(CorrectSoundFile);
+  const wrongSound = new Audio(WrongSoundFile);
+  const nextSound = new Audio(NextSoundFile);
 
   function handleAnswer(option) {
     if (answers[current] !== undefined) return;
@@ -221,9 +251,7 @@ export default function Colors() {
                   }`}
                 >
                   <span className="option-text-alp">{opt.text}</span>
-                  {opt.icon && (
-                    <img src={opt.icon} alt="icon" className="icon" />
-                  )}
+                  {opt.icon && <img src={opt.icon} alt="icon" className="icon" />}
                 </button>
               );
             })}

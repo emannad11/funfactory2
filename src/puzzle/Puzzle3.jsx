@@ -3,13 +3,15 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Puzzle.css";
 
+
+import PuzzleImg1 from "../assets/puzzle.jpg";
+import PuzzleImg2 from "../assets/puzzle2.jpg";
+import PuzzleImg3 from "../assets/puzzle3.jpg";
+import PuzzleImg4 from "../assets/puzzle4.jpg";
+
 export default function Puzzle() {
-  const imageOptions = [
-    "/src/assets/puzzle.jpg",
-    "/src/assets/puzzle2.jpg",
-    "/src/assets/puzzle3.jpg",
-    "/src/assets/puzzle4.jpg",
-  ];
+  
+  const imageOptions = [PuzzleImg1, PuzzleImg2, PuzzleImg3, PuzzleImg4];
 
   const gridSize = 3;
   const [selectedImage, setSelectedImage] = useState(null);
@@ -27,7 +29,7 @@ export default function Puzzle() {
     setPieces(initialPieces.sort(() => Math.random() - 0.5));
     setCompleted(false);
 
-    toast.info("Puzzle loaded! Start arranging the pieces.", {
+    toast.info("🧩 Puzzle loaded! Start arranging the pieces.", {
       className: "white-toast info-toast",
       position: "top-right",
       autoClose: 1500,
@@ -51,7 +53,7 @@ export default function Puzzle() {
 
     if (newPieces.every((v, i) => v === i)) {
       setCompleted(true);
-      toast.success("Congratulations! You completed the puzzle!", {
+      toast.success("🎉 Congratulations! You completed the puzzle!", {
         className: "white-toast success-toast",
         position: "top-right",
         autoClose: 2500,
@@ -73,7 +75,7 @@ export default function Puzzle() {
     }
     setPieces(resetPieces.sort(() => Math.random() - 0.5));
     setCompleted(false);
-    toast.info("Puzzle restarted!", {
+    toast.info("🔄 Puzzle restarted!", {
       className: "white-toast info-toast",
       position: "top-right",
       autoClose: 1000,
@@ -84,7 +86,7 @@ export default function Puzzle() {
     <div className="puzzle-container">
       <ToastContainer />
 
-      {/* Header row */}
+      {/* Header */}
       <div className="puzzle-header">
         <h2>🧩 Jigsaw Puzzle Game</h2>
         <button className="restart-btn" onClick={restartPuzzle}>
@@ -129,9 +131,7 @@ export default function Puzzle() {
               key={idx}
               src={img}
               alt={`Option ${idx + 1}`}
-              className={`option-img ${
-                selectedImage === img ? "active" : ""
-              }`}
+              className={`option-img ${selectedImage === img ? "active" : ""}`}
               onClick={() => setSelectedImage(img)}
             />
           ))}

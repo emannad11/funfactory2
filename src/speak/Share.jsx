@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
 import "./Share.css";
 
+// ✅ Import images correctly
+import SpeakImg1 from "../assets/speakk.jpg";
+import SpeakImg2 from "../assets/speakkk.jpg";
+
 export default function Share() {
   const card = [
     {
       id: 1,
       title: "Guess What I Am ?",
-      img: "/src/assets/speakk.jpg",
+      img: SpeakImg1,
       path: "/speak/guess",
     },
     {
       id: 2,
       title: "Two Truth & One Lie",
-      img: "/src/assets/speakkk.jpg",
+      img: SpeakImg2,
       path: "/speak/twister",
     },
   ];
@@ -27,20 +31,23 @@ export default function Share() {
 
   return (
     <>
-    <div className="heading"> <h2>Speak & Share</h2></div>
-    <div className="container-cards1">
-      {card.map((card) => (
-        <Link
-          key={card.id}
-          to={card.path}
-          className="card-cards1"
-          onClick={() => speakLetter(card.title)}
-        >
-          <img src={card.img} alt={card.title} />
-          <h3>{card.title}</h3>
-        </Link>
-      ))}
-    </div>
+      <div className="heading">
+        <h2>Speak & Share</h2>
+      </div>
+
+      <div className="container-cards1">
+        {card.map((card) => (
+          <Link
+            key={card.id}
+            to={card.path}
+            className="card-cards1"
+            onClick={() => speakLetter(card.title)}
+          >
+            <img src={card.img} alt={card.title} />
+            <h3>{card.title}</h3>
+          </Link>
+        ))}
+      </div>
     </>
   );
 }

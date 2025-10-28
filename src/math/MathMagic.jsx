@@ -2,12 +2,17 @@ import { useState } from "react";
 import "./Math.css";
 import SB4 from "./SB4";
 
+import addImg from "../assets/add.webp";
+import subImg from "../assets/sub.png";
+import mulImg from "../assets/mul.jpg";
+import divImg from "../assets/div.jpg";
+
 export default function MathMagic() {
   const subjects = [
     {
       id: 1,
       title: "Addition",
-      img: "/src/assets/add.webp",
+      img: addImg,
       questions: [
         { question: "What is 2 + 2?", answer: "2 plus 2 equals 4." },
         { question: "What is 3 + 1?", answer: "3 plus 1 equals 4." },
@@ -19,7 +24,7 @@ export default function MathMagic() {
     {
       id: 2,
       title: "Subtraction",
-      img: "/src/assets/sub.png",
+      img: subImg,
       questions: [
         { question: "What is 5 - 2?", answer: "5 minus 2 equals 3." },
         { question: "What is 8 - 3?", answer: "8 minus 3 equals 5." },
@@ -31,7 +36,7 @@ export default function MathMagic() {
     {
       id: 3,
       title: "Multiplication",
-      img: "/src/assets/mul.jpg",
+      img: mulImg,
       questions: [
         { question: "What is 2 × 3?", answer: "2 times 3 equals 6." },
         { question: "What is 4 × 2?", answer: "4 times 2 equals 8." },
@@ -43,7 +48,7 @@ export default function MathMagic() {
     {
       id: 4,
       title: "Division",
-      img: "/src/assets/div.jpg",
+      img: divImg,
       questions: [
         { question: "What is 6 ÷ 2?", answer: "6 divided by 2 equals 3." },
         { question: "What is 8 ÷ 4?", answer: "8 divided by 4 equals 2." },
@@ -71,12 +76,16 @@ export default function MathMagic() {
   };
 
   return (
-    
     <>
-    <div className="heading9"><h2>Math Magic</h2></div>
+      <div className="heading9"><h2>Math Magic</h2></div>
+
       <div className="container11">
         {subjects.map((subject) => (
-          <div key={subject.id} className="card11" onClick={() => openModal(subject)}>
+          <div
+            key={subject.id}
+            className="card11"
+            onClick={() => openModal(subject)}
+          >
             <img src={subject.img} alt={subject.title} />
             <h3>{subject.title}</h3>
           </div>

@@ -4,138 +4,169 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style/Alphabets.css";
 
-export default function Birds() {
-const questions = [
-  {
-    id: 1,
-    question: "Which bird is this?",
-    options: [
-      { text: "Fish", icon: "/src/assets/icons/fish.png" },
-      { text: "Dog", icon: "/src/assets/icons/dog.png" },
-      { text: "Parrot", icon: "/src/assets/icons/parrot.png" },
-      { text: "Cat", icon: "/src/assets/icons/cat.png" },
-    ],
-    answer: "Parrot",
-    img: "/src/assets/parrot.jpg",
-  },
-  {
-    id: 2,
-    question: "Which bird is this?",
-    options: [
-      { text: "Parrot", icon: "/src/assets/icons/parrot.png" },
-      { text: "Sparrow", icon: "/src/assets/icons/sparrow.png" },
-      { text: "Owl", icon: "/src/assets/icons/owl.png" },
-      { text: "Duck", icon: "/src/assets/icons/duck.png" },
-    ],
-    answer: "Sparrow",
-    img: "/src/assets/sparrow.jpeg",
-  },
-  {
-    id: 3,
-    question: "Which bird is this?",
-    options: [
-      { text: "Crow", icon: "/src/assets/icons/crow.png" },
-      { text: "Peacock", icon: "/src/assets/icons/peacock.png" },
-      { text: "Penguin", icon: "/src/assets/icons/penguin.png" },
-      { text: "Hen", icon: "/src/assets/icons/hen.png" },
-    ],
-    answer: "Peacock",
-    img: "/src/assets/peacock.webp",
-  },
-  {
-    id: 4,
-    question: "Which bird is this?",
-    options: [
-      { text: "Hen", icon: "/src/assets/icons/hen.png" },
-      { text: "Crow", icon: "/src/assets/icons/crow.png" },
-      { text: "Owl", icon: "/src/assets/icons/owl.png" },
-      { text: "Peacock", icon: "/src/assets/icons/peacock.png" },
-    ],
-    answer: "Hen",
-    img: "/src/assets/hen.webp",
-  },
-  {
-    id: 5,
-    question: "Which bird is this?",
-    options: [
-      { text: "Penguin", icon: "/src/assets/icons/penguin.png" },
-      { text: "Parrot", icon: "/src/assets/icons/parrot.png" },
-      { text: "Sparrow", icon: "/src/assets/icons/sparrow.png" },
-      { text: "Crow", icon: "/src/assets/icons/crow.png" },
-    ],
-    answer: "Penguin",
-    img: "/src/assets/p.jpeg",
-  },
-  {
-    id: 6,
-    question: "Which bird is this?",
-    options: [
-      { text: "Duck", icon: "/src/assets/icons/duck.png" },
-      { text: "Ostrich", icon: "/src/assets/icons/ostrich.png" },
-      { text: "Crow", icon: "/src/assets/icons/crow.png" },
-      { text: "Pigeon", icon: "/src/assets/icons/pigeon.png" },
-    ],
-    answer: "Ostrich",
-    img: "/src/assets/ostrich.avif",
-  },
-  {
-    id: 7,
-    question: "Which bird is this?",
-    options: [
-      { text: "Crow", icon: "/src/assets/icons/crow.png" },
-      { text: "Dove", icon: "/src/assets/icons/dove.png" },
-      { text: "Duck", icon: "/src/assets/icons/duck.png" },
-      { text: "Parrot", icon: "/src/assets/icons/parrot.png" },
-    ],
-    answer: "Dove",
-    img: "/src/assets/dove.jpg",
-  },
-  {
-    id: 8,
-    question: "Which bird is this?",
-    options: [
-      { text: "Duck", icon: "/src/assets/icons/duck.png" },
-      { text: "Crow", icon: "/src/assets/icons/crow.png" },
-      { text: "Owl", icon: "/src/assets/icons/owl.png" },
-      { text: "Pigeon", icon: "/src/assets/icons/pigeon.png" },
-    ],
-    answer: "Duck",
-    img: "/src/assets/duck.avif",
-  },
-  {
-    id: 9,
-    question: "Which bird is this?",
-    options: [
-      { text: "Parrot", icon: "/src/assets/icons/parrot.png" },
-      { text: "Owl", icon: "/src/assets/icons/owl.png" },
-      { text: "Hen", icon: "/src/assets/icons/hen.png" },
-      { text: "Sparrow", icon: "/src/assets/icons/sparrow.png" },
-    ],
-    answer: "Owl",
-    img: "/src/assets/owl.jpeg",
-  },
-  {
-    id: 10,
-    question: "Which bird is this?",
-    options: [
-      { text: "Sparrow", icon: "/src/assets/icons/sparrow.png" },
-      { text: "Eagle", icon: "/src/assets/icons/eagle.png" },
-      { text: "Parrot", icon: "/src/assets/icons/parrot.png" },
-      { text: "Duck", icon: "/src/assets/icons/duck.png" },
-    ],
-    answer: "Eagle",
-    img: "/src/assets/eagle.jpg",
-  },
-];
 
-const [current, setCurrent] = useState(0);
+import ParrotImg from "../assets/parrot.jpg";
+import SparrowImg from "../assets/sparrow.jpeg";
+import PeacockImg from "../assets/peacock.webp";
+import HenImg from "../assets/hen.webp";
+import PenguinImg from "../assets/p.jpeg";
+import OstrichImg from "../assets/ostrich.avif";
+import DoveImg from "../assets/dove.jpg";
+import DuckImg from "../assets/duck.avif";
+import OwlImg from "../assets/owl.jpeg";
+import EagleImg from "../assets/eagle.jpg";
+
+
+import ParrotIcon from "../assets/icons/parrot.png";
+import SparrowIcon from "../assets/icons/sparrow.png";
+import OwlIcon from "../assets/icons/owl.png";
+import DuckIcon from "../assets/icons/duck.png";
+import CrowIcon from "../assets/icons/crow.png";
+import HenIcon from "../assets/icons/hen.png";
+import PeacockIcon from "../assets/icons/peacock.png";
+import PenguinIcon from "../assets/icons/penguin.png";
+import DoveIcon from "../assets/icons/dove.png";
+import PigeonIcon from "../assets/icons/pigeon.png";
+import OstrichIcon from "../assets/icons/ostrich.png";
+import EagleIcon from "../assets/icons/eagle.png";
+
+
+import CorrectSound from "../assets/sounds/correct.mp3";
+import WrongSound from "../assets/sounds/no.mp3";
+import NextSound from "../assets/sounds/next.mp3";
+
+export default function Birds() {
+  const questions = [
+    {
+      id: 1,
+      question: "Which bird is this?",
+      options: [
+        { text: "Fish", icon: CrowIcon },
+        { text: "Dog", icon: DuckIcon },
+        { text: "Parrot", icon: ParrotIcon },
+        { text: "Cat", icon: HenIcon },
+      ],
+      answer: "Parrot",
+      img: ParrotImg,
+    },
+    {
+      id: 2,
+      question: "Which bird is this?",
+      options: [
+        { text: "Parrot", icon: ParrotIcon },
+        { text: "Sparrow", icon: SparrowIcon },
+        { text: "Owl", icon: OwlIcon },
+        { text: "Duck", icon: DuckIcon },
+      ],
+      answer: "Sparrow",
+      img: SparrowImg,
+    },
+    {
+      id: 3,
+      question: "Which bird is this?",
+      options: [
+        { text: "Crow", icon: CrowIcon },
+        { text: "Peacock", icon: PeacockIcon },
+        { text: "Penguin", icon: PenguinIcon },
+        { text: "Hen", icon: HenIcon },
+      ],
+      answer: "Peacock",
+      img: PeacockImg,
+    },
+    {
+      id: 4,
+      question: "Which bird is this?",
+      options: [
+        { text: "Hen", icon: HenIcon },
+        { text: "Crow", icon: CrowIcon },
+        { text: "Owl", icon: OwlIcon },
+        { text: "Peacock", icon: PeacockIcon },
+      ],
+      answer: "Hen",
+      img: HenImg,
+    },
+    {
+      id: 5,
+      question: "Which bird is this?",
+      options: [
+        { text: "Penguin", icon: PenguinIcon },
+        { text: "Parrot", icon: ParrotIcon },
+        { text: "Sparrow", icon: SparrowIcon },
+        { text: "Crow", icon: CrowIcon },
+      ],
+      answer: "Penguin",
+      img: PenguinImg,
+    },
+    {
+      id: 6,
+      question: "Which bird is this?",
+      options: [
+        { text: "Duck", icon: DuckIcon },
+        { text: "Ostrich", icon: OstrichIcon },
+        { text: "Crow", icon: CrowIcon },
+        { text: "Pigeon", icon: PigeonIcon },
+      ],
+      answer: "Ostrich",
+      img: OstrichImg,
+    },
+    {
+      id: 7,
+      question: "Which bird is this?",
+      options: [
+        { text: "Crow", icon: CrowIcon },
+        { text: "Dove", icon: DoveIcon },
+        { text: "Duck", icon: DuckIcon },
+        { text: "Parrot", icon: ParrotIcon },
+      ],
+      answer: "Dove",
+      img: DoveImg,
+    },
+    {
+      id: 8,
+      question: "Which bird is this?",
+      options: [
+        { text: "Duck", icon: DuckIcon },
+        { text: "Crow", icon: CrowIcon },
+        { text: "Owl", icon: OwlIcon },
+        { text: "Pigeon", icon: PigeonIcon },
+      ],
+      answer: "Duck",
+      img: DuckImg,
+    },
+    {
+      id: 9,
+      question: "Which bird is this?",
+      options: [
+        { text: "Parrot", icon: ParrotIcon },
+        { text: "Owl", icon: OwlIcon },
+        { text: "Hen", icon: HenIcon },
+        { text: "Sparrow", icon: SparrowIcon },
+      ],
+      answer: "Owl",
+      img: OwlImg,
+    },
+    {
+      id: 10,
+      question: "Which bird is this?",
+      options: [
+        { text: "Sparrow", icon: SparrowIcon },
+        { text: "Eagle", icon: EagleIcon },
+        { text: "Parrot", icon: ParrotIcon },
+        { text: "Duck", icon: DuckIcon },
+      ],
+      answer: "Eagle",
+      img: EagleImg,
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const correctSound = new Audio("/src/assets/sounds/correct.mp3");
-  const wrongSound = new Audio("/src/assets/sounds/no.mp3");
-  const nextSound = new Audio("/src/assets/sounds/next.mp3");
+  const correctSound = new Audio(CorrectSound);
+  const wrongSound = new Audio(WrongSound);
+  const nextSound = new Audio(NextSound);
 
   function handleAnswer(option) {
     if (answers[current] !== undefined) return;
@@ -182,7 +213,7 @@ const [current, setCurrent] = useState(0);
     }
   }
 
-   return (
+  return (
     <div className="quiz-container-alp">
       <ToastContainer />
 

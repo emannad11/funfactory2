@@ -4,139 +4,166 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style/Alphabets.css";
 
-export default function Fruits() {
-const questions = [
-  {
-    id: 1,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Potato", icon: "/src/assets/icons/potato.png" },
-      { text: "Tomato", icon: "/src/assets/icons/tomato.png" },
-      { text: "Carrot", icon: "/src/assets/icons/carrot.png" },
-      { text: "Onion", icon: "/src/assets/icons/onion.png" },
-    ],
-    answer: "Potato",
-    img: "/src/assets/potato.jpg",
-  },
-  {
-    id: 2,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Potato", icon: "/src/assets/icons/potato.png" },
-       { text: "Tomato", icon: "/src/assets/icons/tomato.png" },
-      { text: "Cabbage", icon: "/src/assets/icons/cabbage.png" },
-      { text: "Spinach", icon: "/src/assets/icons/spinach.png" },
-    ],
-    answer: "Tomato",
-    img: "/src/assets/tomato.jpeg",
-  },
-  {
-    id: 3,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Onion", icon: "/src/assets/icons/onion.png" },
-      { text: "Broccoli", icon: "/src/assets/icons/broccoli.png" },
-      { text: "Carrot", icon: "/src/assets/icons/carrot.png" },
-      { text: "Peas", icon: "/src/assets/icons/peas.png" },
-    ],
-    answer: "Carrot",
-    img: "/src/assets/carrot.jpeg",
-  },
-  {
-    id: 4,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Cabbage", icon: "/src/assets/icons/cabbage.png" },
-      { text: "Potato", icon: "/src/assets/icons/potato.png" },
-      { text: "Tomato", icon: "/src/assets/icons/tomato.png" },
-      { text: "Onion", icon: "/src/assets/icons/onion.png" },
-    ],
-    answer: "Onion",
-    img: "/src/assets/onion.webp",
-  },
-  {
-    id: 5,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Carrot", icon: "/src/assets/icons/carrot.png" },
-      { text: "Potato", icon: "/src/assets/icons/potato.png" },
-      { text: "Onion", icon: "/src/assets/icons/onion.png" },
-       { text: "Cabbage", icon: "/src/assets/icons/cabbage.png" },
-    ],
-    answer: "Cabbage",
-    img: "/src/assets/cabbage.webp",
-  },
-  {
-    id: 6,
-    question: "Which vegetable is this?",
-    options: [
-      
-      { text: "Potato", icon: "/src/assets/icons/potato.png" },
-      { text: "Carrot", icon: "/src/assets/icons/carrot.png" },
-      { text: "Spinach", icon: "/src/assets/icons/spinach.png" },
-      { text: "Onion", icon: "/src/assets/icons/onion.png" },
-    ],
-    answer: "Spinach",
-    img: "/src/assets/spinach.jpg",
-  },
-  {
-    id: 7,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Tomato", icon: "/src/assets/icons/tomato.png" },
-      { text: "Broccoli", icon: "/src/assets/icons/broccoli.png" },
-      { text: "Carrot", icon: "/src/assets/icons/carrot.png" },
-      { text: "Potato", icon: "/src/assets/icons/potato.png" },
-    ],
-    answer: "Broccoli",
-    img: "/src/assets/broccoli.jpeg",
-  },
-  {
-    id: 8,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Cabbage", icon: "/src/assets/icons/cabbage.png" },
-      { text: "Spinach", icon: "/src/assets/icons/spinach.png" },
-      { text: "Onion", icon: "/src/assets/icons/onion.png" },
-      { text: "Peas", icon: "/src/assets/icons/peas.png" },
-    ],
-    answer: "Peas",
-    img: "/src/assets/peas.jpg",
-  },
-  {
-    id: 9,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Cauliflower", icon: "/src/assets/icons/cauliflower.png" },
-      { text: "Tomato", icon: "/src/assets/icons/tomato.png" },
-      { text: "Carrot", icon: "/src/assets/icons/carrot.png" },
-      { text: "Peas", icon: "/src/assets/icons/peas.png" },
-    ],
-    answer: "Cauliflower",
-    img: "/src/assets/cauliflower.webp",
-  },
-  {
-    id: 10,
-    question: "Which vegetable is this?",
-    options: [
-      { text: "Brinjal", icon: "/src/assets/icons/brinjal.png" },
-      { text: "Potato", icon: "/src/assets/icons/potato.png" },
-      { text: "Onion", icon: "/src/assets/icons/onion.png" },
-      { text: "Carrot", icon: "/src/assets/icons/carrot.png" },
-    ],
-    answer: "Brinjal",
-    img: "/src/assets/brinjal.jpeg",
-  },
-];
 
-const [current, setCurrent] = useState(0);
+import potatoImg from "../assets/potato.jpg";
+import tomatoImg from "../assets/tomato.jpeg";
+import carrotImg from "../assets/carrot.jpeg";
+import onionImg from "../assets/onion.webp";
+import cabbageImg from "../assets/cabbage.webp";
+import spinachImg from "../assets/spinach.jpg";
+import broccoliImg from "../assets/broccoli.jpeg";
+import peasImg from "../assets/peas.jpg";
+import cauliflowerImg from "../assets/cauliflower.webp";
+import brinjalImg from "../assets/brinjal.jpeg";
+
+
+import potatoIcon from "../assets/icons/potato.png";
+import tomatoIcon from "../assets/icons/tomato.png";
+import carrotIcon from "../assets/icons/carrot.png";
+import onionIcon from "../assets/icons/onion.png";
+import cabbageIcon from "../assets/icons/cabbage.png";
+import spinachIcon from "../assets/icons/spinach.png";
+import broccoliIcon from "../assets/icons/broccoli.png";
+import peasIcon from "../assets/icons/peas.png";
+import cauliflowerIcon from "../assets/icons/cauliflower.png";
+import brinjalIcon from "../assets/icons/brinjal.png";
+
+import correctSoundFile from "../assets/sounds/correct.mp3";
+import wrongSoundFile from "../assets/sounds/no.mp3";
+import nextSoundFile from "../assets/sounds/next.mp3";
+
+export default function VegetablesQuiz() {
+  const questions = [
+    {
+      id: 1,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Potato", icon: potatoIcon },
+        { text: "Tomato", icon: tomatoIcon },
+        { text: "Carrot", icon: carrotIcon },
+        { text: "Onion", icon: onionIcon },
+      ],
+      answer: "Potato",
+      img: potatoImg,
+    },
+    {
+      id: 2,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Potato", icon: potatoIcon },
+        { text: "Tomato", icon: tomatoIcon },
+        { text: "Cabbage", icon: cabbageIcon },
+        { text: "Spinach", icon: spinachIcon },
+      ],
+      answer: "Tomato",
+      img: tomatoImg,
+    },
+    {
+      id: 3,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Onion", icon: onionIcon },
+        { text: "Broccoli", icon: broccoliIcon },
+        { text: "Carrot", icon: carrotIcon },
+        { text: "Peas", icon: peasIcon },
+      ],
+      answer: "Carrot",
+      img: carrotImg,
+    },
+    {
+      id: 4,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Cabbage", icon: cabbageIcon },
+        { text: "Potato", icon: potatoIcon },
+        { text: "Tomato", icon: tomatoIcon },
+        { text: "Onion", icon: onionIcon },
+      ],
+      answer: "Onion",
+      img: onionImg,
+    },
+    {
+      id: 5,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Carrot", icon: carrotIcon },
+        { text: "Potato", icon: potatoIcon },
+        { text: "Onion", icon: onionIcon },
+        { text: "Cabbage", icon: cabbageIcon },
+      ],
+      answer: "Cabbage",
+      img: cabbageImg,
+    },
+    {
+      id: 6,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Potato", icon: potatoIcon },
+        { text: "Carrot", icon: carrotIcon },
+        { text: "Spinach", icon: spinachIcon },
+        { text: "Onion", icon: onionIcon },
+      ],
+      answer: "Spinach",
+      img: spinachImg,
+    },
+    {
+      id: 7,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Tomato", icon: tomatoIcon },
+        { text: "Broccoli", icon: broccoliIcon },
+        { text: "Carrot", icon: carrotIcon },
+        { text: "Potato", icon: potatoIcon },
+      ],
+      answer: "Broccoli",
+      img: broccoliImg,
+    },
+    {
+      id: 8,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Cabbage", icon: cabbageIcon },
+        { text: "Spinach", icon: spinachIcon },
+        { text: "Onion", icon: onionIcon },
+        { text: "Peas", icon: peasIcon },
+      ],
+      answer: "Peas",
+      img: peasImg,
+    },
+    {
+      id: 9,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Cauliflower", icon: cauliflowerIcon },
+        { text: "Tomato", icon: tomatoIcon },
+        { text: "Carrot", icon: carrotIcon },
+        { text: "Peas", icon: peasIcon },
+      ],
+      answer: "Cauliflower",
+      img: cauliflowerImg,
+    },
+    {
+      id: 10,
+      question: "Which vegetable is this?",
+      options: [
+        { text: "Brinjal", icon: brinjalIcon },
+        { text: "Potato", icon: potatoIcon },
+        { text: "Onion", icon: onionIcon },
+        { text: "Carrot", icon: carrotIcon },
+      ],
+      answer: "Brinjal",
+      img: brinjalImg,
+    },
+  ];
+
+  const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const correctSound = new Audio("/src/assets/sounds/correct.mp3");
-  const wrongSound = new Audio("/src/assets/sounds/no.mp3");
-  const nextSound = new Audio("/src/assets/sounds/next.mp3");
+  const correctSound = new Audio(correctSoundFile);
+  const wrongSound = new Audio(wrongSoundFile);
+  const nextSound = new Audio(nextSoundFile);
 
   function handleAnswer(option) {
     if (answers[current] !== undefined) return;
@@ -183,7 +210,7 @@ const [current, setCurrent] = useState(0);
     }
   }
 
- return (
+  return (
     <div className="quiz-container-alp">
       <ToastContainer />
 

@@ -1,66 +1,79 @@
 import { useState } from "react";
 import "./Adventure.css";
 
+
+import Pr1 from "../assets/pr1.jpg";
+import Pr2 from "../assets/pr2.jpg";
+import Pr3 from "../assets/pr3.jpg";
+import Pr4 from "../assets/pr4.jpg";
+import Pr5 from "../assets/pr5.jpg";
+import Pr6 from "../assets/pr6.jpg";
+import Pr7 from "../assets/pr7.jpg";
+import Pr8 from "../assets/pr8.jpg";
+
+
+import clickSoundFile from "../assets/sounds/click.mp3";
+
 export default function Islamic() {
   const experiments = [
     {
       id: 2,
       title: "The Life of Prophet Musa (A.S.)",
-      img: "/src/assets/pr1.jpg",
-      videoUrl: "https://www.youtube.com/embed/s3dvuMlsuy8?",
+      img: Pr1,
+      videoUrl: "https://www.youtube.com/embed/s3dvuMlsuy8",
     },
     {
       id: 3,
       title: "The Life of Prophet Adam (A.S.)",
-      img: "/src/assets/pr2.jpg",
+      img: Pr2,
       videoUrl: "https://www.youtube.com/embed/uvhAUB2VxMg",
     },
     {
       id: 4,
       title: "The Life of Prophet Nuh (A.S.)",
-      img: "/src/assets/pr3.jpg",
+      img: Pr3,
       videoUrl: "https://www.youtube.com/embed/NgBkdtrrKLg",
     },
     {
       id: 5,
       title: "The Life of Prophet Dawud (A.S.)",
-      img: "/src/assets/pr4.jpg",
+      img: Pr4,
       videoUrl: "https://www.youtube.com/embed/J-pYkfUXkVg",
     },
     {
       id: 7,
       title: "The Life of Prophet Yahya (A.S.)",
-      img: "/src/assets/pr5.jpg",
+      img: Pr5,
       videoUrl: "https://www.youtube.com/embed/_jkZPYXIn4s",
     },
     {
       id: 8,
       title: "The Life of Prophet Ayub (A.S.)",
-      img: "/src/assets/pr6.jpg",
+      img: Pr6,
       videoUrl: "https://www.youtube.com/embed/9ZIYQhfSe6s",
     },
     {
       id: 9,
       title: "The Life of Prophet Isa (A.S.)",
-      img: "/src/assets/pr7.jpg",
-      videoUrl: "https://www.youtube.com/embed/guocukTc9zQ?",
+      img: Pr7,
+      videoUrl: "https://www.youtube.com/embed/guocukTc9zQ",
     },
     {
       id: 10,
       title: "The Life of Prophet Muhammad (A.S.)",
-      img: "/src/assets/pr8.jpg",
+      img: Pr8,
       videoUrl: "https://www.youtube.com/embed/yKk9-8VoJKM",
     },
   ];
 
   const [selectedExp, setSelectedExp] = useState(null);
 
-  
-  const clickSound = new Audio("/src/assets/sounds/click.mp3");
+  // ✅ Create audio object only once
+  const clickSound = new Audio(clickSoundFile);
 
   const openModal = (exp) => {
-    clickSound.currentTime = 0; 
-    clickSound.play(); 
+    clickSound.currentTime = 0;
+    clickSound.play();
     setSelectedExp(exp);
   };
 

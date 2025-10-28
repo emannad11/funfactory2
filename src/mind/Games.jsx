@@ -1,24 +1,29 @@
 import { Link } from "react-router-dom";
 import "./Games.css";
 
+
+import BingoImg from "../assets/bingo.jpg";
+import CandyImg from "../assets/candy.jpg";
+import SlotImg from "../assets/slot.jpg";
+
 export default function Games() {
   const card = [
     {
       id: 1,
       title: "Animal Sound Quiz",
-      img: "/src/assets/bingo.jpg",
+      img: BingoImg,
       path: "/mind/animalquiz",
     },
     {
       id: 2,
       title: "Fun Riddles",
-      img: "/src/assets/candy.jpg",
+      img: CandyImg,
       path: "/mind/riddlegame",
     },
     {
       id: 3,
       title: "Slot Machine",
-      img: "/src/assets/slot.jpg",
+      img: SlotImg,
       path: "/mind/slotmachine",
     },
   ];
@@ -33,20 +38,23 @@ export default function Games() {
 
   return (
     <>
-    <div className="heading6"> <h2>Mind Games</h2></div>
-    <div className="container-cards6">
-      {card.map((card) => (
-        <Link
-          key={card.id}
-          to={card.path}
-          className="card-cards6"
-          onClick={() => speakLetter(card.title)}
-        >
-          <img src={card.img} alt={card.title} />
-          <h3>{card.title}</h3>
-        </Link>
-      ))}
-    </div>
+      <div className="heading6">
+        <h2>Mind Games</h2>
+      </div>
+
+      <div className="container-cards6">
+        {card.map((card) => (
+          <Link
+            key={card.id}
+            to={card.path}
+            className="card-cards6"
+            onClick={() => speakLetter(card.title)}
+          >
+            <img src={card.img} alt={card.title} />
+            <h3>{card.title}</h3>
+          </Link>
+        ))}
+      </div>
     </>
   );
 }

@@ -3,17 +3,43 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./AnimalQuiz.css";
 
+
+import CowImg from "../assets/coweating.webp";
+import DogImg from "../assets/Dog3.webp";
+import DuckImg from "../assets/duck.avif";
+import CatImg from "../assets/cat.jpg";
+import SheepImg from "../assets/sheepp.webp";
+import HorseImg from "../assets/horse.jpeg";
+import LionImg from "../assets/lion.jpg";
+import ElephantImg from "../assets/elephantt.avif";
+import MonkeyImg from "../assets/Brown4.jpg";
+import CrowImg from "../assets/croww.jpeg";
+
+
+import CowSound from "../assets/sounds/cow.mp3";
+import DogSound from "../assets/sounds/dog.mp3";
+import DuckSound from "../assets/sounds/duck.mp3";
+import CatSound from "../assets/sounds/cat.mp3";
+import SheepSound from "../assets/sounds/sheep.mp3";
+import HorseSound from "../assets/sounds/horse.mp3";
+import LionSound from "../assets/sounds/lion.mp3";
+import ElephantSound from "../assets/sounds/elephant.mp3";
+import MonkeySound from "../assets/sounds/monkey.mp3";
+import CrowSound from "../assets/sounds/crow.mp3";
+import CorrectSound from "../assets/sounds/correct.mp3";
+import NoSound from "../assets/sounds/no.mp3";
+
 const questionsData = [
-  { id: 1, name: "Cow", img: "/src/assets/coweating.webp", sound: "/src/assets/sounds/cow.mp3", options: ["Cow", "Dog", "Cat", "Sheep"], icons: ["🐄", "🐶", "🐱", "🐑"] },
-  { id: 2, name: "Dog", img: "/src/assets/Dog3.webp", sound: "/src/assets/sounds/dog.mp3", options: ["Lion", "Elephant", "Dog", "Horse"], icons: ["🦁", "🐘", "🐶", "🐴"] },
-  { id: 3, name: "Duck", img: "/src/assets/duck.avif", sound: "/src/assets/sounds/duck.mp3", options: ["Cow", "Sheep", "Pig", "Duck"], icons: ["🐄", "🐑", "🐷", "🦆"] },
-  { id: 4, name: "Cat", img: "/src/assets/cat.jpg", sound: "/src/assets/sounds/cat.mp3", options: ["Cat", "Dog", "Cow", "Duck"], icons: ["🐱", "🐶", "🐄", "🦆"] },
-  { id: 5, name: "Sheep", img: "/src/assets/sheepp.webp", sound: "/src/assets/sounds/sheep.mp3", options: ["Duck", "Dog", "Cat", "Sheep"], icons: ["🦆", "🐶", "🐱", "🐑"] },
-  { id: 6, name: "Horse", img: "/src/assets/horse.jpeg", sound: "/src/assets/sounds/horse.mp3", options: ["Horse", "Dog", "Cow", "Monkey"], icons: ["🐴", "🐶", "🐄", "🐒"] },
-  { id: 7, name: "Lion", img: "/src/assets/lion.jpg", sound: "/src/assets/sounds/lion.mp3", options: ["Lion", "Elephant", "Tiger", "Dog"], icons: ["🦁", "🐘", "🐅", "🐶"] },
-  { id: 8, name: "Elephant", img: "/src/assets/elephantt.avif", sound: "/src/assets/sounds/elephant.mp3", options: ["Elephant", "Lion", "Cow", "Pig"], icons: ["🐘", "🦁", "🐄", "🐷"] },
-  { id: 9, name: "Monkey", img: "/src/assets/Brown4.jpg", sound: "/src/assets/sounds/monkey.mp3", options: ["Monkey", "Cat", "Dog", "Parrot"], icons: ["🐒", "🐱", "🐶", "🦜"] },
-  { id: 10, name: "Crow", img: "/src/assets/croww.jpeg", sound: "/src/assets/sounds/crow.mp3", options: ["Crow", "Duck", "Sheep", "Cat"], icons: ["🐦", "🦆", "🐑", "🐱"] },
+  { id: 1, name: "Cow", img: CowImg, sound: CowSound, options: ["Cow", "Dog", "Cat", "Sheep"], icons: ["🐄", "🐶", "🐱", "🐑"] },
+  { id: 2, name: "Dog", img: DogImg, sound: DogSound, options: ["Lion", "Elephant", "Dog", "Horse"], icons: ["🦁", "🐘", "🐶", "🐴"] },
+  { id: 3, name: "Duck", img: DuckImg, sound: DuckSound, options: ["Cow", "Sheep", "Pig", "Duck"], icons: ["🐄", "🐑", "🐷", "🦆"] },
+  { id: 4, name: "Cat", img: CatImg, sound: CatSound, options: ["Cat", "Dog", "Cow", "Duck"], icons: ["🐱", "🐶", "🐄", "🦆"] },
+  { id: 5, name: "Sheep", img: SheepImg, sound: SheepSound, options: ["Duck", "Dog", "Cat", "Sheep"], icons: ["🦆", "🐶", "🐱", "🐑"] },
+  { id: 6, name: "Horse", img: HorseImg, sound: HorseSound, options: ["Horse", "Dog", "Cow", "Monkey"], icons: ["🐴", "🐶", "🐄", "🐒"] },
+  { id: 7, name: "Lion", img: LionImg, sound: LionSound, options: ["Lion", "Elephant", "Tiger", "Dog"], icons: ["🦁", "🐘", "🐅", "🐶"] },
+  { id: 8, name: "Elephant", img: ElephantImg, sound: ElephantSound, options: ["Elephant", "Lion", "Cow", "Pig"], icons: ["🐘", "🦁", "🐄", "🐷"] },
+  { id: 9, name: "Monkey", img: MonkeyImg, sound: MonkeySound, options: ["Monkey", "Cat", "Dog", "Parrot"], icons: ["🐒", "🐱", "🐶", "🦜"] },
+  { id: 10, name: "Crow", img: CrowImg, sound: CrowSound, options: ["Crow", "Duck", "Sheep", "Cat"], icons: ["🐦", "🦆", "🐑", "🐱"] },
 ];
 
 export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
@@ -28,6 +54,7 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
   const failRef = useRef(null);
   const q = questionsData[index];
 
+  
   const playSound = (url) => {
     if (!url) return;
     if (audioRef.current) {
@@ -38,6 +65,7 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
     audioRef.current.play().catch(() => {});
     setSoundPlayed(true);
   };
+
 
   const choose = (opt) => {
     if (selected) return;
@@ -52,7 +80,7 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
         autoClose: 1200,
         style: { background: "white", color: "green", fontWeight: "bold" },
       });
-      if (successRef.current) successRef.current.play().catch(() => {});
+      successRef.current?.play().catch(() => {});
       setTimeout(() => goNext(), autoAdvanceDelay);
     } else {
       setStatus("wrong");
@@ -61,7 +89,7 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
         autoClose: 1200,
         style: { background: "white", color: "red", fontWeight: "bold" },
       });
-      if (failRef.current) failRef.current.play().catch(() => {});
+      failRef.current?.play().catch(() => {});
       setTimeout(() => {
         setSelected(null);
         setStatus(null);
@@ -69,6 +97,7 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
     }
   };
 
+  
   const goNext = () => {
     setSelected(null);
     setStatus(null);
@@ -86,6 +115,7 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
     }
   };
 
+  
   const restart = () => {
     toast.info("🔁 Quiz Restarted!", {
       position: "top-right",
@@ -102,30 +132,26 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
     }, 800);
   };
 
+  
   if (finished) {
     return (
       <div className="aq-page">
         <h2 className="aq-title">Animal Sound Quiz 🐾</h2>
         <div className="aq-container finished">
           <h3>🎉 Quiz Finished! 🎉</h3>
-          <p>
-            Your Score: {score} / {questionsData.length}
-          </p>
-          <button className="aq-reset" onClick={restart}>
-            Restart Quiz 🔄
-          </button>
+          <p>Your Score: {score} / {questionsData.length}</p>
+          <button className="aq-reset" onClick={restart}>Restart Quiz 🔄</button>
         </div>
         <ToastContainer />
       </div>
     );
   }
 
+  
   return (
     <div className="aq-page">
       <h2 className="aq-title">Animal Sound Quiz 🐾</h2>
-      <p className="aq-intro">
-        Tap on the animal picture to hear its sound 🎧. Then choose the correct animal name from the options below!
-      </p>
+      <p className="aq-intro">Tap on the animal picture to hear its sound 🎧. Then choose the correct animal name from the options below!</p>
 
       <div className="aq-container">
         <div
@@ -162,8 +188,9 @@ export default function AnimalQuiz({ autoAdvanceDelay = 2000 }) {
         </div>
       </div>
 
-      <audio ref={successRef} src="/src/assets/sounds/correct.mp3" preload="auto" />
-      <audio ref={failRef} src="/src/assets/sounds/no.mp3" preload="auto" />
+    
+      <audio ref={successRef} src={CorrectSound} preload="auto" />
+      <audio ref={failRef} src={NoSound} preload="auto" />
       <ToastContainer position="top-right" />
     </div>
   );

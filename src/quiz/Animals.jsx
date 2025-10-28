@@ -4,139 +4,175 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style/Alphabets.css";
 
+
+import lionImg from "../assets/lion.jpg";
+import cowImg from "../assets/cow.webp";
+import elephantImg from "../assets/elephantt.avif";
+import cheetahImg from "../assets/cheetah.jpg";
+import giraffeImg from "../assets/giraffe.jpg";
+import dogImg from "../assets/dog.jpg";
+import catImg from "../assets/cat.jpg";
+import kangarooImg from "../assets/kangaroo.jpg";
+import pandaImg from "../assets/panda.webp";
+import zebraImg from "../assets/zebra.webp";
+
+
+import elephantIcon from "../assets/icons/elephant.png";
+import lionIcon from "../assets/icons/lion.png";
+import tigerIcon from "../assets/icons/tiger.png";
+import bearIcon from "../assets/icons/bear.png";
+import dogIcon from "../assets/icons/dog.png";
+import catIcon from "../assets/icons/cat.png";
+import cowIcon from "../assets/icons/cow.png";
+import horseIcon from "../assets/icons/horse.png";
+import giraffeIcon from "../assets/icons/giraffe.png";
+import camelIcon from "../assets/icons/camel.png";
+import cheetahIcon from "../assets/icons/cheetah.png";
+import kangarooIcon from "../assets/icons/kangaroo.png";
+import monkeyIcon from "../assets/icons/monkey.png";
+import rabbitIcon from "../assets/icons/rabbit.png";
+import pandaIcon from "../assets/icons/panda.png";
+import zebraIcon from "../assets/icons/zebra.png";
+import goatIcon from "../assets/icons/goat.png";
+import sheepIcon from "../assets/icons/sheep.png";
+
+
+import correctSoundFile from "../assets/sounds/correct.mp3";
+import wrongSoundFile from "../assets/sounds/no.mp3";
+import nextSoundFile from "../assets/sounds/next.mp3";
+
 export default function Animals() {
-   const questions = [
-  {
-    id: 1,
-    question: "Which animal is this?",
-    options: [
-      { text: "Elephant", icon: "/src/assets/icons/elephant.png" },
-      { text: "Lion", icon: "/src/assets/icons/lion.png" },
-      { text: "Tiger", icon: "/src/assets/icons/tiger.png" },
-      { text: "Bear", icon: "/src/assets/icons/bear.png" },
-    ],
-    answer: "Lion",
-    img: "/src/assets/lion.jpg",
-  },
-  {
-    id: 2,
-    question: "Which animal is this?",
-    options: [
-      { text: "Dog", icon: "/src/assets/icons/dog.png" },
-      { text: "Cat", icon: "/src/assets/icons/cat.png" },
-      { text: "Cow", icon: "/src/assets/icons/cow.png" },
-      { text: "Horse", icon: "/src/assets/icons/horse.png" },
-    ],
-    answer: "Cow",
-    img: "/src/assets/cow.webp",
-  },
-  {
-    id: 3,
-    question: "Which animal is this?",
-    options: [
-      { text: "Elephant", icon: "/src/assets/icons/elephant.png" },
-      { text: "Giraffe", icon: "/src/assets/icons/giraffe.png" },
-      { text: "Horse", icon: "/src/assets/icons/horse.png" },
-      { text: "Camel", icon: "/src/assets/icons/camel.png" },
-    ],
-    answer: "Elephant",
-    img: "/src/assets/elephantt.avif",
-  },
-  {
-    id: 4,
-    question: "Which animal is this?",
-    options: [
-      { text: "Dog", icon: "/src/assets/icons/dog.png" },
-      { text: "Cheetah", icon: "/src/assets/icons/cheetah.png" },
-      { text: "Lion", icon: "/src/assets/icons/lion.png" },
-      { text: "Horse", icon: "/src/assets/icons/horse.png" },
-    ],
-    answer: "Cheetah",
-    img: "/src/assets/cheetah.jpg",
-  },
-  {
-    id: 5,
-    question: "Which animal id this?",
-    options: [
-      { text: "Elephant", icon: "/src/assets/icons/elephant.png" },
-      { text: "Giraffe", icon: "/src/assets/icons/giraffe.png" },
-      { text: "Camel", icon: "/src/assets/icons/camel.png" },
-      { text: "Kangaroo", icon: "/src/assets/icons/kangaroo.png" },
-    ],
-    answer: "Giraffe",
-    img: "/src/assets/giraffe.jpg",
-  },
-  {
-    id: 6,
-    question: "Which animal is this?",
-    options: [
-      { text: "Dog", icon: "/src/assets/icons/dog.png" },
-      { text: "Cat", icon: "/src/assets/icons/cat.png" },
-      { text: "Goat", icon: "/src/assets/icons/goat.png" },
-      { text: "Sheep", icon: "/src/assets/icons/sheep.png" },
-    ],
-    answer: "Dog",
-    img: "/src/assets/dog.jpg",
-  },
-  {
-    id: 7,
-    question: "Which animal is this?",
-    options: [
-      { text: "Lion", icon: "/src/assets/icons/lion.png" },
-      { text: "Kangaroo", icon: "/src/assets/icons/kangaroo.png" },
-      { text: "Cat", icon: "/src/assets/icons/cat.png" },
-      { text: "Goat", icon: "/src/assets/icons/goat.png" },
-    ],
-    answer: "Cat",
-    img: "/src/assets/cat.jpg",
-  },
-  {
-    id: 8,
-    question: "Which animal is this",
-    options: [
-      { text: "Kangaroo", icon: "/src/assets/icons/kangaroo.png" },
-      { text: "Monkey", icon: "/src/assets/icons/monkey.png" },
-      { text: "Rabbit", icon: "/src/assets/icons/rabbit.png" },
-      { text: "Panda", icon: "/src/assets/icons/panda.png" },
-    ],
-    answer: "Kangaroo",
-    img: "/src/assets/kangaroo.jpg",
-  },
-  {
-    id: 9,
-    question: "Which animal is this?",
-    options: [
-      { text: "Panda", icon: "/src/assets/icons/panda.png" },
-      { text: "Zebra", icon: "/src/assets/icons/zebra.png" },
-      { text: "Cow", icon: "/src/assets/icons/cow.png" },
-      { text: "Horse", icon: "/src/assets/icons/horse.png" },
-    ],
-    answer: "Panda",
-    img: "/src/assets/panda.webp",
-  },
-  {
-    id: 10,
-    question: "Which animal is this?",
-    options: [
-      { text: "Tiger", icon: "/src/assets/icons/tiger.png" },
-      { text: "Zebra", icon: "/src/assets/icons/zebra.png" },
-      { text: "Panda", icon: "/src/assets/icons/panda.png" },
-      { text: "Horse", icon: "/src/assets/icons/horse.png" },
-    ],
-    answer: "Zebra",
-    img: "/src/assets/zebra.webp",
-  },
-];
+  const questions = [
+    {
+      id: 1,
+      question: "Which animal is this?",
+      options: [
+        { text: "Elephant", icon: elephantIcon },
+        { text: "Lion", icon: lionIcon },
+        { text: "Tiger", icon: tigerIcon },
+        { text: "Bear", icon: bearIcon },
+      ],
+      answer: "Lion",
+      img: lionImg,
+    },
+    {
+      id: 2,
+      question: "Which animal is this?",
+      options: [
+        { text: "Dog", icon: dogIcon },
+        { text: "Cat", icon: catIcon },
+        { text: "Cow", icon: cowIcon },
+        { text: "Horse", icon: horseIcon },
+      ],
+      answer: "Cow",
+      img: cowImg,
+    },
+    {
+      id: 3,
+      question: "Which animal is this?",
+      options: [
+        { text: "Elephant", icon: elephantIcon },
+        { text: "Giraffe", icon: giraffeIcon },
+        { text: "Horse", icon: horseIcon },
+        { text: "Camel", icon: camelIcon },
+      ],
+      answer: "Elephant",
+      img: elephantImg,
+    },
+    {
+      id: 4,
+      question: "Which animal is this?",
+      options: [
+        { text: "Dog", icon: dogIcon },
+        { text: "Cheetah", icon: cheetahIcon },
+        { text: "Lion", icon: lionIcon },
+        { text: "Horse", icon: horseIcon },
+      ],
+      answer: "Cheetah",
+      img: cheetahImg,
+    },
+    {
+      id: 5,
+      question: "Which animal is this?",
+      options: [
+        { text: "Elephant", icon: elephantIcon },
+        { text: "Giraffe", icon: giraffeIcon },
+        { text: "Camel", icon: camelIcon },
+        { text: "Kangaroo", icon: kangarooIcon },
+      ],
+      answer: "Giraffe",
+      img: giraffeImg,
+    },
+    {
+      id: 6,
+      question: "Which animal is this?",
+      options: [
+        { text: "Dog", icon: dogIcon },
+        { text: "Cat", icon: catIcon },
+        { text: "Goat", icon: goatIcon },
+        { text: "Sheep", icon: sheepIcon },
+      ],
+      answer: "Dog",
+      img: dogImg,
+    },
+    {
+      id: 7,
+      question: "Which animal is this?",
+      options: [
+        { text: "Lion", icon: lionIcon },
+        { text: "Kangaroo", icon: kangarooIcon },
+        { text: "Cat", icon: catIcon },
+        { text: "Goat", icon: goatIcon },
+      ],
+      answer: "Cat",
+      img: catImg,
+    },
+    {
+      id: 8,
+      question: "Which animal is this?",
+      options: [
+        { text: "Kangaroo", icon: kangarooIcon },
+        { text: "Monkey", icon: monkeyIcon },
+        { text: "Rabbit", icon: rabbitIcon },
+        { text: "Panda", icon: pandaIcon },
+      ],
+      answer: "Kangaroo",
+      img: kangarooImg,
+    },
+    {
+      id: 9,
+      question: "Which animal is this?",
+      options: [
+        { text: "Panda", icon: pandaIcon },
+        { text: "Zebra", icon: zebraIcon },
+        { text: "Cow", icon: cowIcon },
+        { text: "Horse", icon: horseIcon },
+      ],
+      answer: "Panda",
+      img: pandaImg,
+    },
+    {
+      id: 10,
+      question: "Which animal is this?",
+      options: [
+        { text: "Tiger", icon: tigerIcon },
+        { text: "Zebra", icon: zebraIcon },
+        { text: "Panda", icon: pandaIcon },
+        { text: "Horse", icon: horseIcon },
+      ],
+      answer: "Zebra",
+      img: zebraImg,
+    },
+  ];
 
-
-const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const correctSound = new Audio("/src/assets/sounds/correct.mp3");
-  const wrongSound = new Audio("/src/assets/sounds/no.mp3");
-  const nextSound = new Audio("/src/assets/sounds/next.mp3");
+  const correctSound = new Audio(correctSoundFile);
+  const wrongSound = new Audio(wrongSoundFile);
+  const nextSound = new Audio(nextSoundFile);
 
   function handleAnswer(option) {
     if (answers[current] !== undefined) return;
@@ -194,13 +230,7 @@ const [current, setCurrent] = useState(0);
           </h2>
           <p className="question-text-alp">{questions[current].question}</p>
 
-          {questions[current].img && (
-            <img
-              src={questions[current].img}
-              alt="question"
-              className="quiz-img-alp"
-            />
-          )}
+          <img src={questions[current].img} alt="question" className="quiz-img-alp" />
 
           <div className="options-alp">
             {questions[current].options.map((opt, index) => {
@@ -222,9 +252,7 @@ const [current, setCurrent] = useState(0);
                   }`}
                 >
                   <span className="option-text-alp">{opt.text}</span>
-                  {opt.icon && (
-                    <img src={opt.icon} alt="icon" className="icon" />
-                  )}
+                  {opt.icon && <img src={opt.icon} alt="icon" className="icon" />}
                 </button>
               );
             })}

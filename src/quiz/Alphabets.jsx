@@ -1,129 +1,165 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./style/Alphabets.css";
 
+
+import AImg from "../assets/A.jpg";
+import FrogImg from "../assets/frog.webp";
+import CatImg from "../assets/catt.jpg";
+import DogImg from "../assets/dogg.webp";
+import MonkeyImg from "../assets/monkey.webp";
+import EggImg from "../assets/eggg.png";
+import NoseImg from "../assets/nose.png";
+import GrapesImg from "../assets/grapess.jpg";
+import IcecreamImg from "../assets/icecream.png";
+import SunImg from "../assets/sun..png";
+
+
+import AppleIcon from "../assets/icons/apple.png";
+import CatIcon from "../assets/icons/cat.png";
+import DogIcon from "../assets/icons/dog.png";
+import EggIcon from "../assets/icons/egg.png";
+import ZooIcon from "../assets/icons/zoo.png";
+import YoyoIcon from "../assets/icons/yoyo.png";
+import DeliveryIcon from "../assets/icons/delivery.png";
+import BananaIcon from "../assets/icons/bananas.png";
+import LemonIcon from "../assets/icons/lemon.png";
+import KeyIcon from "../assets/icons/key-chain.png";
+import MonkeyIcon from "../assets/icons/monkey.png";
+import HenIcon from "../assets/icons/hen.png";
+import GrapeIcon from "../assets/icons/grape.png";
+import TomatoIcon from "../assets/icons/tomato.png";
+import JugIcon from "../assets/icons/jug.png";
+import FishIcon from "../assets/icons/fish.png";
+import SunnyIcon from "../assets/icons/sunny.png";
+import WatermelonIcon from "../assets/icons/watermelon.png";
+import IceIcon from "../assets/icons/ice-cream.png";
+
+import CorrectSound from "../assets/sounds/correct.mp3";
+import WrongSound from "../assets/sounds/no.mp3";
+import NextSound from "../assets/sounds/next.mp3";
+
 export default function Alphabets() {
-   const questions = [
+  const questions = [
     {
       id: 1,
       question: "Which letter is this?",
-      img: "/src/assets/A.jpg",
+      img: AImg,
       options: [
-        { text: "A", icon: "/src/assets/icons/apple.png" },
-        { text: "C", icon: "/src/assets/icons/cat.png" },
-        { text: "D", icon: "/src/assets/icons/dog.png" },
-        { text: "E", icon: "/src/assets/icons/egg.png" },
+        { text: "A", icon: AppleIcon },
+        { text: "C", icon: CatIcon },
+        { text: "D", icon: DogIcon },
+        { text: "E", icon: EggIcon },
       ],
       answer: "A",
     },
     {
       id: 2,
       question: "Which letter is this?",
-      img: "/src/assets/frog.webp",
+      img: FrogImg,
       options: [
-        { text: "Z", icon: "/src/assets/icons/zoo.png" },
-        { text: "Y", icon: "/src/assets/icons/yoyo.png" },
-        { text: "F", icon: "/src/assets/icons/frog.png" },
-        { text: "V", icon: "/src/assets/icons/delivery.png" },
+        { text: "Z", icon: ZooIcon },
+        { text: "Y", icon: YoyoIcon },
+        { text: "F", icon: GrapeIcon },
+        { text: "V", icon: DeliveryIcon },
       ],
       answer: "F",
     },
     {
       id: 3,
       question: "Which letter is this?",
-      img: "/src/assets/catt.jpg",
+      img: CatImg,
       options: [
-        { text: "Z", icon: "/src/assets/icons/zoo.png" },
-        { text: "C", icon: "/src/assets/icons/cat.png" },
-        { text: "A", icon: "/src/assets/icons/apple.png" },
-        { text: "B", icon: "/src/assets/icons/bananas.png" },
+        { text: "Z", icon: ZooIcon },
+        { text: "C", icon: CatIcon },
+        { text: "A", icon: AppleIcon },
+        { text: "B", icon: BananaIcon },
       ],
       answer: "C",
     },
     {
       id: 4,
       question: "Which letter is this?",
-      img: "/src/assets/dogg.webp",
+      img: DogImg,
       options: [
-        { text: "D", icon: "/src/assets/icons/dog.png" },
-        { text: "L", icon: "/src/assets/icons/lemon.png" },
-        { text: "E", icon: "/src/assets/icons/egg.png" },
-        { text: "K", icon: "/src/assets/icons/key-chain.png" },
+        { text: "D", icon: DogIcon },
+        { text: "L", icon: LemonIcon },
+        { text: "E", icon: EggIcon },
+        { text: "K", icon: KeyIcon },
       ],
       answer: "D",
     },
     {
       id: 5,
       question: "Which letter is this?",
-      img: "/src/assets/monkey.webp",
+      img: MonkeyImg,
       options: [
-        { text: "M", icon: "/src/assets/icons/monkey.png" },
-        { text: "Y", icon: "/src/assets/icons/yoyo.png" },
-        { text: "Z", icon: "/src/assets/icons/zoo.png" },
-        { text: "W", icon: "/src/assets/icons/watermelon.png" },
+        { text: "M", icon: MonkeyIcon },
+        { text: "Y", icon: YoyoIcon },
+        { text: "Z", icon: ZooIcon },
+        { text: "W", icon: WatermelonIcon },
       ],
       answer: "M",
     },
     {
       id: 6,
       question: "Which letter is this?",
-      img: "/src/assets/eggg.png",
+      img: EggImg,
       options: [
-        { text: "C", icon: "/src/assets/icons/cat.png" },
-        { text: "A", icon: "/src/assets/icons/apple.png" },
-        { text: "D", icon: "/src/assets/icons/dog.png" },
-        { text: "E", icon: "/src/assets/icons/egg.png" },
+        { text: "C", icon: CatIcon },
+        { text: "A", icon: AppleIcon },
+        { text: "D", icon: DogIcon },
+        { text: "E", icon: EggIcon },
       ],
       answer: "E",
     },
     {
       id: 7,
       question: "Which letter is this?",
-      img: "/src/assets/nose.png",
+      img: NoseImg,
       options: [
-        { text: "N", icon: "/src/assets/icons/nose.png" },
-        { text: "H", icon: "/src/assets/icons/hen.png" },
-        { text: "G", icon: "/src/assets/icons/grape.png" },
-        { text: "K", icon: "/src/assets/icons/key-chain.png" },
+        { text: "N", icon: NoseImg },
+        { text: "H", icon: HenIcon },
+        { text: "G", icon: GrapeIcon },
+        { text: "K", icon: KeyIcon },
       ],
       answer: "N",
     },
     {
       id: 8,
       question: "Which letter is this?",
-      img: "/src/assets/grapess.jpg",
+      img: GrapesImg,
       options: [
-        { text: "T", icon: "/src/assets/icons/tomato.png" },
-        { text: "J", icon: "/src/assets/icons/jug.png" },
-        { text: "G", icon: "/src/assets/icons/grape.png" },
-        { text: "F", icon: "/src/assets/icons/fish.png" },
+        { text: "T", icon: TomatoIcon },
+        { text: "J", icon: JugIcon },
+        { text: "G", icon: GrapeIcon },
+        { text: "F", icon: FishIcon },
       ],
       answer: "G",
     },
     {
       id: 9,
       question: "Which letter is this?",
-      img: "/src/assets/icecream.png",
+      img: IcecreamImg,
       options: [
-        { text: "A", icon: "/src/assets/icons/apple.png" },
-        { text: "B", icon: "/src/assets/icons/bananas.png" },
-        { text: "E", icon: "/src/assets/icons/egg.png" },
-        { text: "I", icon: "/src/assets/icons/ice-cream.png" },
+        { text: "A", icon: AppleIcon },
+        { text: "B", icon: BananaIcon },
+        { text: "E", icon: EggIcon },
+        { text: "I", icon: IceIcon },
       ],
       answer: "I",
     },
     {
       id: 10,
       question: "Which letter is this?",
-      img: "/src/assets/sun..png",
+      img: SunImg,
       options: [
-        { text: "S", icon: "/src/assets/icons/sunny.png" },
-        { text: "W", icon: "/src/assets/icons/watermelon.png" },
-        { text: "V", icon: "/src/assets/icons/delivery.png" },
-        { text: "A", icon: "/src/assets/icons/apple.png" },
+        { text: "S", icon: SunnyIcon },
+        { text: "W", icon: WatermelonIcon },
+        { text: "V", icon: DeliveryIcon },
+        { text: "A", icon: AppleIcon },
       ],
       answer: "S",
     },
@@ -134,29 +170,30 @@ export default function Alphabets() {
   const [score, setScore] = useState(0);
   const [finished, setFinished] = useState(false);
 
-  const correctSound = new Audio("/src/assets/sounds/correct.mp3");
-  const wrongSound = new Audio("/src/assets/sounds/no.mp3");
-  const nextSound = new Audio("/src/assets/sounds/next.mp3");
+  const correctSound = new Audio(CorrectSound);
+  const wrongSound = new Audio(WrongSound);
+  const nextSound = new Audio(NextSound);
 
-  function handleAnswer(option) {
+  const handleAnswer = (option) => {
     if (answers[current] !== undefined) return;
     setAnswers({ ...answers, [current]: option });
+
     if (option === questions[current].answer) {
-      setScore(score + 1);
+      setScore((prev) => prev + 1);
       correctSound.play();
     } else {
       wrongSound.play();
     }
-  }
+  };
 
-  function restartQuiz() {
+  const restartQuiz = () => {
     setCurrent(0);
     setAnswers({});
     setScore(0);
     setFinished(false);
-  }
+  };
 
-  function goNext() {
+  const goNext = () => {
     if (answers[current] === undefined) {
       toast.info("Please select an option 😊", {
         position: "top-right",
@@ -168,9 +205,9 @@ export default function Alphabets() {
     nextSound.play();
     if (current + 1 < questions.length) setCurrent(current + 1);
     else setFinished(true);
-  }
+  };
 
-  function handleBack() {
+  const handleBack = () => {
     if (current === 0) {
       toast.warn("Back to Home Page 🏠", {
         position: "top-left",
@@ -181,7 +218,7 @@ export default function Alphabets() {
     } else {
       setCurrent(current - 1);
     }
-  }
+  };
 
   return (
     <div className="quiz-container-alp">
@@ -194,13 +231,7 @@ export default function Alphabets() {
           </h2>
           <p className="question-text-alp">{questions[current].question}</p>
 
-          {questions[current].img && (
-            <img
-              src={questions[current].img}
-              alt="question"
-              className="quiz-img-alp"
-            />
-          )}
+          <img src={questions[current].img} alt="question" className="quiz-img-alp" />
 
           <div className="options-alp">
             {questions[current].options.map((opt, index) => {
@@ -222,9 +253,7 @@ export default function Alphabets() {
                   }`}
                 >
                   <span className="option-text-alp">{opt.text}</span>
-                  {opt.icon && (
-                    <img src={opt.icon} alt="icon" className="icon" />
-                  )}
+                  {opt.icon && <img src={opt.icon} alt="icon" className="icon" />}
                 </button>
               );
             })}

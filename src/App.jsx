@@ -6,6 +6,12 @@ import {
   useNavigate,
 } from "react-router-dom";
 import { useState } from "react";
+import "./App.css";
+
+
+import clickSound from "./assets/sounds/click.mp3";
+
+
 import Home from "./Home";
 import Quiz from "./Quiz";
 import Alphabets from "./quiz/Alphabets";
@@ -66,7 +72,6 @@ import RiddleGame from "./mind/RiddleGame";
 import AnimalQuiz from "./mind/AnimalQuiz";
 import SlotMachine from "./mind/SlotMachine";
 import Home4 from "./Home4";
-import "./App.css";
 import MatchingCards from "./cards/MatchingCards";
 import Cards from "./cards/Cards";
 import Game from "./cards/Game";
@@ -88,12 +93,13 @@ import Islamic from "./story5/Islamic";
 import Horror from "./story5/Horror";
 
 
+
 function ResponsiveNavbar({ backLink, backText }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   const playClickSound = () => {
-    const audio = new Audio("/src/assets/sounds/click.mp3"); 
+    const audio = new Audio(clickSound);
     audio.currentTime = 0;
     audio.play();
   };
@@ -101,7 +107,7 @@ function ResponsiveNavbar({ backLink, backText }) {
   const handleClick = (e, target) => {
     e.preventDefault();
     playClickSound();
-    setTimeout(() => navigate(target), 150); 
+    setTimeout(() => navigate(target), 150);
   };
 
   return (
@@ -133,7 +139,6 @@ function ResponsiveNavbar({ backLink, backText }) {
     </header>
   );
 }
-
 
 function KidsNavbar() {
   const location = useLocation();
@@ -172,14 +177,11 @@ function KidsNavbar() {
   if (path.startsWith("/learn/") && path !== "/learning")
     return <ResponsiveNavbar backLink="/learning" backText="Back To Learning" />;
   if (path === "/quiz")
-    return (
-      <ResponsiveNavbar backLink="/home" backText="Back To PlayGroup - Prep" />
-    );
+    return <ResponsiveNavbar backLink="/home" backText="Back To PlayGroup - Prep" />;
   if (path.startsWith("/quiz/"))
     return <ResponsiveNavbar backLink="/quiz" backText="Back To Quiz" />;
   return <ResponsiveNavbar backLink="/home" backText="Back To PlayGroup - Prep" />;
 }
-
 
 function KidsNavbar2() {
   const location = useLocation();
@@ -293,9 +295,9 @@ function KidsNavbar4() {
   return <ResponsiveNavbar backLink="/class5-6" backText="Back To Grade 5–6" />;
 }
 
-
 export default function App() {
   const [loading, setLoading] = useState(true);
+
   return (
     <>
       {loading ? (
@@ -306,9 +308,10 @@ export default function App() {
           <KidsNavbar2 />
           <KidsNavbar3 />
           <KidsNavbar4 />
+
           <main className="page">
             <Routes>
-             
+              {/* All routes */}
               <Route path="/" element={<Classes />} />
               <Route path="/home" element={<Home />} />
               <Route path="/learning" element={<Learning />} />
@@ -388,6 +391,7 @@ export default function App() {
               <Route path="/digital/wordsearch" element={<WordSearch />} />
             </Routes>
           </main>
+
           <Footer />
         </BrowserRouter>
       )}
