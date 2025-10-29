@@ -175,18 +175,17 @@ First, take a plain cardboard frame. Apply glue around the edges. Then, stick th
             3. Paint your designs or patterns on the rocks using acrylic paints.<br />
             4. Let the paint dry completely.<br />
             5. Add additional layers or details if desired.<br />
-            6. Optionally, seal your rocks with a clear varnish to make them last longer.<br />
-            7. Display your colorful rocks or use them as decorations!
+            6. Display your colorful rocks or use them as decorations!
           </p>
         </>
       ),
-      text: `Rock Painting. You’ll need: Smooth rocks, Acrylic paints, Paintbrushes, A cup of water, Newspaper or old cloth. Instructions: Clean the rocks to remove dirt and dust. Lay down newspaper or cloth to protect your work surface. Paint your designs or patterns on the rocks using acrylic paints. Let the paint dry completely. Add additional layers or details if desired. Optionally, seal your rocks with a clear varnish to make them last longer. Display your colorful rocks or use them as decorations!`,
+      text: `Rock Painting. You’ll need: Smooth rocks, Acrylic paints, Paintbrushes, A cup of water, Newspaper or old cloth. Instructions: Clean the rocks to remove dirt and dust. Lay down newspaper or cloth to protect your work surface. Paint your designs or patterns on the rocks using acrylic paints. Let the paint dry completely. Add additional layers or details if desired. Display your colorful rocks or use them as decorations!`,
     },
     {
       id: 7,
       title: "Seed Art",
       img: seedImg,
-      videoUrl: "https://www.youtube.com/embed/Miv0WDkM4Zo",
+      videoUrl: "https://www.youtube.com/embed/JZWgzNvKdPY",
       content: (
         <>
           <h2>Seed Art</h2>

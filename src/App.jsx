@@ -94,6 +94,7 @@ import Horror from "./story5/Horror";
 
 
 
+
 function ResponsiveNavbar({ backLink, backText }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
@@ -389,6 +390,7 @@ export default function App() {
               <Route path="/digital/play" element={<Play />} />
               <Route path="/digital/tictactoe" element={<Tictactoe />} />
               <Route path="/digital/wordsearch" element={<WordSearch />} />
+              
             </Routes>
           </main>
 

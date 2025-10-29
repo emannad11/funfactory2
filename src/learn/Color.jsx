@@ -73,7 +73,7 @@ import yellow1 from "../assets/Yellow1.avif";
 import yellow2 from "../assets/Yellow2.jpg";
 import yellow3 from "../assets/Yellow3.jpg";
 import yellow4 from "../assets/Yellow4.jpg";
-import yellow5 from "../assets/yellow5.webp";
+import yellow5 from "../assets/Yellow5.webp";
 
 export default function Color() {
   const colors = [

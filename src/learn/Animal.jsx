@@ -47,7 +47,7 @@ import dog3 from "../assets/Dog3.webp";
 import dog4 from "../assets/Dog4.avif";
 import dog5 from "../assets/Dog5.jpg";
 
-import catMain from "../assets/Cat.jpg";
+import catMain from "../assets/cat.jpg";
 import cat1 from "../assets/Cat1.jpg";
 import cat2 from "../assets/Cat2.jpg";
 import cat3 from "../assets/Cat3.jpg";

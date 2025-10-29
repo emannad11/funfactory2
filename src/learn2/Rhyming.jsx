@@ -11,7 +11,7 @@ import FrogImg from "../assets/frog.jpg";
 import TreeImg from "../assets/treee.jpg";
 import BeeImg from "../assets/beee.jpeg";
 import CarImg from "../assets/car.jpg";
-import StarImg from "../assets/st3.jpg";
+import StarImg from "../assets/St3.jpg";
 import BoatImg from "../assets/boat.jpg";
 import GoatImg from "../assets/goat.jpg";
 import FoxImg from "../assets/fox.jpg";
