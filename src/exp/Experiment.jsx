@@ -14,6 +14,7 @@ import rainbowImg from "../assets/rainbow1.jpg";
 import lemonImg from "../assets/lemon.jpg";
 
 export default function Experiment() {
+  
   const experiments = [
     {
       id: 1,
@@ -310,12 +311,12 @@ export default function Experiment() {
       text: `Invisible Ink with Lemon Juice. You'll need: lemon juice, water, spoon, cotton bud, paper, and a lamp. Instructions: Mix lemon juice and water. Write with a cotton bud. Let dry. Heat under a lamp to reveal the message. What's happening: The lemon juice oxidizes and turns brown when heated, exposing your writing!`,
     },
   ];
-
   const [selectedExp, setSelectedExp] = useState(null);
 
   const openModal = (exp) => {
     window.speechSynthesis.cancel();
     setSelectedExp(exp);
+
     const utterance = new SpeechSynthesisUtterance(exp.title);
     utterance.lang = "en-US";
     utterance.rate = 0.9;
@@ -325,18 +326,6 @@ export default function Experiment() {
   const closeModal = () => {
     window.speechSynthesis.cancel();
     setSelectedExp(null);
-  };
-
-  // Handle click/touch to play video
-  const handleTouchPlay = (e) => {
-    e.stopPropagation();
-    const frameContainer = e.currentTarget.closest(".video-frame");
-    const iframe = frameContainer.querySelector("iframe");
-    if (iframe) {
-      let src = iframe.src.replace("&autoplay=1", "").replace("?autoplay=1", "");
-      iframe.src = src + (src.includes("?") ? "&" : "?") + "autoplay=1";
-      frameContainer.classList.add("playing");
-    }
   };
 
   return (
@@ -351,40 +340,35 @@ export default function Experiment() {
         ))}
       </div>
 
-      {selectedExp && (
-        <div className="exp-modal-overlay" onClick={closeModal}>
-          <div className="exp-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
+    {selectedExp && (
+  <div className="exp-modal-overlay">
+    <div className="exp-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-            <div className="modal1-body">
-              <div className="modal1-content">
-                <div className="modal1-header">
-                  <h2>{selectedExp.title}</h2>
-                  <SoundButton2 text={selectedExp.text} />
-                </div>
-                {selectedExp.content}
-              </div>
+      <div className="modal1-body">
+        <div className="modal1-content">
+          <div className="modal1-header">
+            <h2>{selectedExp.title}</h2>
+            <SoundButton2 text={selectedExp.text} />
+          </div>
+          {selectedExp.content}
+        </div>
 
-              <div className="modal1-video">
-                <div className="video-frame">
-                  <iframe
-                    src={`${selectedExp.videoUrl}?enablejsapi=1`}
-                    title={selectedExp.title}
-                    frameBorder="0"
-                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                  <div
-                    className="video-touch-layer"
-                    onClick={handleTouchPlay}
-                    onTouchStart={handleTouchPlay}
-                  ></div>
-                </div>
-              </div>
-            </div>
+        <div className="modal1-video">
+          <div className="video-frame">
+            <iframe
+              src={selectedExp.videoUrl} 
+              title={selectedExp.title}
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

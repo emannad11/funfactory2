@@ -109,23 +109,37 @@ body {
   gap: 15px;
 }
 
-/* Close button fix */
+
 .close-modal-btn {
-  position: absolute;
-  top: clamp(10px, 2vw, 15px);  /* top of modal */
-  right: clamp(10px, 2vw, 15px); /* right of modal */
-  background: rgba(255,255,255,0.8); /* optional: slightly visible over images */
+   position: absolute;
+  top: clamp(10px, 2vw, 15px); 
+  right: clamp(10px, 2vw, 15px);
+  background: rgba(255,255,255,0.8);
   border: none;
   font-size: clamp(20px, 4vw, 24px);
   color: #444;
   cursor: pointer;
   transition: transform 0.2s ease;
-  z-index: 5000; /* make sure it is above swiper & images */
+  z-index: 5000; 
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
 }
 
-.close-modal-btn:hover {
-  transform: scale(1.2);
+
+.close-modal-btn:hover,
+.close-modal-btn:focus,
+.close-modal-btn:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+  color: rgb(250, 2, 2); 
 }
+
+
+
 
 
 .shape-flex-section {
@@ -146,11 +160,11 @@ body {
 .fixed-img {
   width: clamp(140px, 18vw, 170px);
   height: clamp(140px, 18vw, 170px);
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .shape-swiper {
-  flex: 1.5;
+  flex: 2;
   width: 100%;
   height: clamp(180px, 28vw, 220px);
   overflow: hidden;

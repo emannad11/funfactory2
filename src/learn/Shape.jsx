@@ -127,43 +127,51 @@ export default function Shape() {
         ))}
       </div>
 
-      {selectedShape && (
-        <div className="shape-modal-overlay" onClick={closeModal}>
-          <div className="shape-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
+     {selectedShape && (
+  <div className="shape-modal-overlay">
+    <div className="shape-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-            <div className="shape-flex-section">
-              <div className="fixed-image-section">
-                <img src={selectedShape.fixedImg} alt={selectedShape.title} className="fixed-img" />
-              </div>
-
-              <Swiper
-                modules={[Autoplay]}
-                autoplay={{ delay: 2000, disableOnInteraction: false }}
-                loop
-                speed={800}
-                spaceBetween={20}
-                slidesPerView={1}
-                className="shape-swiper"
-              >
-                {selectedShape.images.map((img, i) => (
-                  <SwiperSlide key={i}>
-                    <img src={img} alt={`${selectedShape.title} ${i + 1}`} className="shape-img" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-
-            <div className="shape-card">
-              <div className="shape-header">
-                <h2>{selectedShape.title}</h2>
-                <SoundButton text={selectedShape.paragraph} />
-              </div>
-              <p>{selectedShape.paragraph}</p>
-            </div>
-          </div>
+      <div className="shape-flex-section">
+        <div className="fixed-image-section">
+          <img
+            src={selectedShape.fixedImg}
+            alt={selectedShape.title}
+            className="fixed-img"
+          />
         </div>
-      )}
+
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          loop
+          speed={800}
+          spaceBetween={20}
+          slidesPerView={1}
+          className="shape-swiper"
+        >
+          {selectedShape.images.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img
+                src={img}
+                alt={`${selectedShape.title} ${i + 1}`}
+                className="shape-img"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="shape-card">
+        <div className="shape-header">
+          <h2>{selectedShape.title}</h2>
+          <SoundButton text={selectedShape.paragraph} />
+        </div>
+        <p>{selectedShape.paragraph}</p>
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

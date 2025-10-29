@@ -87,34 +87,31 @@ export default function Manners() {
           </div>
         ))}
       </div>
+{selectedSubject && (
+  <div className="modal-overlay5">
+    <div className="modal-content5">
+      <button className="close-modal-btn5" onClick={closeModal}>✖</button>
 
-      {selectedSubject && (
-        <div className="modal-overlay5" onClick={closeModal}>
-          <div className="modal-content5" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn5" onClick={closeModal}>
-              ✖
-            </button>
+      <div className="modal-header5">
+        <h2>{selectedSubject.title}</h2>
+      </div>
 
-            <div className="modal-header5">
-              <h2>{selectedSubject.title}</h2>
+      <div className="questions-list5">
+        {selectedSubject.questions.map((q, index) => (
+          <div className="question-card5" key={index}>
+            <div className="question-line5">
+              <strong>{q.question}</strong>
+              <div className="sound-btn-right5">
+                <SB6 text={`${q.question} ${q.answer}`} />
+              </div>
             </div>
-
-            <div className="questions-list5">
-              {selectedSubject.questions.map((q, index) => (
-                <div className="question-card5" key={index}>
-                  <div className="question-line5">
-                    <strong>{q.question}</strong>
-                    <div className="sound-btn-right5">
-                      <SB6 text={`${q.question} ${q.answer}`} />
-                    </div>
-                  </div>
-                  <p>{q.answer}</p>
-                </div>
-              ))}
-            </div>
+            <p>{q.answer}</p>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

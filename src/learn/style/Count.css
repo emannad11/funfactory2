@@ -118,6 +118,12 @@
   position: relative;
   box-sizing: border-box;
 }
+.counting-container h2{
+   font-size: clamp(20px, 2vw, 35px);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: var(--nav-dark);
+}
 
 
 

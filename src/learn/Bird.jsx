@@ -219,42 +219,41 @@ export default function Bird() {
           </div>
         ))}
       </div>
-      {selectedBird && (
-        <div className="bird-modal-overlay" onClick={closeModal}>
-          <div
-            className="bird-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <Swiper
-              modules={[Autoplay]}
-              autoplay={{ delay: 2000, disableOnInteraction: false }}
-              loop={true}
-              speed={800}
-              spaceBetween={15}
-              slidesPerView={1}
-              className="bird-swiper"
-            >
-              {selectedBird.images.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img
-                    src={img}
-                    alt={`${selectedBird.title} ${i + 1}`}
-                    className="bird-img"
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <div className="bird-card">
-              <div className="bird-header">
-                <h2>{selectedBird.title}</h2>
-                <SoundButton text={selectedBird.paragraph} />
-              </div>
-              <p>{selectedBird.paragraph}</p>
-            </div>
-          </div>
+    {selectedBird && (
+  <div className="bird-modal-overlay">
+    <div className="bird-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop={true}
+        speed={800}
+        spaceBetween={15}
+        slidesPerView={1}
+        className="bird-swiper"
+      >
+        {selectedBird.images.map((img, i) => (
+          <SwiperSlide key={i}>
+            <img
+              src={img}
+              alt={`${selectedBird.title} ${i + 1}`}
+              className="bird-img"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="bird-card">
+        <div className="bird-header">
+          <h2>{selectedBird.title}</h2>
+          <SoundButton text={selectedBird.paragraph} />
         </div>
-      )}
+        <p>{selectedBird.paragraph}</p>
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

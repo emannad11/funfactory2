@@ -92,33 +92,31 @@ export default function MathMagic() {
         ))}
       </div>
 
-      {selectedSubject && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>
-              ✖
-            </button>
+    {selectedSubject && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-            <div className="modal-header4">
-              <h2>{selectedSubject.title}</h2>
-            </div>
+      <div className="modal-header4">
+        <h2>{selectedSubject.title}</h2>
+      </div>
 
-            <div className="questions-list4">
-              {selectedSubject.questions.map((q, index) => (
-                <div className="question-card4" key={index}>
-                  <div className="question-line4">
-                    <strong>{q.question}</strong>
-                    <div className="sound-btn-right4">
-                      <SB4 text={`${q.question} ${q.answer}`} />
-                    </div>
-                  </div>
-                  <p>{q.answer}</p>
-                </div>
-              ))}
+      <div className="questions-list4">
+        {selectedSubject.questions.map((q, index) => (
+          <div className="question-card4" key={index}>
+            <div className="question-line4">
+              <strong>{q.question}</strong>
+              <div className="sound-btn-right4">
+                <SB4 text={`${q.question} ${q.answer}`} />
+              </div>
             </div>
+            <p>{q.answer}</p>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

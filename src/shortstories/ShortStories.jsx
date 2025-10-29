@@ -235,35 +235,35 @@ export default function ShortStories() {
         ))}
       </div>
 
-      {selectedSt && (
-        <div className="exp-modal-overlay" onClick={closeModal}>
-          <div className="exp-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
+     {selectedSt && (
+  <div className="exp-modal-overlay">
+    <div className="exp-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-            <div className="modal1-body">
-              <div className="modal1-content">
-                <div className="modal1-header">
-                  <h2>{selectedSt.title}</h2>
-                  <SoundButto text={selectedSt.text} />
-                </div>
-                {selectedSt.content}
-              </div>
+      <div className="modal1-body">
+        <div className="modal1-content">
+          <div className="modal1-header">
+            <h2>{selectedSt.title}</h2>
+            <SoundButto text={selectedSt.text} />
+          </div>
+          {selectedSt.content}
+        </div>
 
-              <div className="modal1-video">
-                <div className="video-frame">
-                  <iframe
-                    src={selectedSt.videoUrl}
-                    title={selectedSt.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
+        <div className="modal1-video">
+          <div className="video-frame">
+            <iframe
+              src={selectedSt.videoUrl}
+              title={selectedSt.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

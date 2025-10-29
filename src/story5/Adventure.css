@@ -103,14 +103,27 @@ body {
   background: none;
   border: none;
   font-size: clamp(18px, 3vw, 24px);
-  color: #444;
+  color: red;
   cursor: pointer;
   transition: transform 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
 }
 
-.close-modal-btn1:hover {
-  transform: scale(1.2);
+
+.close-modal-btn1:hover,
+.close-modal-btn1:focus,
+.close-modal-btn1:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+  color: rgb(250, 2, 2); 
 }
+
+
 
 
 .modal-video-container1 {

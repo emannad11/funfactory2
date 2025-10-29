@@ -186,30 +186,30 @@ export default function Knowledge() {
         ))}
       </div>
 
-      {selectedSubject && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <div className="modal-header">
-              <h2>{selectedSubject.title}</h2>
+  {selectedSubject && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+      <div className="modal-header">
+        <h2>{selectedSubject.title}</h2>
+      </div>
+      <div className="questions-list1">
+        {selectedSubject.questions.map((q, index) => (
+          <div className="question-card1" key={index}>
+            <div className="question-left1">
+              <div className="question-line1">
+                <strong>{q.question}</strong>
+                <SB text={`${q.question} ${q.answer}`} />
+              </div>
+              <p>{q.answer}</p>
             </div>
-            <div className="questions-list1">
-              {selectedSubject.questions.map((q, index) => (
-                <div className="question-card1" key={index}>
-                  <div className="question-left1">
-                    <div className="question-line1">
-                      <strong>{q.question}</strong>
-                      <SB text={`${q.question} ${q.answer}`} />
-                    </div>
-                    <p>{q.answer}</p>
-                  </div>
-                  <img src={q.image} alt="related" className="question-image1" />
-                </div>
-              ))}
-            </div>
+            <img src={q.image} alt="related" className="question-image1" />
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

@@ -8,7 +8,7 @@
 
 .alphabets-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(clamp(65px, 6vw, 110px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(clamp(70px, 8vw, 120px), 1fr));
   gap: clamp(15px, 2vw, 25px);
   padding: clamp(15px, 3vw, 40px);
   max-width: 1200px;

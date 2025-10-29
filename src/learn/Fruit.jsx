@@ -156,27 +156,42 @@ Litchis are very sweet and tasty.` },
           </div>
         ))}
       </div>
-      {selectedFruit && (
-        <div className="fruit-modal-overlay" onClick={closeModal}>
-          <div className="fruit-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <Swiper modules={[Autoplay]} autoplay={{ delay: 2000, disableOnInteraction: false }} loop speed={800} spaceBetween={15} slidesPerView={1} className="fruit-swiper">
-              {selectedFruit.images.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img src={img} alt={`${selectedFruit.title} ${i + 1}`} className="fruit-img" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <div className="fruit-card">
-              <div className="fruit-header">
-                <h2>{selectedFruit.title}</h2>
-                <SoundButton text={selectedFruit.paragraph} />
-              </div>
-              <p>{selectedFruit.paragraph}</p>
-            </div>
-          </div>
+  {selectedFruit && (
+  <div className="fruit-modal-overlay">
+    <div className="fruit-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop
+        speed={800}
+        spaceBetween={15}
+        slidesPerView={1}
+        className="fruit-swiper"
+      >
+        {selectedFruit.images.map((img, i) => (
+          <SwiperSlide key={i}>
+            <img
+              src={img}
+              alt={`${selectedFruit.title} ${i + 1}`}
+              className="fruit-img"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="fruit-card">
+        <div className="fruit-header">
+          <h2>{selectedFruit.title}</h2>
+          <SoundButton text={selectedFruit.paragraph} />
         </div>
-      )}
+        <p>{selectedFruit.paragraph}</p>
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 }

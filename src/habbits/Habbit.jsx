@@ -62,28 +62,28 @@ export default function Habbit() {
       </div>
 
       {selectedSubject && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <div className="modal-header2">
-              <h2>{selectedSubject.title}</h2>
-            </div>
-            <div className="questions-list2">
-              {selectedSubject.questions.map((q, index) => (
-                <div className="question-card2" key={index}>
-                  <div className="question-left2">
-                    <div className="question-line2">
-                      <strong>{q.question}</strong>
-                      <SB3 text={`${q.question} ${q.answer}`} />
-                    </div>
-                    <p>{q.answer}</p>
-                  </div>
-                </div>
-              ))}
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+      <div className="modal-header2">
+        <h2>{selectedSubject.title}</h2>
+      </div>
+      <div className="questions-list2">
+        {selectedSubject.questions.map((q, index) => (
+          <div className="question-card2" key={index}>
+            <div className="question-left2">
+              <div className="question-line2">
+                <strong>{q.question}</strong>
+                <SB3 text={`${q.question} ${q.answer}`} />
+              </div>
+              <p>{q.answer}</p>
             </div>
           </div>
-        </div>
-      )}
+        ))}
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

@@ -251,36 +251,35 @@ If you stop both eggs with your hand, the raw egg may start spinning again, show
           </div>
         ))}
       </div>
+{selectedExp && (
+  <div className="exp-modal-overlay">
+    <div className="exp-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-      {selectedExp && (
-        <div className="exp-modal-overlay" onClick={closeModal}>
-          <div className="exp-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
+      <div className="modal1-body">
+        <div className="modal1-content">
+          <div className="modal1-header">
+            <h2>{selectedExp.title}</h2>
+            <Soundexp text={selectedExp.text} />
+          </div>
+          {selectedExp.content}
+        </div>
 
-            <div className="modal1-body">
-              <div className="modal1-content">
-                <div className="modal1-header">
-                  <h2>{selectedExp.title}</h2>
-                  <Soundexp text={selectedExp.text} />
-                </div>
-                {selectedExp.content}
-              </div>
-
-              <div className="modal1-video">
-                <div className="video-frame">
-                  <iframe
-                    src={selectedExp.videoUrl}
-                    title={selectedExp.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
+        <div className="modal1-video">
+          <div className="video-frame">
+            <iframe
+              src={selectedExp.videoUrl}
+              title={selectedExp.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

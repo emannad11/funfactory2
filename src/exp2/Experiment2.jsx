@@ -2,254 +2,255 @@ import { useState } from "react";
 import "./Experiment2.css";
 import Sound from "./Sound";
 
-import dryImg from "../assets/dry.jpg";
-import waterImg from "../assets/water.jpg";
-import volcanoImg from "../assets/volcano.jpg";
-import sandImg from "../assets/sand.jpg";
-import ballonImg from "../assets/ballon.jpg";
-import saltImg from "../assets/salt.jpeg";
-import rainbowImg from "../assets/rainbow1.jpg";
-import lemonImg from "../assets/lemon.jpg";
+import dryImg from "../assets/dry1.jpg";
+import waterImg from "../assets/dance.jpg";
+import volcanoImg from "../assets/water1.jpg";
+import sandImg from "../assets/coin.jpg";
+import ballonImg from "../assets/rocket.jpg";
+import saltImg from "../assets/icee.jpg";
+import rainbowImg from "../assets/bubble.jpg";
+import lemonImg from "../assets/bottle1.jpg";
 
 export default function Experiment2() {
   const experiments = [
     {
       id: 2,
-      title: "Dry Ice Bubble",
+      title: "Magic Milk Colors",
       img: dryImg,
-      videoUrl: "https://www.youtube.com/embed/hSizkoEFImc",
-      content: (
-        <>
-          <h2>Make a Big Dry Ice Bubble</h2>
-          <p>
-            <strong>You’ll need:</strong><br />
-            - Water<br />
-            - A large bowl (or smaller bowl/cup)<br />
-            - A strip of cloth or material<br />
-            - Soapy water (water + dish soap)<br />
-            - Dry ice (handle with gloves)
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Put dry ice in bowl, add water.<br />
-            Dip cloth in soapy water, run around bowl edge.<br />
-            Step back and watch bubble grow!
-          </p>
-          <p>
-            <strong>What happens:</strong><br />
-            Dry ice sublimates creating fog, gas fills bubble until it bursts.
-          </p>
-        </>
-      ),
-      text: `Make a Big Dry Ice Bubble. You'll need: Water, A large bowl, A strip of cloth, Soapy water, Dry ice. Instructions: Put dry ice in bowl and add water. Dip cloth in soapy water, run around bowl edge. Step back and watch bubble grow! What happens: Dry ice sublimates into gas, creating fog. Gas fills bubble until it bursts.`,
-    },
+      videoUrl: "https://www.youtube.com/embed/Bq1_fVcji4g",
+  content: (
+    <>
+      <h2>Magic Milk Colors</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - Milk (whole milk works best)<br />
+        - Food coloring (different colors)<br />
+        - Dish soap<br />
+        - Shallow plate
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Pour milk into a shallow plate.<br />
+        Add drops of different food coloring.<br />
+        Dip a cotton swab in dish soap and touch the milk surface.<br />
+        Watch colors swirl and move magically!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Soap breaks the surface tension of the milk, making the colors swirl and mix in fascinating patterns.
+      </p>
+    </>
+  ),
+  text: `Magic Milk Colors. You'll need: Milk, Food coloring, Dish soap, Shallow plate. Instructions: Pour milk into a shallow plate, add food coloring drops. Dip cotton swab in dish soap and touch milk. Watch colors swirl magically! What happens: Soap breaks the milk's surface tension, making colors swirl and mix.`
+},
     {
       id: 3,
-      title: "Oil and Water",
+      title: "Dancing Raisins",
       img: waterImg,
-      videoUrl: "https://www.youtube.com/embed/sV0SxwaVKN8",
-      content: (
-        <>
-          <h2>Mixing Oil and Water</h2>
-          <p>
-            <strong>What you'll need:</strong><br />
-            - Small soft drink bottle<br />
-            - Water<br />
-            - Food colouring<br />
-            - 2 tablespoons cooking oil<br />
-            - Dish washing liquid or detergent
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Add food colouring to water.<br />
-            Pour coloured water and oil into bottle.<br />
-            Shake well and watch.<br />
-            Add detergent and shake again.
-          </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Oil and water don't mix; oil floats. Detergent helps mix them by forming an emulsion.
-          </p>
-        </>
-      ),
-      text: `Mixing Oil and Water. You'll need a bottle, water, food colouring, cooking oil, detergent. Instructions: Add colouring to water, pour water and oil into bottle, shake and watch, add detergent and shake again. What's happening: Oil floats on water. Detergent helps mix them by forming an emulsion.`,
-    },
+      videoUrl: "https://www.youtube.com/embed/ctWsPa0DCoA",
+     content: (
+    <>
+      <h2>Dancing Raisins</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - Clear soda (like Sprite or 7Up)<br />
+        - Raisins<br />
+        - A glass
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Pour soda into a glass.<br />
+        Drop a few raisins into the soda.<br />
+        Watch as the raisins move up and down like they are dancing!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Carbon dioxide bubbles in the soda attach to the raisins and lift them to the surface. When the bubbles pop, the raisins sink again, creating a dancing motion.
+      </p>
+    </>
+  ),
+  text: `Dancing Raisins. You'll need: Clear soda, Raisins, Glass. Instructions: Pour soda into a glass, drop raisins in, watch them move up and down like dancing! What happens: Carbon dioxide bubbles attach to raisins and lift them. When bubbles pop, raisins sink, creating a dancing effect.`
+},
     {
       id: 4,
-      title: "Vinegar Volcano",
+      title: "Walking Water",
       img: volcanoImg,
-      videoUrl: "https://www.youtube.com/embed/dIvXnqQaSwM",
-      content: (
-        <>
-          <h2>Vinegar Volcano</h2>
-          <p>
-            <strong>What you'll need:</strong><br />
-            - Baking soda<br />
-            - Vinegar<br />
-            - A container<br />
-            - Paper towels
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Put baking soda in the container.<br />
-            Pour vinegar on top.<br />
-            Watch the fizzing reaction!
-          </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Baking soda (a base) reacts with vinegar (an acid) to form carbon dioxide gas, causing fizzing.
-          </p>
-        </>
-      ),
-      text: `Baking Soda & Vinegar Volcano. You'll need baking soda, vinegar, a container, and paper towels. Instructions: Put baking soda in the container, pour vinegar on top, and watch the fizzing reaction. What's happening: Baking soda reacts with vinegar to produce carbon dioxide gas, creating fizz.`
-    },
+      videoUrl: "https://www.youtube.com/embed/MQGFQFdA6i0",
+content: (
+    <>
+      <h2>Walking Water</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - 3 clear cups<br />
+        - Water<br />
+        - Food coloring (different colors)<br />
+        - Paper towels
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Fill the first and third cups with colored water.<br />
+        Leave the middle cup empty.<br />
+        Fold paper towels into strips and place one end in a filled cup and the other in the empty cup.<br />
+        Watch the water “walk” along the paper towel and mix in the middle cup!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Water moves up the paper towel by capillary action, carrying the color to the empty cup and mixing colors.
+      </p>
+    </>
+  ),
+  text: `Walking Water. You'll need: 3 clear cups, Water, Food coloring, Paper towels. Instructions: Fill first and third cups with colored water, leave middle cup empty. Place folded paper towels connecting cups. Watch water walk and colors mix! What happens: Water moves via capillary action, carrying color to the empty cup and mixing colors.`
+},
     {
       id: 5,
-      title: "Quick Sand",
+      title: "Paper Bridge Challenge",
       img: sandImg,
-      videoUrl: "https://www.youtube.com/embed/PLKN3X5JgbM",
-      content: (
-        <>
-          <h2>Make Your Own Quick Sand</h2>
-          <p>
-            <strong>What you'll need:</strong><br />
-            - 1 cup maize cornflour<br />
-            - Half a cup water<br />
-            - Large plastic container<br />
-            - Spoon
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Mix cornflour and water in the container.<br />
-            Stir slowly to show liquid properties.<br />
-            Stir quickly to make it hard.<br />
-            Play outside and stir before use.
-          </p>
-          <p>
-            <strong>What's happening:</strong><br />
-            Cornflour grains lock when stirred fast, making it thick and hard. Stirring slowly lets water flow, making it runny.
-          </p>
-        </>
-      ),
-      text: `Make Your Own Quick Sand. You'll need 1 cup maize cornflour, half a cup water, a large plastic container, and a spoon. Instructions: Mix cornflour and water, stir slowly to show liquid, stir quickly to make hard. What's happening: Stirring fast locks cornflour grains, making it thick; stirring slow lets it flow.`,
-    },
+      videoUrl: "https://www.youtube.com/embed/gdQO3mlGJA8",
+        content: (
+    <>
+      <h2>Paper Bridge Challenge</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - Sheets of paper<br />
+        - Small coins or objects<br />
+        - Table or flat surface
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Place two books or boxes a short distance apart.<br />
+        Fold or stack paper to make a bridge between them.<br />
+        Carefully place coins or small objects on the bridge.<br />
+        See how much weight your paper bridge can hold!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Folding and layering paper makes it stronger. Kids learn how shapes and layers can support weight.
+      </p>
+    </>
+  ),
+  text: `Paper Bridge Challenge. You'll need: Sheets of paper, Small coins, Table or flat surface. Instructions: Place two books or boxes apart. Fold or stack paper to make a bridge. Place coins carefully and see how much it holds! What happens: Folding/layering paper makes it stronger. Kids learn how shapes and layers support weight.`
+},
     {
       id: 7,
-      title: "Blowing Up Balloons",
+      title: "Bottle Rocket",
       img: ballonImg,
-      videoUrl: "https://www.youtube.com/embed/JK5-2X_GqP8",
-      content: (
-        <>
-          <h2>Blowing Up Balloons With CO₂</h2>
-          <p>
-            <strong>What you'll need:</strong><br />
-            - Balloon<br />
-            - 40ml water<br />
-            - Soft drink bottle<br />
-            - Drinking straw<br />
-            - Lemon juice (or vinegar)<br />
-            - 1 tsp baking soda
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Stretch the balloon. Pour water into bottle, add baking soda and stir.<br />
-            Add lemon juice and quickly place balloon over bottle opening.
-          </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            The reaction creates carbon dioxide gas, which fills the balloon!
-          </p>
-        </>
-      ),
-      text: `Balloon with CO₂. You'll need: balloon, water, bottle, straw, lemon juice, baking soda. Instructions: Pour water in bottle, add baking soda and stir. Add lemon juice and cover with balloon. What's happening: CO₂ gas forms and inflates the balloon.`,
-    },
+      videoUrl: "https://www.youtube.com/embed/ff8EjjW1_2o",
+   content: (
+    <>
+      <h2>Bottle Rocket</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - Small plastic bottle<br />
+        - Vinegar<br />
+        - Baking soda<br />
+        - Cork or stopper<br />
+        - Measuring spoon
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Pour vinegar into the bottle (about 1/4 full).<br />
+        Wrap baking soda in a small piece of tissue.<br />
+        Quickly drop the baking soda into the bottle and seal with the cork.<br />
+        Place the bottle upside down outside and step back.<br />
+        Watch the bottle shoot up like a rocket!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Vinegar reacts with baking soda to produce carbon dioxide gas. The gas builds up pressure and propels the bottle into the air.
+      </p>
+    </>
+  ),
+  text: `Bottle Rocket. You'll need: Small plastic bottle, Vinegar, Baking soda, Cork, Measuring spoon. Instructions: Pour vinegar into bottle, wrap baking soda in tissue, drop it in, seal bottle, place upside down, step back, watch rocket! What happens: Vinegar reacts with baking soda to create CO₂ gas. Pressure builds up and launches the bottle into the air.`
+},
     {
       id: 8,
-      title: "Lung Capacity",
+      title: "Ice Fishing",
       img: saltImg,
-      videoUrl: "https://www.youtube.com/embed/UlhJwogS6l0",
+      videoUrl: "https://www.youtube.com/embed/5Xwq8CusPjE",
       content: (
-        <>
-          <h2>What Is Your Lung Volume?</h2>
-          <p>
-            <strong>What you'll need:</strong><br />
-            - Plastic tubing<br />
-            - Large plastic bottle<br />
-            - Water<br />
-            - Sink or large bowl
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Fill the bottle with water, turn it upside down in a sink of water, and insert the tube.<br /> Take a deep breath and blow out through the tube into the bottle.
-          </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            The air from your lungs replaces the water in the bottle. The amount of water displaced shows your lung capacity!
-          </p>
-        </>
-      ),
-      text: `Lung Volume Test. You'll need: tubing, bottle, water, sink. Instructions: Fill the bottle with water and turn it upside down in a sink of water. Blow through a tube into the bottle after a deep breath. What's happening: Your breath pushes out water, showing your lung capacity.`,
-    },
+    <>
+      <h2>Ice Fishing</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - Ice cube<br />
+        - String<br />
+        - Salt<br />
+        - Bowl of water
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Place the ice cube in a bowl of water.<br />
+        Lay a string across the ice cube.<br />
+        Sprinkle a little salt on the string and ice.<br />
+        Wait a few seconds, then gently lift the string — the ice sticks to it!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Salt lowers the melting point of ice, causing the surface to melt slightly and then refreeze around the string, allowing you to “pick up” the ice.
+      </p>
+    </>
+  ),
+  text: `Ice Fishing. You'll need: Ice cube, String, Salt, Bowl of water. Instructions: Place ice in water, lay string across it, sprinkle salt, wait a few seconds, lift string. What happens: Salt melts and refreezes the ice around the string, letting you pick it up.`
+},
     {
       id: 9,
-      title: "Creating Rainbow",
+      title: "Bubble Painting",
       img: rainbowImg,
-      videoUrl: "https://www.youtube.com/embed/lma6xLE4tPI",
+      videoUrl: "https://www.youtube.com/embed/LGfx_ks-deI?",
       content: (
-        <>
-          <h2>Make Your Own Rainbow</h2>
-          <p>
-            <strong>What you'll need:</strong><br />
-            - A glass of water<br />
-            - White paper<br />
-            - A sunny day
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Hold a glass of water near a sunny window and place white paper underneath.<br />
-            Watch a rainbow appear as sunlight passes through the water.<br />
-            Try different angles!
-          </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Sunlight bends as it moves through water, separating into colors. This is called refraction — just like when rainbows form in the sky!
-          </p>
-        </>
-      ),
-      text: `Make Your Own Rainbow. You'll need: a glass of water, white paper, and sunlight. Instructions: Hold the water glass near a window above the paper. Sunlight bends through the water and makes a rainbow. What's happening: Sunlight refracts in water, separating into colors like a real rainbow.`,
-    },
+    <>
+      <h2>Bubble Painting</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - Bubble solution (or soapy water)<br />
+        - Straws<br />
+        - Paper<br />
+        - Food coloring
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Add a few drops of food coloring to the bubble solution.<br />
+        Use a straw to blow bubbles onto a sheet of paper.<br />
+        Watch the bubbles pop and leave colorful patterns on the paper.<br />
+        Repeat with different colors to make art!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Bubbles trap the colored solution, and when they pop, they leave unique patterns on the paper.
+      </p>
+    </>
+  ),
+  text: `Bubble Painting. You'll need: Bubble solution, Straws, Paper, Food coloring. Instructions: Add food coloring to bubble solution, blow bubbles onto paper, watch colors create patterns. Repeat with different colors. What happens: Bubbles trap colored solution and leave unique patterns when they pop.`
+},
     {
       id: 10,
-      title: "Invisible Ink",
+      title: "Balloon in a Bottle",
       img: lemonImg,
-      videoUrl: "https://www.youtube.com/embed/poCnU_crpjQ?si",
-      content: (
-        <>
-          <h2>Invisible Ink with Lemon Juice</h2>
-          <p>
-            <strong>What you'll need:</strong><br />
-            - Half a lemon<br />
-            - Water<br />
-            - Spoon & bowl<br />
-            - Cotton bud<br />
-            - White paper<br />
-            - Light bulb or lamp
-          </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Mix lemon juice with water.<br />
-            Use a cotton bud to write a message on paper.<br />
-            Let it dry.<br />
-            To reveal, heat the paper under a lamp.
-          </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Lemon juice turns brown when heated due to oxidation, revealing your secret message!
-          </p>
-        </>
-      ),
-      text: `Invisible Ink with Lemon Juice. You'll need: lemon juice, water, spoon, cotton bud, paper, and a lamp. Instructions: Mix lemon juice and water. Write with a cotton bud. Let dry. Heat under a lamp to reveal the message. What's happening: The lemon juice oxidizes and turns brown when heated, exposing your writing!`,
-    },
+      videoUrl: "https://www.youtube.com/embed/yaDVnQOvjfU",
+     content: (
+    <>
+      <h2>Balloon in a Bottle</h2>
+      <p>
+        <strong>You’ll need:</strong><br />
+        - Small balloon<br />
+        - Empty plastic bottle<br />
+        - Hands
+      </p>
+      <p>
+        <strong>Instructions:</strong><br />
+        Stretch the balloon a little with your hands.<br />
+        Try to put the balloon inside the bottle without inflating it — it won’t fit easily.<br />
+        Now, place the balloon’s opening over the bottle mouth and blow into it.<br />
+        Watch the balloon inflate inside the bottle!
+      </p>
+      <p>
+        <strong>What happens:</strong><br />
+        Air you blow into the bottle inflates the balloon. The tight bottle shows how air pressure works inside a closed space.
+      </p>
+    </>
+  ),
+  text: `Balloon in a Bottle. You'll need: Small balloon, Empty plastic bottle, Hands. Instructions: Stretch balloon, try to put it in bottle, then place opening over bottle mouth and blow. Watch it inflate inside! What happens: Air inflates balloon inside bottle. Air pressure demonstrates how a closed space affects inflation.`
+},
   ];
 
   const [selectedExp, setSelectedExp] = useState(null);
@@ -280,35 +281,36 @@ export default function Experiment2() {
         ))}
       </div>
 
-      {selectedExp && (
-        <div className="exp-modal-overlay" onClick={closeModal}>
-          <div className="exp-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
+ {selectedExp && (
+  <div className="exp-modal-overlay">
+    <div className="exp-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-            <div className="modal1-body">
-              <div className="modal1-content">
-                <div className="modal1-header">
-                  <h2>{selectedExp.title}</h2>
-                  <Sound text={selectedExp.text} />
-                </div>
-                {selectedExp.content}
-              </div>
+      <div className="modal1-body">
+        <div className="modal1-content">
+          <div className="modal1-header">
+            <h2>{selectedExp.title}</h2>
+            <Sound text={selectedExp.text} />
+          </div>
+          {selectedExp.content}
+        </div>
 
-              <div className="modal1-video">
-                <div className="video-frame">
-                  <iframe
-                    src={selectedExp.videoUrl}
-                    title={selectedExp.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
-            </div>
+        <div className="modal1-video">
+          <div className="video-frame">
+            <iframe
+              src={selectedExp.videoUrl}
+              title={selectedExp.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
-      )}
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 }

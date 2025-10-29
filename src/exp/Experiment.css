@@ -10,29 +10,26 @@
   font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
 }
 
-/* ---------- Page ---------- */
 .heading9 h2 {
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   color: var(--nav-dark);
-  margin: 25px 0 15px;
+  margin: 20px 0 15px;
   font-weight: 600;
 }
 
-/* ---------- Grid Container ---------- */
 .container-ex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 20px;
-  max-width: 950px;
-  margin: 0 auto 40px;
+  gap: 15px;
+  max-width: 1000px;
+  margin: 0 auto 30px;
   padding: 10px;
 }
 
-/* ---------- Experiment Cards ---------- */
-.card-ex{
+.card-ex {
   background: var(--card);
   box-shadow: 0 4px 12px var(--shadow);
   border-radius: var(--radius);
@@ -56,47 +53,65 @@
 }
 
 .card-ex:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* ---------- Modal ---------- */
 .exp-modal-overlay-ex {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 5000;
+  padding: 10px;
   animation: fadeIn 0.3s ease;
 }
 
 .exp-modal-content-ex {
   background: #fff;
   border-radius: var(--radius);
-  width: 90%;
+  width: 100%;
   max-width: 900px;
-  max-height: 90vh;
+  max-height: 95vh;
   overflow-y: auto;
   position: relative;
   animation: slideIn 0.3s ease;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-.close-modal-btn-ex {
+.close-modal-btn {
   position: absolute;
-  top: 12px;
-  right: 14px;
-  font-size: 22px;
+  top: clamp(6px, 1vw, 10px);
+  right: clamp(10px, 2vw, 15px);
   background: none;
   border: none;
+  font-size: clamp(18px, 3vw, 24px);
+  color: red;
   cursor: pointer;
-  color: var(--nav-dark);
-  font-weight: bold;
+  transition: transform 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
 }
 
-/* ---------- Modal Layout ---------- */
+
+.close-modal-btn:hover,
+.close-modal-btn:focus,
+.close-modal-btn:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+  color: rgb(250, 2, 2); 
+}
+
+
+
+
 .modal1-body-ex {
   display: flex;
   flex-direction: column;
@@ -105,22 +120,22 @@
 
 .modal1-header-ex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .modal1-header-ex h2 {
   color: var(--nav-dark);
-  font-size: 26px;
+  font-size: 24px;
   margin: 0;
 }
 
 .modal1-content-ex p {
   line-height: 1.6;
   color: var(--text);
+  font-size: 16px;
 }
 
-/* ---------- Video Section ---------- */
 .modal1-video-ex {
   width: 100%;
   display: flex;
@@ -131,7 +146,7 @@
 .video-frame-ex {
   position: relative;
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
   border-radius: var(--radius);
@@ -146,7 +161,6 @@
   display: block;
 }
 
-/* ---------- Touch / Click Layer ---------- */
 .video-touch-layer {
   position: absolute;
   inset: 0;
@@ -159,16 +173,14 @@
   transition: background 0.3s;
 }
 
-/* Play Icon on Overlay */
 .video-touch-layer::before {
   content: "▶";
-  font-size: 60px;
+  font-size: 50px;
   color: white;
   opacity: 0.85;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Hover/Tap Feedback */
 .video-touch-layer:hover {
   background: rgba(0, 0, 0, 0.35);
 }
@@ -177,37 +189,43 @@
   transform: scale(1.2);
 }
 
-/* Hide overlay once video starts */
-.video-frame.playing .video-touch-layer {
+.video-frame-ex.playing .video-touch-layer {
   display: none;
 }
 
-/* ---------- Hover Animation ---------- */
-.video-frame:hover {
-  transform: scale(1.02);
+.video-frame-ex:hover {
+  transform: scale(1.01);
 }
 
-/* ---------- Animations ---------- */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
 @keyframes slideIn {
-  from { transform: translateY(-15px); opacity: 0; }
+  from { transform: translateY(-10px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
   .card-ex {
     width: 90%;
   }
+
   .modal1-header-ex h2 {
-    font-size: 22px;
+    font-size: 20px;
   }
+
+  .modal1-content-ex p {
+    font-size: 15px;
+  }
+
   .exp-modal-content-ex {
     width: 95%;
     padding: 15px;
+  }
+
+  .video-frame-ex iframe {
+    aspect-ratio: 16/9;
   }
 }

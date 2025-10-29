@@ -102,18 +102,33 @@ body {
 
 .close-modal-btn {
   position: absolute;
-  top: clamp(8px, 2vw, 10px);
-  right: clamp(12px, 3vw, 15px);
+  top: clamp(6px, 1vw, 10px);
+  right: clamp(10px, 2vw, 15px);
   background: none;
   border: none;
-  font-size: clamp(20px, 4vw, 24px);
-  color: #444;
+  font-size: clamp(18px, 3vw, 24px);
+  color: red;
   cursor: pointer;
   transition: transform 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
 }
-.close-modal-btn:hover {
-  transform: scale(1.2);
+
+
+.close-modal-btn:hover,
+.close-modal-btn:focus,
+.close-modal-btn:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+  color: rgb(250, 2, 2); 
 }
+
+
+
 
 .animal-swiper {
   width: 90%;

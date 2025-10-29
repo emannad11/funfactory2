@@ -97,18 +97,34 @@ body {
 
 .close-modal-btn5 {
   position: absolute;
-  top: 10px; right: 15px;
+  top: clamp(6px, 1vw, 10px);
+  right: clamp(10px, 2vw, 15px);
   background: none;
   border: none;
-  font-size: 24px;
-  color: #444;
+  font-size: clamp(18px, 3vw, 24px);
+  color: red;
   cursor: pointer;
   transition: transform 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
 }
 
-.close-modal-btn5:hover {
-  transform: scale(1.2);
+
+.close-modal-btn5:hover,
+.close-modal-btn5:focus,
+.close-modal-btn5:active {
+  outline: none;
+  box-shadow: none;
+  background: none;
+  color: rgb(250, 2, 2); 
 }
+
+
+
+
 
 .modal-header5 {
   text-align: center;

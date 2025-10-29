@@ -52,7 +52,7 @@ import purple1 from "../assets/Purple1.jpg";
 import purple2 from "../assets/Purple2.jpeg";
 import purple3 from "../assets/Purple3.jpg";
 import purple4 from "../assets/Purple4.webp";
-import purple5 from "../assets/purple5.jpg";
+import purple5 from "../assets/Purple5.jpg";
 
 import brownMain from "../assets/brown.png";
 import brown1 from "../assets/Brown1.jpg";
@@ -156,32 +156,51 @@ Yellow is a cheerful and sunny color.` },
           </div>
         ))}
       </div>
-      {selectedColor && (
-        <div className="color-modal-overlay" onClick={closeModal}>
-          <div className="color-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <div className="color-flex-section">
-              <div className="fixed-image-section">
-                <img src={selectedColor.fixedImg} alt={selectedColor.title} className="fixed-img" />
-              </div>
-              <Swiper modules={[Autoplay]} autoplay={{ delay: 2000, disableOnInteraction: false }} loop={true} speed={800} spaceBetween={20} slidesPerView={1} className="color-swiper">
-                {selectedColor.images.map((img, i) => (
-                  <SwiperSlide key={i}>
-                    <img src={img} alt={`${selectedColor.title} ${i + 1}`} className="color-img" />
-                  </SwiperSlide>
-                ))}
-              </Swiper>
-            </div>
-            <div className="color-card">
-              <div className="color-header">
-                <h2>{selectedColor.title}</h2>
-                <SoundButton text={selectedColor.paragraph} />
-              </div>
-              <p>{selectedColor.paragraph}</p>
-            </div>
-          </div>
+{selectedColor && (
+  <div className="color-modal-overlay">
+    <div className="color-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
+      <div className="color-flex-section">
+        <div className="fixed-image-section">
+          <img
+            src={selectedColor.fixedImg}
+            alt={selectedColor.title}
+            className="fixed-img"
+          />
         </div>
-      )}
+        <Swiper
+          modules={[Autoplay]}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          loop={true}
+          speed={800}
+          spaceBetween={20}
+          slidesPerView={1}
+          className="color-swiper"
+        >
+          {selectedColor.images.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img
+                src={img}
+                alt={`${selectedColor.title} ${i + 1}`}
+                className="color-img"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      <div className="color-card">
+        <div className="color-header">
+          <h2>{selectedColor.title}</h2>
+          <SoundButton text={selectedColor.paragraph} />
+        </div>
+        <p>{selectedColor.paragraph}</p>
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 }

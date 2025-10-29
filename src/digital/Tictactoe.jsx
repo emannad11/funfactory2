@@ -116,7 +116,7 @@ export default function Tictactoe() {
   };
 
   const cellClass = (i) => {
-    let cls = "tt-cell";
+    let cls = "tt-cell1";
     cls += board[i] ? " filled" : " empty";
     if (winningLine.includes(i)) cls += " win";
     return cls;
@@ -149,17 +149,17 @@ export default function Tictactoe() {
           <div className="controls-right">
             <div className="modes">
               <button
-                className={mode === "pvp" ? "mode-btn active" : "mode-btn"}
+                className={mode === "pvp" ? "mode-btn1 active" : "mode-btn1"}
                 onClick={() => toggleMode("pvp")}
               >2 Player</button>
               <button
-                className={mode === "cpu" ? "mode-btn active" : "mode-btn"}
+                className={mode === "cpu" ? "mode-btn1 active" : "mode-btn1"}
                 onClick={() => toggleMode("cpu")}
               >Vs Computer</button>
             </div>
             <div className="btn-row">
-              <button className="small-btn" onClick={() => handleRestart(false)}>Restart</button>
-              <button className="small-btn ghost" onClick={() => handleRestart(true)}>Reset All</button>
+              <button className="small-btn1" onClick={() => handleRestart(false)}>Restart</button>
+              <button className="small-btn1 ghost" onClick={() => handleRestart(true)}>Reset All</button>
             </div>
           </div>
         </div>

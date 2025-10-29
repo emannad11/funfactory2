@@ -97,30 +97,27 @@ export default function Adventure() {
           </div>
         ))}
       </div>
+{selectedExp && (
+  <div className="exp-modal-overlay1">
+    <div className="exp-modal-content1">
+      <button className="close-modal-btn1" onClick={closeModal}>
+        ✖
+      </button>
 
-      {selectedExp && (
-        <div className="exp-modal-overlay1" onClick={closeModal}>
-          <div
-            className="exp-modal-content1"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="close-modal-btn1" onClick={closeModal}>
-              ✖
-            </button>
+      <div className="modal-video-container1">
+        <h2>{selectedExp.title}</h2>
+        <iframe
+          src={selectedExp.videoUrl}
+          title={selectedExp.title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+)}
 
-            <div className="modal-video-container1">
-              <h2>{selectedExp.title}</h2>
-              <iframe
-                src={selectedExp.videoUrl}
-                title={selectedExp.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      )}
     </>
   );
 }

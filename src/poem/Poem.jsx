@@ -214,58 +214,55 @@ Wiggly nose and fluffy hair!`,
         ))}
       </div>
 
-      {selectedPoem && (
-        <div className="poem-modal-overlay" onClick={closeModal}>
-          <div
-            className="poem-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="close-modal-btn" onClick={closeModal}>
-              ✖
-            </button>
+     {selectedPoem && (
+  <div className="poem-modal-overlay">
+    <div className="poem-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>
+        ✖
+      </button>
 
-            <Swiper
-              modules={[Autoplay]}
-              autoplay={{ delay: 2000, disableOnInteraction: false }}
-              loop={true}
-              speed={800}
-              slidesPerView={1}
-              className="poem-swiper"
-            >
-              {selectedPoem.images?.length > 0 ? (
-                selectedPoem.images.map((image, index) => (
-                  <SwiperSlide key={index}>
-                    <img
-                      src={image}
-                      alt={`${selectedPoem.title} ${index + 1}`}
-                      className="poem-img"
-                    />
-                  </SwiperSlide>
-                ))
-              ) : (
-                <SwiperSlide>
-                  <img
-                    src={selectedPoem.img}
-                    alt={selectedPoem.title}
-                    className="poem-img"
-                  />
-                </SwiperSlide>
-              )}
-            </Swiper>
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop={true}
+        speed={800}
+        slidesPerView={1}
+        className="poem-swiper"
+      >
+        {selectedPoem.images?.length > 0 ? (
+          selectedPoem.images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={image}
+                alt={`${selectedPoem.title} ${index + 1}`}
+                className="poem-img"
+              />
+            </SwiperSlide>
+          ))
+        ) : (
+          <SwiperSlide>
+            <img
+              src={selectedPoem.img}
+              alt={selectedPoem.title}
+              className="poem-img"
+            />
+          </SwiperSlide>
+        )}
+      </Swiper>
 
-            <div className="poem-card">
-              <div className="poem-header">
-                <h2>{selectedPoem.title}</h2>
-                <div className="sound-right">
-                  <span className="sound-text">Click to play 🎵</span>
-                  <SoundButton0 text={selectedPoem.poem.replace(/<br\/>/g, " ")} />
-                </div>
-              </div>
-              <p dangerouslySetInnerHTML={{ __html: selectedPoem.poem }}></p>
-            </div>
+      <div className="poem-card">
+        <div className="poem-header">
+          <h2>{selectedPoem.title}</h2>
+          <div className="sound-right">
+            <span className="sound-text">Click to play 🎵</span>
+            <SoundButton0 text={selectedPoem.poem.replace(/<br\/>/g, " ")} />
           </div>
         </div>
-      )}
+        <p dangerouslySetInnerHTML={{ __html: selectedPoem.poem }}></p>
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

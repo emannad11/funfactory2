@@ -155,31 +155,32 @@ export default function FunFact() {
         ))}
       </div>
 
-      {selectedSubject && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <div className="modal-header3">
-              <h2>{selectedSubject.title}</h2>
+  {selectedSubject && (
+  <div className="modal-overlay">
+    <div className="modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+      <div className="modal-header3">
+        <h2>{selectedSubject.title}</h2>
+      </div>
+      <div className="questions-list3">
+        {selectedSubject.questions.map((q, index) => {
+          const textToSpeak = getTextFromJSX(q.question);
+          return (
+            <div className="question-card3" key={index}>
+              <div className="question-left3">
+                <div className="question-line3">
+                  <div className="question-text">{q.question}</div>
+                  <SB2 text={textToSpeak} /> 
+                </div>
+              </div>
             </div>
-            <div className="questions-list3">
-              {selectedSubject.questions.map((q, index) => {
-                const textToSpeak = getTextFromJSX(q.question);
-                return (
-                  <div className="question-card3" key={index}>
-                    <div className="question-left3">
-                      <div className="question-line3">
-                        <div className="question-text">{q.question}</div>
-                        <SB2 text={textToSpeak} /> 
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      )}
+          );
+        })}
+      </div>
+    </div>
+  </div>
+)}
+
     </>
   );
 }

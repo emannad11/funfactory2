@@ -116,35 +116,41 @@ export default function Vegetable() {
           </div>
         ))}
       </div>
-      {selectedVegetable && (
-        <div className="vegetable-modal-overlay" onClick={closeModal}>
-          <div className="vegetable-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <Swiper
-              modules={[Autoplay]}
-              autoplay={{ delay: 2000, disableOnInteraction: false }}
-              loop={true}
-              speed={800}
-              spaceBetween={15}
-              slidesPerView={1}
-              className="vegetable-swiper"
-            >
-              {selectedVegetable.images.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img src={img} alt={`${selectedVegetable.title} ${i + 1}`} className="vegetable-img" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <div className="vegetable-card">
-              <div className="vegetable-header">
-                <h2>{selectedVegetable.title}</h2>
-                <SoundButton text={selectedVegetable.paragraph} />
-              </div>
-              <p>{selectedVegetable.paragraph}</p>
-            </div>
-          </div>
+     {selectedVegetable && (
+  <div className="vegetable-modal-overlay">
+    <div className="vegetable-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop={true}
+        speed={800}
+        spaceBetween={15}
+        slidesPerView={1}
+        className="vegetable-swiper"
+      >
+        {selectedVegetable.images.map((img, i) => (
+          <SwiperSlide key={i}>
+            <img
+              src={img}
+              alt={`${selectedVegetable.title} ${i + 1}`}
+              className="vegetable-img"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="vegetable-card">
+        <div className="vegetable-header">
+          <h2>{selectedVegetable.title}</h2>
+          <SoundButton text={selectedVegetable.paragraph} />
         </div>
-      )}
+        <p>{selectedVegetable.paragraph}</p>
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }

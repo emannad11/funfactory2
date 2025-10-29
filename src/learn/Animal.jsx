@@ -176,35 +176,37 @@ export default function Animal() {
           </div>
         ))}
       </div>
-      {selectedAnimal && (
-        <div className="animal-modal-overlay" onClick={closeModal}>
-          <div className="animal-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-modal-btn" onClick={closeModal}>✖</button>
-            <Swiper
-              modules={[Autoplay]}
-              autoplay={{ delay: 2000, disableOnInteraction: false }}
-              loop={true}
-              speed={800}
-              spaceBetween={15}
-              slidesPerView={1}
-              className="animal-swiper"
-            >
-              {selectedAnimal.images.map((img, i) => (
-                <SwiperSlide key={i}>
-                  <img src={img} alt={`${selectedAnimal.title} ${i + 1}`} className="animal-img" />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-            <div className="animal-card">
-              <div className="animal-header">
-                <h2>{selectedAnimal.title}</h2>
-                <SoundButton text={selectedAnimal.paragraph} />
-              </div>
-              <p>{selectedAnimal.paragraph}</p>
-            </div>
-          </div>
+   {selectedAnimal && (
+  <div className="animal-modal-overlay">
+    <div className="animal-modal-content">
+      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
+      <Swiper
+        modules={[Autoplay]}
+        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        loop={true}
+        speed={800}
+        spaceBetween={15}
+        slidesPerView={1}
+        className="animal-swiper"
+      >
+        {selectedAnimal.images.map((img, i) => (
+          <SwiperSlide key={i}>
+            <img src={img} alt={`${selectedAnimal.title} ${i + 1}`} className="animal-img" />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="animal-card">
+        <div className="animal-header">
+          <h2>{selectedAnimal.title}</h2>
+          <SoundButton text={selectedAnimal.paragraph} />
         </div>
-      )}
+        <p>{selectedAnimal.paragraph}</p>
+      </div>
+    </div>
+  </div>
+)}
     </>
   );
 }
