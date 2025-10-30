@@ -1,5 +1,5 @@
 :root {
-  --bg: #fff7e6 !important;
+  --bg: #fff7e6 ;
   --nav: #00d2ff !important;
   --nav-dark: #3a7bd5 !important;
   --accent: #079140 !important;
@@ -15,7 +15,7 @@ body {
   font-family: inherit;
   min-height: 100vh;
   color: var(--text);
-  background: url("/src/assets/bg1.jpg") no-repeat center center fixed;
+  background: url("/blue.jpg") no-repeat center center fixed;
   background-size: cover;
   animation: bgMove 30s ease-in-out infinite alternate;
   overflow-x: hidden;

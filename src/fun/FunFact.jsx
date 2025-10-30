@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Funfact.css";
 import SB2 from "./SB2";
 
-import h11 from "/src/assets/h11.png";
+import h11 from "/src/assets/h11.jpg";
 import h12 from "/src/assets/h12.webp";
 import h13 from "/src/assets/h13.jpg";
 import h14 from "/src/assets/h14.jpg";

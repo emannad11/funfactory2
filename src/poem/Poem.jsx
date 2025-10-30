@@ -11,7 +11,7 @@ import RainImg from "../assets/rain.jpeg";
 import SheepImg from "../assets/sheep.jpg";
 import JackImg from "../assets/jack.jpg";
 import HumptyImg from "../assets/humpty.jpg";
-import BeeImg from "../assets/frogg.png";
+import BeeImg from "../assets/frogg.jpg";
 import RainbowImg from "../assets/rainbow.jpg";
 import ButterflyImg from "../assets/butterfly.jpg";
 import FishImg from "../assets/fish.jpg";

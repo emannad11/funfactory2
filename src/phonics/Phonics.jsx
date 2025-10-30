@@ -68,7 +68,7 @@ export default function Phonics() {
 
     const letterUtterance = new SpeechSynthesisUtterance(letter);
     letterUtterance.lang = "en-US";
-    letterUtterance.rate = 0.8;
+    letterUtterance.rate = 0.6;
 
     setIsSpeaking(true);
     letterUtterance.onend = () => {
