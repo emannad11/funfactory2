@@ -22,4 +22,5 @@
 .highlight {
   font-weight: bold;
   color: var(--nav-dark);
+  text-decoration: none;
 }

@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "./style/Bird.css";
 import SoundButton from "./SoundButton";
 
+// 🦜 Imports
 import parrotMain from "../assets/parrot.jpg";
 import parrot1 from "../assets/Parrot3.jpg";
 import parrot2 from "../assets/Parrot1.webp";
@@ -84,9 +85,9 @@ export default function Bird() {
       images: [parrot1, parrot2, parrot3, parrot4, parrot5],
       paragraph: `A parrot is a colorful bird.  
       Parrots eat fruits, seeds, and nuts.  
-    They live in trees and forests.  
-    Parrots can talk, whistle, and mimic sounds.  
-    They are playful and love to be around people.`,
+      They live in trees and forests.  
+      Parrots can talk, whistle, and mimic sounds.  
+      They are playful and love to be around people.`,
     },
     {
       id: 2,
@@ -94,10 +95,10 @@ export default function Bird() {
       img: sparrowMain,
       images: [sparrow1, sparrow2, sparrow3, sparrow4, sparrow5],
       paragraph: `A sparrow is a small brown bird.  
-    Sparrows eat seeds, grains, and insects.  
-    They live in trees, gardens, and near houses.  
-    Sparrows can chirp and fly very fast.  
-    They are friendly and often stay in flocks.`,
+      Sparrows eat seeds, grains, and insects.  
+      They live in trees, gardens, and near houses.  
+      Sparrows can chirp and fly very fast.  
+      They are friendly and often stay in flocks.`,
     },
     {
       id: 3,
@@ -105,10 +106,10 @@ export default function Bird() {
       img: peacockMain,
       images: [peacock1, peacock2, peacock3, peacock4, peacock5],
       paragraph: `A peacock is a beautiful bird with colorful feathers.  
-    Peacocks eat grains, insects, and plants.  
-    They live in forests.  
-    Male peacocks have long, shiny tail feathers that they fan out.  
-    Peacocks can make loud calls and are very proud birds.`,
+      Peacocks eat grains, insects, and plants.  
+      They live in forests.  
+      Male peacocks have long, shiny tail feathers that they fan out.  
+      Peacocks can make loud calls and are very proud birds.`,
     },
     {
       id: 4,
@@ -116,10 +117,10 @@ export default function Bird() {
       img: henMain,
       images: [hen1, hen2, hen3, hen4, hen5],
       paragraph: `A hen is a farm bird.  
-    Hens eat grains, seeds, and small insects.  
-    They live on farms.  
-    Hens lay eggs for people to eat.  
-    They cluck and scratch the ground to find food.`,
+      Hens eat grains, seeds, and small insects.  
+      They live on farms.  
+      Hens lay eggs for people to eat.  
+      They cluck and scratch the ground to find food.`,
     },
     {
       id: 5,
@@ -127,9 +128,9 @@ export default function Bird() {
       img: penguinMain,
       images: [penguin1, penguin2, penguin3, penguin4, penguin5],
       paragraph: `A penguin is a flightless bird that lives in cold places.  
-    Penguins eat fish and small sea animals.   
-    Penguins can swim very fast in the water.  
-    They waddle when they walk on land and are very cute.`,
+      Penguins eat fish and small sea animals.   
+      Penguins can swim very fast in the water.  
+      They waddle when they walk on land and are very cute.`,
     },
     {
       id: 6,
@@ -137,10 +138,10 @@ export default function Bird() {
       img: ostrichMain,
       images: [ostrich1, ostrich2, ostrich3, ostrich4, ostrich5],
       paragraph: `An ostrich is the largest bird on land.  
-    Ostriches eat plants, seeds, and insects.  
-    They live in open grasslands and deserts.  
-    Ostriches cannot fly but run very fast on their strong legs.  
-    They have long necks and big eyes to see far away.`,
+      Ostriches eat plants, seeds, and insects.  
+      They live in open grasslands and deserts.  
+      Ostriches cannot fly but run very fast on their strong legs.  
+      They have long necks and big eyes to see far away.`,
     },
     {
       id: 7,
@@ -148,10 +149,10 @@ export default function Bird() {
       img: doveMain,
       images: [dove1, dove2, dove3, dove4, dove5],
       paragraph: `A dove is a small and gentle bird.  
-    Doves eat seeds, grains, and fruits.  
-    They live in trees, gardens, and near houses.  
-    Doves can coo and fly gracefully in the sky.  
-    They are symbols of peace and love.`,
+      Doves eat seeds, grains, and fruits.  
+      They live in trees, gardens, and near houses.  
+      Doves can coo and fly gracefully in the sky.  
+      They are symbols of peace and love.`,
     },
     {
       id: 8,
@@ -159,10 +160,10 @@ export default function Bird() {
       img: owlMain,
       images: [owl1, owl2, owl3, owl4, owl5],
       paragraph: `An owl is a bird that comes out at night.  
-    Owls eat mice, insects, and small animals.  
-    They live in trees, forests, and barns.  
-    Owls can turn their heads all the way around.  
-    They have big eyes and can see very well in the dark.`,
+      Owls eat mice, insects, and small animals.  
+      They live in trees, forests, and barns.  
+      Owls can turn their heads all the way around.  
+      They have big eyes and can see very well in the dark.`,
     },
     {
       id: 9,
@@ -170,10 +171,10 @@ export default function Bird() {
       img: duckMain,
       images: [duck1, duck2, duck3, duck4, duck5],
       paragraph: `A duck is a water bird.  
-    Ducks eat plants, insects, and small fish.  
-    They live in ponds, lakes, and rivers.  
-    Ducks can swim very well and also fly.  
-    They quack and waddle when they walk on land.`,
+      Ducks eat plants, insects, and small fish.  
+      They live in ponds, lakes, and rivers.  
+      Ducks can swim very well and also fly.  
+      They quack and waddle when they walk on land.`,
     },
     {
       id: 10,
@@ -181,21 +182,22 @@ export default function Bird() {
       img: eagleMain,
       images: [eagle1, eagle2, eagle3, eagle4, eagle5],
       paragraph: `An eagle is a big and strong bird.  
-    Eagles eat fish, small animals, and birds.  
-    They live in mountains, forests, and near rivers.  
-    Eagles can fly very high and have sharp eyes to see far.  
-    They are powerful and brave birds.`,
+      Eagles eat fish, small animals, and birds.  
+      They live in mountains, forests, and near rivers.  
+      Eagles can fly very high and have sharp eyes to see far.  
+      They are powerful and brave birds.`,
     },
   ];
 
   const [selectedBird, setSelectedBird] = useState(null);
 
+  // open modal + speak title
   const openModal = (bird) => {
     window.speechSynthesis.cancel();
     setSelectedBird(bird);
     const utterance = new SpeechSynthesisUtterance(bird.title);
     utterance.lang = "en-US";
-    utterance.rate = 0.8;
+    utterance.rate = 0.9;
     window.speechSynthesis.speak(utterance);
   };
 
@@ -204,9 +206,19 @@ export default function Bird() {
     setSelectedBird(null);
   };
 
+  // speak paragraph
+  const speakParagraph = (text) => {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  };
+
   return (
     <>
       <div className="heading7"><h2>Birds</h2></div>
+
       <div className="container1">
         {birds.map((bird) => (
           <div
@@ -219,41 +231,48 @@ export default function Bird() {
           </div>
         ))}
       </div>
-    {selectedBird && (
-  <div className="bird-modal-overlay">
-    <div className="bird-modal-content">
-      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-      <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
-        loop={true}
-        speed={800}
-        spaceBetween={15}
-        slidesPerView={1}
-        className="bird-swiper"
-      >
-        {selectedBird.images.map((img, i) => (
-          <SwiperSlide key={i}>
-            <img
-              src={img}
-              alt={`${selectedBird.title} ${i + 1}`}
-              className="bird-img"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {selectedBird && (
+        <div className="bird-modal-overlay">
+          <div className="bird-modal-content">
+            <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-      <div className="bird-card">
-        <div className="bird-header">
-          <h2>{selectedBird.title}</h2>
-          <SoundButton text={selectedBird.paragraph} />
+            <Swiper
+              modules={[Autoplay]}
+              autoplay={{ delay: 2000, disableOnInteraction: false }}
+              loop={true}
+              speed={800}
+              spaceBetween={15}
+              slidesPerView={1}
+              className="bird-swiper"
+            >
+              {selectedBird.images.map((img, i) => (
+                <SwiperSlide key={i}>
+                  <img src={img} alt={`${selectedBird.title} ${i + 1}`} className="bird-img" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+
+            {/* FULL CARD CLICKABLE FOR SPEECH */}
+            <div
+              className="bird-card"
+              onClick={() => speakParagraph(selectedBird.paragraph)}
+            >
+              <div
+                className="bird-header"
+                onClick={(e) => e.stopPropagation()} // prevent re-trigger when pressing sound button
+              >
+                <h2>{selectedBird.title}</h2>
+                <SoundButton
+                  text={selectedBird.paragraph}
+                  onClick={() => speakParagraph(selectedBird.paragraph)}
+                />
+              </div>
+              <p>{selectedBird.paragraph}</p>
+            </div>
+          </div>
         </div>
-        <p>{selectedBird.paragraph}</p>
-      </div>
-    </div>
-  </div>
-)}
+      )}
     </>
   );
 }

@@ -41,7 +41,7 @@ export default function Sound1({ text }) {
   };
 
   return (
-    <button className="sound-btn" onClick={speakText}>
+    <button className="sound-btn111" onClick={speakText}>
       {!isSpeaking ? (
         <Volume2 size={22} />
       ) : isPaused ? (

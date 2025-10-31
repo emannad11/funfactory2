@@ -248,16 +248,31 @@ export default function Experiment4() {
         ))}
       </div>
 
-     {selectedExp && (
+{selectedExp && (
   <div className="exp-modal-overlay">
     <div className="exp-modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
       <div className="modal1-body">
-        <div className="modal1-content">
+        <div
+          className="modal1-content"
+          onClick={() => {
+            // Stop any existing speech
+            window.speechSynthesis.cancel();
+
+            // Speak the experiment text
+            const utterance = new SpeechSynthesisUtterance(selectedExp.text);
+            utterance.lang = "en-US";
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+          }}
+        >
           <div className="modal1-header">
             <h2>{selectedExp.title}</h2>
-            <SBplant text={selectedExp.text} />
+            {/* Prevent sound button click from triggering card speech */}
+            <div onClick={(e) => e.stopPropagation()}>
+              <SBplant text={selectedExp.text} />
+            </div>
           </div>
           {selectedExp.content}
         </div>
@@ -277,6 +292,7 @@ export default function Experiment4() {
     </div>
   </div>
 )}
+
     </>
   );
 }

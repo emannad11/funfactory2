@@ -127,7 +127,7 @@ export default function Shape() {
         ))}
       </div>
 
-     {selectedShape && (
+{selectedShape && (
   <div className="shape-modal-overlay">
     <div className="shape-modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
@@ -162,8 +162,18 @@ export default function Shape() {
         </Swiper>
       </div>
 
-      <div className="shape-card">
-        <div className="shape-header">
+      {/* ✅ Full card area click = speak text */}
+      <div
+        className="shape-card"
+        onClick={() => {
+          window.speechSynthesis.cancel();
+          const utterance = new SpeechSynthesisUtterance(selectedShape.paragraph);
+          utterance.lang = "en-US";
+          utterance.rate = 0.9;
+          window.speechSynthesis.speak(utterance);
+        }}
+      >
+        <div className="shape-header" onClick={(e) => e.stopPropagation()}>
           <h2>{selectedShape.title}</h2>
           <SoundButton text={selectedShape.paragraph} />
         </div>
@@ -172,6 +182,7 @@ export default function Shape() {
     </div>
   </div>
 )}
+
     </>
   );
 }

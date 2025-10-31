@@ -5,6 +5,7 @@ import { Autoplay } from "swiper/modules";
 import "./style/Color.css";
 import SoundButton from "./SoundButton";
 
+// 🎨 Imports
 import blueMain from "../assets/bluee.webp";
 import blue1 from "../assets/Blue2.jpg";
 import blue2 from "../assets/Blue1.jpg";
@@ -136,7 +137,7 @@ Yellow is a cheerful and sunny color.` },
     setSelectedColor(color);
     const utterance = new SpeechSynthesisUtterance(color.title);
     utterance.lang = "en-US";
-    utterance.rate = 0.8;
+    utterance.rate = 0.9;
     window.speechSynthesis.speak(utterance);
   };
 
@@ -145,9 +146,18 @@ Yellow is a cheerful and sunny color.` },
     setSelectedColor(null);
   };
 
+  const speakParagraph = (text) => {
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "en-US";
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+  };
+
   return (
     <>
       <div className="heading7"><h2>Colors</h2></div>
+
       <div className="container1">
         {colors.map((color) => (
           <div key={color.id} className="card1" onClick={() => openModal(color)}>
@@ -156,51 +166,62 @@ Yellow is a cheerful and sunny color.` },
           </div>
         ))}
       </div>
-{selectedColor && (
-  <div className="color-modal-overlay">
-    <div className="color-modal-content">
-      <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
-      <div className="color-flex-section">
-        <div className="fixed-image-section">
-          <img
-            src={selectedColor.fixedImg}
-            alt={selectedColor.title}
-            className="fixed-img"
-          />
+      {selectedColor && (
+        <div className="color-modal-overlay">
+          <div className="color-modal-content">
+            <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
+            <div className="color-flex-section">
+              <div className="fixed-image-section">
+                <img
+                  src={selectedColor.fixedImg}
+                  alt={selectedColor.title}
+                  className="fixed-img"
+                />
+              </div>
+
+              <Swiper
+                modules={[Autoplay]}
+                autoplay={{ delay: 2000, disableOnInteraction: false }}
+                loop={true}
+                speed={800}
+                spaceBetween={20}
+                slidesPerView={1}
+                className="color-swiper"
+              >
+                {selectedColor.images.map((img, i) => (
+                  <SwiperSlide key={i}>
+                    <img
+                      src={img}
+                      alt={`${selectedColor.title} ${i + 1}`}
+                      className="color-img"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* FULL CARD CLICKABLE */}
+            <div
+              className="color-card"
+              onClick={() => speakParagraph(selectedColor.paragraph)}
+            >
+              <div
+                className="color-header"
+                onClick={(e) => e.stopPropagation()} // prevent soundButton triggering twice
+              >
+                <h2>{selectedColor.title}</h2>
+                <SoundButton
+                  text={selectedColor.paragraph}
+                  onClick={() => speakParagraph(selectedColor.paragraph)}
+                />
+              </div>
+              <p>{selectedColor.paragraph}</p>
+            </div>
+          </div>
         </div>
-        <Swiper
-          modules={[Autoplay]}
-          autoplay={{ delay: 2000, disableOnInteraction: false }}
-          loop={true}
-          speed={800}
-          spaceBetween={20}
-          slidesPerView={1}
-          className="color-swiper"
-        >
-          {selectedColor.images.map((img, i) => (
-            <SwiperSlide key={i}>
-              <img
-                src={img}
-                alt={`${selectedColor.title} ${i + 1}`}
-                className="color-img"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-
-      <div className="color-card">
-        <div className="color-header">
-          <h2>{selectedColor.title}</h2>
-          <SoundButton text={selectedColor.paragraph} />
-        </div>
-        <p>{selectedColor.paragraph}</p>
-      </div>
-    </div>
-  </div>
-)}
-
+      )}
     </>
   );
 }

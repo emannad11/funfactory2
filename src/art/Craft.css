@@ -167,7 +167,7 @@ body {
   flex-shrink: 0;
 }
 
-.sound-btn {
+.sound-btn111 {
   background: linear-gradient(135deg, #3a7bd5, #00d2ff);
   color: white;
   border: none;
@@ -183,12 +183,12 @@ body {
   flex-shrink: 0;
 }
 
-.sound-btn:hover {
+.sound-btn111:hover {
   transform: scale(1.15);
   box-shadow: 0 0 18px rgba(0, 210, 255, 0.8);
 }
 
-.sound-btn.speaking {
+.sound-btn111.speaking {
   background: linear-gradient(135deg, #15b457, #00ff88);
   animation: pulse 1.2s infinite;
 }

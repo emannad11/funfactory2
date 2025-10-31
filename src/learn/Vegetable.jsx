@@ -116,7 +116,7 @@ export default function Vegetable() {
           </div>
         ))}
       </div>
-     {selectedVegetable && (
+  {selectedVegetable && (
   <div className="vegetable-modal-overlay">
     <div className="vegetable-modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
@@ -141,8 +141,18 @@ export default function Vegetable() {
         ))}
       </Swiper>
 
-      <div className="vegetable-card">
-        <div className="vegetable-header">
+      {/* ✅ Full card click = speak paragraph */}
+      <div
+        className="vegetable-card"
+        onClick={() => {
+          window.speechSynthesis.cancel();
+          const utterance = new SpeechSynthesisUtterance(selectedVegetable.paragraph);
+          utterance.lang = "en-US";
+          utterance.rate = 0.9;
+          window.speechSynthesis.speak(utterance);
+        }}
+      >
+        <div className="vegetable-header" onClick={(e) => e.stopPropagation()}>
           <h2>{selectedVegetable.title}</h2>
           <SoundButton text={selectedVegetable.paragraph} />
         </div>
@@ -151,6 +161,7 @@ export default function Vegetable() {
     </div>
   </div>
 )}
+
     </>
   );
 }

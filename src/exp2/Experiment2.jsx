@@ -281,17 +281,33 @@ content: (
         ))}
       </div>
 
- {selectedExp && (
+{selectedExp && (
   <div className="exp-modal-overlay">
     <div className="exp-modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
       <div className="modal1-body">
-        <div className="modal1-content">
+        <div
+          className="modal1-content"
+          onClick={() => {
+          
+            window.speechSynthesis.cancel();
+
+          
+            const utterance = new SpeechSynthesisUtterance(selectedExp.text);
+            utterance.lang = "en-US";
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+          }}
+        >
           <div className="modal1-header">
             <h2>{selectedExp.title}</h2>
-            <Sound text={selectedExp.text} />
+           
+            <div onClick={(e) => e.stopPropagation()}>
+              <Sound text={selectedExp.text} />
+            </div>
           </div>
+
           {selectedExp.content}
         </div>
 
@@ -310,6 +326,7 @@ content: (
     </div>
   </div>
 )}
+
 
     </>
   );

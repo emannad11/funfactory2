@@ -1,5 +1,5 @@
 :root {
-  --bg: #fff7e6 ;
+  --bg: #fff7e6;
   --nav: #00d2ff !important;
   --nav-dark: #3a7bd5 !important;
   --accent: #079140 !important;
@@ -21,9 +21,58 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
+.page1 {
+  padding-top: 10px;
+  padding-bottom: 0;
+  background: transparent;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.home-container1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 12px auto 8px auto;
+  padding: 0 12px;
+  box-sizing: border-box;
+  background: transparent !important;
+}
+
+
+.kid-footer1 {
+  text-align: right;
+  padding: 0.7rem 1rem;
+  color: #333;
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
+  width: 100%;
+  background-color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.footer-text {
+  margin: 0;
+}
+
+.heart-icon {
+  color: red;
+  vertical-align: middle;
+  margin: 0 4px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: var(--nav-dark);
+  text-decoration: none;
+}
 
 .page {
-  padding-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 0;
   background: transparent;
   min-height: 100vh;
   box-sizing: border-box;
@@ -32,11 +81,11 @@ body {
 .home-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
+  gap: 14px;
   justify-content: center;
   align-items: stretch;
   max-width: 1000px;
-  margin: 25px auto;
+  margin: 12px auto 8px auto;
   padding: 0 12px;
   box-sizing: border-box;
   background: transparent !important;
@@ -48,15 +97,21 @@ body {
 }
 
 @keyframes bgMove {
-  0% { background-position: center top; }
-  50% { background-position: center center; }
-  100% { background-position: center bottom; }
+  0% {
+    background-position: center top;
+  }
+  50% {
+    background-position: center center;
+  }
+  100% {
+    background-position: center bottom;
+  }
 }
 
-.kids-navbar {
-  display: flex;
+.kids-navbar1 {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   padding: 10px 20px;
   background: linear-gradient(90deg, var(--nav), var(--nav-dark));
   border-radius: 0 0 18px 18px;
@@ -64,6 +119,31 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.left-links1 {
+  justify-self: start;
+}
+
+.center-logo {
+  justify-self: center;
+}
+
+.right-home {
+  justify-self: end;
+  font-size: x-large;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 14px;
+  background: linear-gradient(90deg, var(--nav-dark), var(--nav));
+  transition: all 0.3s ease;
+}
+
+.right-home:hover {
+  background: linear-gradient(90deg, var(--nav), var(--nav-dark));
+  transform: translateY(-2px);
 }
 
 .kids-logo {
@@ -101,23 +181,23 @@ body {
   margin-left: auto;
 }
 
-.home-link {
-  font-size: 16px;
+.home-link1 {
+  font-size: 18px;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
   padding: 6px 14px;
   border-radius: 14px;
-  background: rgba(0, 210, 255, 0.3);
+  background: linear-gradient(90deg, var(--nav-dark), var(--nav));
   transition: all 0.3s ease;
 }
 
-.home-link:hover {
-  background: rgba(0, 210, 255, 0.6);
+.home-link1:hover {
+  background: linear-gradient(90deg, var(--nav), var(--nav-dark));
   transform: translateY(-2px);
 }
 
-.home-link.active {
+.home-link1.active {
   background: linear-gradient(135deg, #00d2ff, #3a7bd5);
   color: #fff;
   box-shadow: 0 0 12px rgba(0, 210, 255, 0.8), 0 4px 10px rgba(58, 123, 213, 0.5);
@@ -126,20 +206,26 @@ body {
 }
 
 @keyframes pulseActive {
-  0% { box-shadow: 0 0 8px rgba(0, 210, 255, 0.6); }
-  50% { box-shadow: 0 0 16px rgba(0, 180, 255, 0.9); }
-  100% { box-shadow: 0 0 8px rgba(0, 210, 255, 0.6); }
+  0% {
+    box-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(0, 180, 255, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 8px rgba(0, 210, 255, 0.6);
+  }
 }
 
-.home-link.active:hover {
+.home-link1.active:hover {
   box-shadow: 0 0 20px rgba(0, 210, 255, 1), 0 6px 12px rgba(58, 123, 213, 0.6);
 }
 
-body.home-page .kids-navbar {
+body.home-page .kids-navbar1 {
   justify-content: center;
 }
 
-body.home-page .home-link-container {
+body.home-page .home-link-container111 {
   display: none;
 }
 
@@ -152,7 +238,7 @@ body.home-page .home-link-container {
     font-size: 20px;
   }
 
-  .home-link {
+  .home-link1 {
     font-size: 14px;
     padding: 5px 10px;
   }
@@ -169,8 +255,9 @@ body.home-page .home-link-container {
   text-align: center;
   text-decoration: none;
   color: var(--text);
-  height: 210px;
-  padding-bottom: 8px;
+  height: auto;
+  padding-bottom: 12px;
+  padding-top: 16px;
 }
 
 .home-card:hover {
@@ -190,14 +277,10 @@ body.home-page .home-link-container {
 }
 
 .home-card p {
+  display: block;
   color: #333;
   font-size: 14px;
   margin: 4px;
-  display: none;
-}
-
-.home-card:hover p {
-  display: block;
 }
 
 .home-card button,
@@ -207,7 +290,7 @@ body.home-page .home-link-container {
 
 .welcome-text {
   text-align: center;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .welcome-text marquee {
@@ -218,6 +301,7 @@ body.home-page .home-link-container {
   color: #3a7bd5;
   letter-spacing: 1px;
 }
+
 .hamburger-btn {
   display: none;
   font-size: 28px;
@@ -237,7 +321,6 @@ body.home-page .home-link-container {
   .hamburger-btn {
     display: block;
   }
-
 
   .home-link-container {
     display: none;
@@ -295,28 +378,31 @@ body.home-page .home-link-container {
   animation: popIn 0.8s ease both;
 }
 
-
-.home-card:nth-child(1) { animation-delay: 0.2s; }
-.home-card:nth-child(2) { animation-delay: 0.4s; }
-.home-card:nth-child(3) { animation-delay: 0.6s; }
-.home-card:nth-child(4) { animation-delay: 0.8s; }
-
+.home-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.home-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.home-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.home-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
 
 .home-card:hover {
   transform: translateY(-6px) scale(1.05);
   box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
 }
 
-
 .home-card:active {
   animation: clickBounce 0.4s ease;
 }
 
-
 .home-card[data-clicked="true"] {
   animation: wiggle 0.4s ease;
 }
-
 
 .home-card img {
   width: 100%;
@@ -326,7 +412,6 @@ body.home-page .home-link-container {
   animation: floatImage 3s ease-in-out infinite;
 }
 
-
 .home-card h3 {
   margin: 6px 0 3px;
   font-size: 16px;
@@ -335,7 +420,6 @@ body.home-page .home-link-container {
   transition: color 0.3s ease;
   animation: textFadeIn 1s ease forwards;
 }
-
 
 @keyframes popIn {
   0% {
@@ -352,7 +436,8 @@ body.home-page .home-link-container {
 }
 
 @keyframes floatImage {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -371,19 +456,36 @@ body.home-page .home-link-container {
   }
 }
 
-
 @keyframes clickBounce {
-  0% { transform: scale(1) rotate(0deg); }
-  25% { transform: scale(0.95) rotate(1deg); }
-  50% { transform: scale(1.05) rotate(-1deg); }
-  75% { transform: scale(0.98) rotate(1deg); }
-  100% { transform: scale(1) rotate(0deg); }
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(0.95) rotate(1deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(-1deg);
+  }
+  75% {
+    transform: scale(0.98) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
 }
 
-
 @keyframes wiggle {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(2deg); }
-  50% { transform: rotate(-2deg); }
-  75% { transform: rotate(2deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
 }

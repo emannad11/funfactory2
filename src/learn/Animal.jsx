@@ -165,48 +165,76 @@ export default function Animal() {
     setSelectedAnimal(null);
   };
 
-  return (
-    <>
-      <div className="heading8"><h2>Animals</h2></div>
-      <div className="container1">
-        {animals.map((animal) => (
-          <div key={animal.id} className="card1" onClick={() => openModal(animal)}>
-            <img src={animal.img} alt={animal.title} />
-            <h3>{animal.title}</h3>
-          </div>
-        ))}
-      </div>
-   {selectedAnimal && (
-  <div className="animal-modal-overlay">
-    <div className="animal-modal-content">
-      <button className="close-modal-btn" onClick={closeModal}>✖</button>
-
-      <Swiper
-        modules={[Autoplay]}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
-        loop={true}
-        speed={800}
-        spaceBetween={15}
-        slidesPerView={1}
-        className="animal-swiper"
-      >
-        {selectedAnimal.images.map((img, i) => (
-          <SwiperSlide key={i}>
-            <img src={img} alt={`${selectedAnimal.title} ${i + 1}`} className="animal-img" />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-
-      <div className="animal-card">
-        <div className="animal-header">
-          <h2>{selectedAnimal.title}</h2>
-          <SoundButton text={selectedAnimal.paragraph} />
-        </div>
-        <p>{selectedAnimal.paragraph}</p>
-      </div>
+ return (
+  <>
+    <div className="heading8">
+      <h2>Animals</h2>
     </div>
-  </div>
-)}
-    </>
-  );
+
+    <div className="container1">
+      {animals.map((animal) => (
+        <div
+          key={animal.id}
+          className="card1"
+          onClick={() => openModal(animal)}
+        >
+          <img src={animal.img} alt={animal.title} />
+          <h3>{animal.title}</h3>
+        </div>
+      ))}
+    </div>
+
+    {selectedAnimal && (
+      <div className="animal-modal-overlay">
+        <div className="animal-modal-content">
+          <button className="close-modal-btn" onClick={closeModal}>
+            ✖
+          </button>
+
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            loop={true}
+            speed={800}
+            spaceBetween={15}
+            slidesPerView={1}
+            className="animal-swiper"
+          >
+            {selectedAnimal.images.map((img, i) => (
+              <SwiperSlide key={i}>
+                <img
+                  src={img}
+                  alt={`${selectedAnimal.title} ${i + 1}`}
+                  className="animal-img"
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          <div
+            className="animal-card"
+            onClick={() => {
+              window.speechSynthesis.cancel();
+              const utterance = new SpeechSynthesisUtterance(
+                selectedAnimal.paragraph
+              );
+              utterance.lang = "en-US";
+              utterance.rate = 0.9;
+              window.speechSynthesis.speak(utterance);
+            }}
+          >
+            <div
+              className="animal-header"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <h2>{selectedAnimal.title}</h2>
+              <SoundButton text={selectedAnimal.paragraph} />
+            </div>
+            <p>{selectedAnimal.paragraph}</p>
+          </div>
+        </div>
+      </div>
+    )}
+  </>
+);
 }

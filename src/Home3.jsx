@@ -24,11 +24,11 @@ export default function Home3() {
   };
 
   const cards = [
-    { title: "Creative Activities", img: artImg, path: "/art/artactivities", description: "Draw, paint, and have fun." },
-    { title: "Science & Environment", img: envImg, path: "/env/enviornment", description: "Nature, Trees, Clean, Green, Earth." },
+    { title: "Creative Activities", img: artImg, path: "/art/artactivities", description: "Draw, paint, and have fun" },
+    { title: "Science & Environment", img: envImg, path: "/env/enviornment", description: "Nature, Trees, Clean, Green, Earth" },
     { title: "Fun Focus", img: compImg, path: "/comp/computer", description: "Let’s play and learn" },
-    { title: "Experiments", img: expImg, path: "/exp3/Experiment3", description: "Science is fun to try." },
-    { title: "Puzzle", img: puzzleImg, path: "/puzzle/puzzle", description: "Solve, think, match, and win." },
+    { title: "Experiments", img: expImg, path: "/exp3/Experiment3", description: "Science is fun to try" },
+    { title: "Puzzle", img: puzzleImg, path: "/puzzle/puzzle", description: "Solve, think, match, and win" },
     { title: "Mind Games", img: mindImg, path: "/mind/games", description: "Play, learn, laugh, and win" },
   ];
 

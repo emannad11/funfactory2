@@ -155,20 +155,22 @@ body {
 .modal1-header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: clamp(10px, 1.5vw, 15px);
+  justify-content: space-between; /* keep h2 and sound button apart */
+  gap: clamp(8px, 1.5vw, 15px);
   margin-bottom: clamp(10px, 1.5vw, 15px);
+  flex-wrap: nowrap; /* ensure they stay on same line */
 }
 
 .modal1-header h2 {
   font-size: clamp(18px, 3vw, 26px);
   color: #3a7bd5;
   margin: 0;
-  flex-shrink: 0;
+  flex: 1;
+  word-break: break-word;
 }
 
-.sound-btn {
-  background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+.sound-btn111 {
+ background: linear-gradient(135deg, #3a7bd5, #00d2ff);
   color: white;
   border: none;
   border-radius: 50%;
@@ -183,15 +185,16 @@ body {
   flex-shrink: 0;
 }
 
-.sound-btn:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 18px rgba(0, 210, 255, 0.8);
+.sound-btn111:hover {
+  transform: scale(1.12);
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.6);
 }
 
-.sound-btn.speaking {
+.sound-btn111.speaking {
   background: linear-gradient(135deg, #15b457, #00ff88);
   animation: pulse 1.2s infinite;
 }
+
 
 .modal1-video {
   flex: 1;

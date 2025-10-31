@@ -214,7 +214,7 @@ Wiggly nose and fluffy hair!`,
         ))}
       </div>
 
-     {selectedPoem && (
+  {selectedPoem && (
   <div className="poem-modal-overlay">
     <div className="poem-modal-content">
       <button className="close-modal-btn" onClick={closeModal}>
@@ -249,20 +249,40 @@ Wiggly nose and fluffy hair!`,
           </SwiperSlide>
         )}
       </Swiper>
+      <div
+        className="poem-card"
+        onClick={() => {
+          
+          window.speechSynthesis.cancel();
 
-      <div className="poem-card">
+         
+          const textToSpeak = selectedPoem.poem
+            .replace(/<br\s*\/?>/gi, " ")
+            .replace(/<\/?[^>]+(>|$)/g, "");
+
+          // Speak poem
+          const utterance = new SpeechSynthesisUtterance(textToSpeak);
+          utterance.lang = "en-US";
+          utterance.rate = 0.9;
+          window.speechSynthesis.speak(utterance);
+        }}
+      >
         <div className="poem-header">
           <h2>{selectedPoem.title}</h2>
-          <div className="sound-right">
+
+          
+          <div className="sound-right" onClick={(e) => e.stopPropagation()}>
             <span className="sound-text">Click to play 🎵</span>
             <SoundButton0 text={selectedPoem.poem.replace(/<br\/>/g, " ")} />
           </div>
         </div>
+
         <p dangerouslySetInnerHTML={{ __html: selectedPoem.poem }}></p>
       </div>
     </div>
   </div>
 )}
+
     </>
   );
 }

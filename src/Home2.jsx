@@ -24,13 +24,13 @@ export default function Home2() {
   };
 
   const cards = [
-    { title: "Learning", img: gr3Img, path: "/learning1-2", description: "Explore fun lessons for kids." },
+    { title: "Learning", img: gr3Img, path: "/learning1-2", description: "Explore fun lessons for kids" },
     { title: "Phonics-(accent)", img: gr6Img, path: "/phonics/Phonics", description: "Smart kids love to learn" },
-    { title: "Short Stories", img: gr2Img, path: "/shortstories/ShortStories", description: "Stories teach manners." },
-    { title: "Experiments", img: gr7Img, path: "/exp2/Experiment2", description: "Science is fun to try." },
-    { title: "Math Magic", img: gr8Img, path: "/math/mathmagic", description: "Explore the world of Math." },
-    { title: "Drawing", img: gr1Img, path: "/drawing2/draw2", description: "Draw, paint, and have fun." },
-    { title: "Manners", img: mannersImg, path: "/manner/manners", description: "Be kind, clean, and happy." },
+    { title: "Short Stories", img: gr2Img, path: "/shortstories/ShortStories", description: "Stories teach manners" },
+    { title: "Experiments", img: gr7Img, path: "/exp2/Experiment2", description: "Science is fun to try" },
+    { title: "Math Magic", img: gr8Img, path: "/math/mathmagic", description: "Explore the world of Math" },
+    { title: "Drawing", img: gr1Img, path: "/drawing2/draw2", description: "Draw, paint, and have fun" },
+    { title: "Manners", img: mannersImg, path: "/manner/manners", description: "Be kind, clean, and happy" },
     { title: "Fun Puzzle", img: gr4Img, path: "/game/puzzle", description: "Play and Learn" },
   ];
 

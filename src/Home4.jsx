@@ -22,7 +22,7 @@ export default function Home4() {
   };
 
   const cards = [
-    { title: "Brain Teasers", img: brainImg, path: "/cards", description: "Test your brain." },
+    { title: "Brain Teasers", img: brainImg, path: "/cards", description: "Test your brain" },
     { title: "Speak & Share", img: speakImg, path: "/speak", description: "Speak and Share" },
     { title: "Entertainment", img: entertainmentImg, path: "/story5/entertainment", description: "Imagination blooms here" },
     { title: "World of Cultures", img: cultureImg, path: "/world/culture", description: "Let's learn about our culture." },

@@ -257,11 +257,28 @@ If you stop both eggs with your hand, the raw egg may start spinning again, show
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
       <div className="modal1-body">
-        <div className="modal1-content">
+        {/* Click anywhere on this section to trigger text-to-speech */}
+        <div
+          className="modal1-content"
+          onClick={() => {
+            // Cancel any previous speech
+            window.speechSynthesis.cancel();
+
+            // Speak experiment text
+            const utterance = new SpeechSynthesisUtterance(selectedExp.text);
+            utterance.lang = "en-US";
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+          }}
+        >
           <div className="modal1-header">
             <h2>{selectedExp.title}</h2>
-            <Soundexp text={selectedExp.text} />
+            {/* Prevent button click from triggering the content's speech */}
+            <div onClick={(e) => e.stopPropagation()}>
+              <Soundexp text={selectedExp.text} />
+            </div>
           </div>
+
           {selectedExp.content}
         </div>
 

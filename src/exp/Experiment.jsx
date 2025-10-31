@@ -339,25 +339,41 @@ export default function Experiment() {
           </div>
         ))}
       </div>
-
-    {selectedExp && (
+{selectedExp && (
   <div className="exp-modal-overlay">
     <div className="exp-modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
       <div className="modal1-body">
-        <div className="modal1-content">
+        <div
+          className="modal1-content"
+          onClick={() => {
+           
+            window.speechSynthesis.cancel();
+
+            
+            const utterance = new SpeechSynthesisUtterance(selectedExp.text);
+            utterance.lang = "en-US";
+            utterance.rate = 0.9;
+            window.speechSynthesis.speak(utterance);
+          }}
+        >
           <div className="modal1-header">
             <h2>{selectedExp.title}</h2>
-            <SoundButton2 text={selectedExp.text} />
+
+           
+            <div onClick={(e) => e.stopPropagation()}>
+              <SoundButton2 text={selectedExp.text} />
+            </div>
           </div>
+
           {selectedExp.content}
         </div>
 
         <div className="modal1-video">
           <div className="video-frame">
             <iframe
-              src={selectedExp.videoUrl} 
+              src={selectedExp.videoUrl}
               title={selectedExp.title}
               frameBorder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -369,6 +385,7 @@ export default function Experiment() {
     </div>
   </div>
 )}
+
     </>
   );
 }

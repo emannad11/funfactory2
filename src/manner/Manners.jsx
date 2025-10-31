@@ -98,10 +98,29 @@ export default function Manners() {
 
       <div className="questions-list5">
         {selectedSubject.questions.map((q, index) => (
-          <div className="question-card5" key={index}>
+          <div
+            className="question-card5"
+            key={index}
+            onClick={() => {
+              // Stop any current speech
+              window.speechSynthesis.cancel();
+
+              // Create new speech instance
+              const utterance = new SpeechSynthesisUtterance(
+                `${q.question}. ${q.answer}`
+              );
+              utterance.lang = "en-US";
+              utterance.rate = 0.9;
+              window.speechSynthesis.speak(utterance);
+            }}
+          >
             <div className="question-line5">
               <strong>{q.question}</strong>
-              <div className="sound-btn-right5">
+              {/* Stop propagation so button doesn't trigger card click */}
+              <div
+                className="sound-btn-right5"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <SB6 text={`${q.question} ${q.answer}`} />
               </div>
             </div>
@@ -112,6 +131,7 @@ export default function Manners() {
     </div>
   </div>
 )}
+
     </>
   );
 }

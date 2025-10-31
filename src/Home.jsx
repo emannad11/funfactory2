@@ -24,49 +24,49 @@ export default function Home() {
       title: "Learning",
       img: poemImg,
       path: "/learning",
-      description: "Explore fun lessons for kids.",
+      description: "Explore fun lessons for kids",
     },
     {
       title: "Quiz",
       img: quizImg,
       path: "/quiz",
-      description: "Smart kids love fun quizzes.",
+      description: "Smart kids love fun quizzes",
     },
     {
       title: "Poems",
       img: learningImg,
       path: "/poem",
-      description: "Sing along to happy rhymes.",
+      description: "Sing along to happy rhymes",
     },
     {
       title: "Experiments",
       img: experimentImg,
       path: "/experiment",
-      description: "Science is fun to try.",
+      description: "Science is fun to try",
     },
     {
       title: "General Knowledge",
       img: gkImg,
       path: "/knowledge",
-      description: "Explore the world of knowledge.",
+      description: "Explore the world of knowledge",
     },
     {
       title: "Drawing",
       img: drawingImg,
       path: "/drawing",
-      description: "Draw, paint, and have fun.",
+      description: "Draw, paint, and have fun",
     },
     {
       title: "Habbits",
       img: habbitImg,
       path: "/habbits",
-      description: "Be kind, clean, and happy.",
+      description: "Be kind, clean, and happy",
     },
     {
       title: "Leadership principles",
       img: funfactImg,
       path: "/funfact",
-      description: "Lead with vision and heart.",
+      description: "Lead with vision and heart",
     },
   ];
 
@@ -76,7 +76,7 @@ export default function Home() {
         <h2>PlayGroup - Prep</h2>
       </div>
 
-      <div className="home-container">
+      <div className="home-container1">
         {cards.map((card, index) => (
           <Link
             key={index}

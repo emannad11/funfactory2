@@ -36,66 +36,6 @@ body {
     }
 }
 
-.kids-navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    padding: 14px 20px;
-    background: linear-gradient(90deg, var(--nav), var(--nav-dark));
-    border-radius: 0 0 18px 18px;
-    box-shadow: 0 6px 18px var(--shadow);
-    position: sticky;
-    top: 0;
-}
-
-.kids-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: #fff;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
-}
-
-.kids-logo img {
-    font-size: 30px;
-    height: 40px;
-    width: 40px;
-}
-
-.kids-logo h2 {
-    margin: 0;
-    font-size: 22px;
-    letter-spacing: .6px;
-}
-
-.kids-links {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-}
-
-.kids-link {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    color: #fff;
-    background: transparent;
-    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.06) inset;
-}
-
-.kids-link:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.kids-link.active {
-    background: rgba(255, 255, 255, 0.18);
-    color: #fff;
-}
 .heading9 {
   text-align: center;
   font-size: 28px;        

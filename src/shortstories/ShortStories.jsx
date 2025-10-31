@@ -235,18 +235,23 @@ export default function ShortStories() {
         ))}
       </div>
 
-     {selectedSt && (
+    {selectedSt && (
   <div className="exp-modal-overlay">
     <div className="exp-modal-content">
-      <button className="close-modal-btn" onClick={closeModal}>✖</button>
+      <button className="close-modal-btn" onClick={closeModal}>
+        ✖
+      </button>
 
       <div className="modal1-body">
         <div className="modal1-content">
           <div className="modal1-header">
             <h2>{selectedSt.title}</h2>
-            <SoundButto text={selectedSt.text} />
+            <div className="sound-btn-container">
+              <SoundButto text={selectedSt.text} />
+            </div>
           </div>
-          {selectedSt.content}
+
+          <div className="story-content">{selectedSt.content}</div>
         </div>
 
         <div className="modal1-video">
@@ -264,6 +269,7 @@ export default function ShortStories() {
     </div>
   </div>
 )}
+
     </>
   );
 }

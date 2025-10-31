@@ -65,16 +65,38 @@ export default function Habbit() {
   <div className="modal-overlay">
     <div className="modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
       <div className="modal-header2">
         <h2>{selectedSubject.title}</h2>
       </div>
+
       <div className="questions-list2">
         {selectedSubject.questions.map((q, index) => (
-          <div className="question-card2" key={index}>
+          <div
+            className="question-card2"
+            key={index}
+            onClick={() => {
+              // Cancel any ongoing speech first
+              window.speechSynthesis.cancel();
+              
+              // Create and configure a new utterance
+              const utterance = new SpeechSynthesisUtterance(
+                `${q.question}. ${q.answer}`
+              );
+              utterance.lang = "en-US";
+              utterance.rate = 0.9;
+              
+              // Speak it
+              window.speechSynthesis.speak(utterance);
+            }}
+          >
             <div className="question-left2">
               <div className="question-line2">
                 <strong>{q.question}</strong>
-                <SB3 text={`${q.question} ${q.answer}`} />
+                {/* Prevent card click when pressing sound button */}
+                <div onClick={(e) => e.stopPropagation()}>
+                  <SB3 text={`${q.question} ${q.answer}`} />
+                </div>
               </div>
               <p>{q.answer}</p>
             </div>
@@ -84,6 +106,7 @@ export default function Habbit() {
     </div>
   </div>
 )}
+
     </>
   );
 }

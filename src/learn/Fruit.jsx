@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
-import "./style/Fruit.css";
+import "./style/Animal.css";
 import SoundButton from "./SoundButton";
 
 import appleMain from "../assets/Apple.jpeg";
@@ -156,9 +156,9 @@ Litchis are very sweet and tasty.` },
           </div>
         ))}
       </div>
-  {selectedFruit && (
-  <div className="fruit-modal-overlay">
-    <div className="fruit-modal-content">
+{selectedFruit && (
+  <div className="animal-modal-overlay">
+    <div className="animal-modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
 
       <Swiper
@@ -168,21 +168,31 @@ Litchis are very sweet and tasty.` },
         speed={800}
         spaceBetween={15}
         slidesPerView={1}
-        className="fruit-swiper"
+        className="animal-swiper"
       >
         {selectedFruit.images.map((img, i) => (
           <SwiperSlide key={i}>
             <img
               src={img}
               alt={`${selectedFruit.title} ${i + 1}`}
-              className="fruit-img"
+              className="animal-img"
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="fruit-card">
-        <div className="fruit-header">
+      {/* ✅ Updated clickable card area for Text-to-Speech */}
+      <div
+        className="animal-card"
+        onClick={() => {
+          window.speechSynthesis.cancel();
+          const utterance = new SpeechSynthesisUtterance(selectedFruit.paragraph);
+          utterance.lang = "en-US";
+          utterance.rate = 0.9;
+          window.speechSynthesis.speak(utterance);
+        }}
+      >
+        <div className="animal-header" onClick={(e) => e.stopPropagation()}>
           <h2>{selectedFruit.title}</h2>
           <SoundButton text={selectedFruit.paragraph} />
         </div>

@@ -186,20 +186,37 @@ export default function Knowledge() {
         ))}
       </div>
 
-  {selectedSubject && (
+{selectedSubject && (
   <div className="modal-overlay">
     <div className="modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
+
       <div className="modal-header">
         <h2>{selectedSubject.title}</h2>
       </div>
+
       <div className="questions-list1">
         {selectedSubject.questions.map((q, index) => (
-          <div className="question-card1" key={index}>
+          <div
+            className="question-card1"
+            key={index}
+            onClick={() => {
+              window.speechSynthesis.cancel();
+              const utterance = new SpeechSynthesisUtterance(
+                `${q.question}. ${q.answer}`
+              );
+              utterance.lang = "en-US";
+              utterance.rate = 0.9;
+              window.speechSynthesis.speak(utterance);
+            }}
+          >
             <div className="question-left1">
               <div className="question-line1">
                 <strong>{q.question}</strong>
-                <SB text={`${q.question} ${q.answer}`} />
+              
+                <div onClick={(e) => e.stopPropagation()}>
+                  <SB text={`${q.question} ${q.answer}`} />
+                </div>
               </div>
               <p>{q.answer}</p>
             </div>
@@ -210,6 +227,7 @@ export default function Knowledge() {
     </div>
   </div>
 )}
+
     </>
   );
 }

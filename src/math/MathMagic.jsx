@@ -91,8 +91,7 @@ export default function MathMagic() {
           </div>
         ))}
       </div>
-
-    {selectedSubject && (
+{selectedSubject && (
   <div className="modal-overlay">
     <div className="modal-content">
       <button className="close-modal-btn" onClick={closeModal}>✖</button>
@@ -103,10 +102,29 @@ export default function MathMagic() {
 
       <div className="questions-list4">
         {selectedSubject.questions.map((q, index) => (
-          <div className="question-card4" key={index}>
+          <div
+            className="question-card4"
+            key={index}
+            onClick={() => {
+          
+              window.speechSynthesis.cancel();
+
+           
+              const utterance = new SpeechSynthesisUtterance(
+                `${q.question}. ${q.answer}`
+              );
+              utterance.lang = "en-US";
+              utterance.rate = 0.9;
+              window.speechSynthesis.speak(utterance);
+            }}
+          >
             <div className="question-line4">
               <strong>{q.question}</strong>
-              <div className="sound-btn-right4">
+              
+              <div
+                className="sound-btn-right4"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <SB4 text={`${q.question} ${q.answer}`} />
               </div>
             </div>
