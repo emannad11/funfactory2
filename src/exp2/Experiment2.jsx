@@ -35,13 +35,10 @@ export default function Experiment2() {
         Dip a cotton swab in dish soap and touch the milk surface.<br />
         Watch colors swirl and move magically!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Soap breaks the surface tension of the milk, making the colors swirl and mix in fascinating patterns.
-      </p>
+    
     </>
   ),
-  text: `Magic Milk Colors. You'll need: Milk, Food coloring, Dish soap, Shallow plate. Instructions: Pour milk into a shallow plate, add food coloring drops. Dip cotton swab in dish soap and touch milk. Watch colors swirl magically! What happens: Soap breaks the milk's surface tension, making colors swirl and mix.`
+  text: `Magic Milk Colors. You'll need: Milk, Food coloring, Dish soap, Shallow plate. Instructions: Pour milk into a shallow plate, add food coloring drops. Dip cotton swab in dish soap and touch milk. Watch colors swirl magically!`
 },
     {
       id: 3,
@@ -63,13 +60,10 @@ export default function Experiment2() {
         Drop a few raisins into the soda.<br />
         Watch as the raisins move up and down like they are dancing!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Carbon dioxide bubbles in the soda attach to the raisins and lift them to the surface. When the bubbles pop, the raisins sink again, creating a dancing motion.
-      </p>
+    
     </>
   ),
-  text: `Dancing Raisins. You'll need: Clear soda, Raisins, Glass. Instructions: Pour soda into a glass, drop raisins in, watch them move up and down like dancing! What happens: Carbon dioxide bubbles attach to raisins and lift them. When bubbles pop, raisins sink, creating a dancing effect.`
+  text: `Dancing Raisins. You'll need: Clear soda, Raisins, Glass. Instructions: Pour soda into a glass, drop raisins in, watch them move up and down like dancing!`
 },
     {
       id: 4,
@@ -93,13 +87,11 @@ content: (
         Fold paper towels into strips and place one end in a filled cup and the other in the empty cup.<br />
         Watch the water “walk” along the paper towel and mix in the middle cup!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Water moves up the paper towel by capillary action, carrying the color to the empty cup and mixing colors.
-      </p>
+     
+     
     </>
   ),
-  text: `Walking Water. You'll need: 3 clear cups, Water, Food coloring, Paper towels. Instructions: Fill first and third cups with colored water, leave middle cup empty. Place folded paper towels connecting cups. Watch water walk and colors mix! What happens: Water moves via capillary action, carrying color to the empty cup and mixing colors.`
+  text: `Walking Water. You'll need: 3 clear cups, Water, Food coloring, Paper towels. Instructions: Fill first and third cups with colored water, leave middle cup empty. Place folded paper towels connecting cups. Watch water walk and colors mix!`
 },
     {
       id: 5,
@@ -122,13 +114,9 @@ content: (
         Carefully place coins or small objects on the bridge.<br />
         See how much weight your paper bridge can hold!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Folding and layering paper makes it stronger. Kids learn how shapes and layers can support weight.
-      </p>
     </>
   ),
-  text: `Paper Bridge Challenge. You'll need: Sheets of paper, Small coins, Table or flat surface. Instructions: Place two books or boxes apart. Fold or stack paper to make a bridge. Place coins carefully and see how much it holds! What happens: Folding/layering paper makes it stronger. Kids learn how shapes and layers support weight.`
+  text: `Paper Bridge Challenge. You'll need: Sheets of paper, Small coins, Table or flat surface. Instructions: Place two books or boxes apart. Fold or stack paper to make a bridge. Place coins carefully and see how much it holds!`
 },
     {
       id: 7,
@@ -154,13 +142,9 @@ content: (
         Place the bottle upside down outside and step back.<br />
         Watch the bottle shoot up like a rocket!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Vinegar reacts with baking soda to produce carbon dioxide gas. The gas builds up pressure and propels the bottle into the air.
-      </p>
     </>
   ),
-  text: `Bottle Rocket. You'll need: Small plastic bottle, Vinegar, Baking soda, Cork, Measuring spoon. Instructions: Pour vinegar into bottle, wrap baking soda in tissue, drop it in, seal bottle, place upside down, step back, watch rocket! What happens: Vinegar reacts with baking soda to create CO₂ gas. Pressure builds up and launches the bottle into the air.`
+  text: `Bottle Rocket. You'll need: Small plastic bottle, Vinegar, Baking soda, Cork, Measuring spoon. Instructions: Pour vinegar into bottle, wrap baking soda in tissue, drop it in, seal bottle, place upside down, step back, watch rocket!`
 },
     {
       id: 8,
@@ -184,13 +168,9 @@ content: (
         Sprinkle a little salt on the string and ice.<br />
         Wait a few seconds, then gently lift the string — the ice sticks to it!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Salt lowers the melting point of ice, causing the surface to melt slightly and then refreeze around the string, allowing you to “pick up” the ice.
-      </p>
     </>
   ),
-  text: `Ice Fishing. You'll need: Ice cube, String, Salt, Bowl of water. Instructions: Place ice in water, lay string across it, sprinkle salt, wait a few seconds, lift string. What happens: Salt melts and refreezes the ice around the string, letting you pick it up.`
+  text: `Ice Fishing. You'll need: Ice cube, String, Salt, Bowl of water. Instructions: Place ice in water, lay string across it, sprinkle salt, wait a few seconds, lift string.`
 },
     {
       id: 9,
@@ -214,13 +194,10 @@ content: (
         Watch the bubbles pop and leave colorful patterns on the paper.<br />
         Repeat with different colors to make art!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Bubbles trap the colored solution, and when they pop, they leave unique patterns on the paper.
-      </p>
+    
     </>
   ),
-  text: `Bubble Painting. You'll need: Bubble solution, Straws, Paper, Food coloring. Instructions: Add food coloring to bubble solution, blow bubbles onto paper, watch colors create patterns. Repeat with different colors. What happens: Bubbles trap colored solution and leave unique patterns when they pop.`
+  text: `Bubble Painting. You'll need: Bubble solution, Straws, Paper, Food coloring. Instructions: Add food coloring to bubble solution, blow bubbles onto paper, watch colors create patterns. Repeat with different colors.`
 },
     {
       id: 10,
@@ -243,13 +220,11 @@ content: (
         Now, place the balloon’s opening over the bottle mouth and blow into it.<br />
         Watch the balloon inflate inside the bottle!
       </p>
-      <p>
-        <strong>What happens:</strong><br />
-        Air you blow into the bottle inflates the balloon. The tight bottle shows how air pressure works inside a closed space.
-      </p>
+     
+      
     </>
   ),
-  text: `Balloon in a Bottle. You'll need: Small balloon, Empty plastic bottle, Hands. Instructions: Stretch balloon, try to put it in bottle, then place opening over bottle mouth and blow. Watch it inflate inside! What happens: Air inflates balloon inside bottle. Air pressure demonstrates how a closed space affects inflation.`
+  text: `Balloon in a Bottle. You'll need: Small balloon, Empty plastic bottle, Hands. Instructions: Stretch balloon, try to put it in bottle, then place opening over bottle mouth and blow. Watch it inflate inside! `
 },
   ];
 

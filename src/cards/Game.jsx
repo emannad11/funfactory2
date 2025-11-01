@@ -166,7 +166,7 @@ export default function Game() {
         <div className="game-over">
           <h2>🏁 Game Over!</h2>
           <p>🎯 Final Score: {score}</p>
-          <button className="restart-btn" onClick={handleRestart}>🔁 Restart Game</button>
+          
         </div>
       )}
 

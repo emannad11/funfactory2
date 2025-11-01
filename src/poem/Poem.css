@@ -270,6 +270,9 @@ body {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
   justify-content: flex-start;
   animation: popIn 0.8s ease both;
   transform-origin: center;

@@ -9,6 +9,9 @@
 .word-builder-container {
   max-width: clamp(350px, 90%, 800px);
   margin: clamp(5px, 2vw, 15px) auto;
+  height: auto;
+  margin-bottom: 25px;
+  margin-top: 25px;
   text-align: center;
   padding: clamp(15px, 4vw, 30px);
   

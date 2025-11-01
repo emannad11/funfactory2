@@ -1,6 +1,6 @@
 .missing-letter-container {
   text-align: center;
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,9 @@
   gap: 0.5rem;
   background: transparent;
   overflow: hidden;
+  height: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 .header-roww {

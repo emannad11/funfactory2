@@ -12,13 +12,16 @@
 
 
 .classes-container {
-  min-height: 100vh;
+  min-height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 12px);
+  height: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 @keyframes fadeInPage {
@@ -37,8 +40,8 @@
   font-size: clamp(1.8rem, 2vw + 1rem, 2.3rem);
   color: var(--nav-dark);
   font-weight: 700;
-  margin-bottom: clamp(10px, 2vw, 25px);
-  margin-top: clamp(10px, 1vw, 20px);
+  margin-bottom: clamp(2px, 1vw, 2px);
+  margin-top: clamp(2px, 1vw, 2px);
   text-shadow: 1px 1px 2px rgba(58, 123, 213, 0.2);
   position: relative;
   animation: bounceIn 1.2s ease forwards;
@@ -51,8 +54,8 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  max-width: 780px;
-  margin-top: clamp(10px, 2vw, 20px);
+  max-width: 650px;
+  margin-top: clamp(2px, 2vw, 10px);
   animation: floatUp 1.2s ease forwards;
 }
 

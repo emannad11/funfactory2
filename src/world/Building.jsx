@@ -91,7 +91,7 @@ export default function Building() {
       <div className="header-row">
         <div className="title-section">
           <h2>🏛️ Match the Building with its Country!</h2>
-          <p className="instructions">
+          <p className="instructions0">
             Click on a building, then click the country you think it belongs to. Match all pairs to win!
           </p>
         </div>

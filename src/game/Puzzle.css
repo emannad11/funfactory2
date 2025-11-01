@@ -1,10 +1,11 @@
-.puzzle-container {
+.puzzle-containerr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 25px;
-  min-height: 100vh;
-  padding: 20px;
+  margin-top: 40px;
+  min-height: auto;
+  margin-bottom: 40px;
+  padding: 30px;
 }
 
 .puzzle-header-row {
@@ -13,7 +14,7 @@
   align-items: center;
   width: 100%;
   max-width: 400px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .puzzle-heading {

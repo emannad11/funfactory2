@@ -76,7 +76,7 @@ export default function Language() {
       <div className="header-row">
         <div className="title-section">
           <h2>🗺️ Match the Country with its Language!</h2>
-          <p className="instructions">
+          <p className="instructions0">
             Click a language, then click the country you think it belongs to. Match all pairs to win!
           </p>
         </div>

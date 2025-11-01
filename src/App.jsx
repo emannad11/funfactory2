@@ -107,11 +107,26 @@ function ResponsiveNavbar({ backLink, backText, homeLink }) {
       <div className="home-link-container1 left-links1">
         <a
           href={backLink}
-          className="home-link1"
+          className="home-link1 back-link-large"
           onClick={(e) => handleClick(e, backLink)}
         >
           {backText}
         </a>
+        <button
+  className="hamburger"
+  onClick={() => setMenuOpen(!menuOpen)}
+  aria-label="Toggle menu"
+>
+  &#9776;
+</button>
+
+        {menuOpen && (
+          <div className="hamburger-menu">
+            <a href={backLink} onClick={(e) => handleClick(e, backLink)}>
+              {backText}
+            </a>
+          </div>
+        )}
       </div>
       <div className="kids-logo center-logo">
         <a href="/" className="logo-link" onClick={(e) => handleClick(e, "/")}>
@@ -160,40 +175,14 @@ function KidsNavbar() {
     path.startsWith("/drawing2");
   if (!isPlaygroupPage || isClass12Page) return null;
   if (path === "/home")
-    return (
-      <ResponsiveNavbar
-        backLink="/"
-        backText="⮪ Back To Classes"
-        homeLink="/home"
-      />
-    );
+    return <ResponsiveNavbar backLink="/" backText="⮪ Back To Classes" homeLink="/home" />;
   if (path.startsWith("/learn/") && path !== "/learning")
-    return (
-      <ResponsiveNavbar
-        backLink="/learning"
-        backText="⮪ Back To Learning"
-        homeLink="/home"
-      />
-    );
+    return <ResponsiveNavbar backLink="/learning" backText="⮪ Back To Learning" homeLink="/home" />;
   if (path === "/quiz")
-    return (
-      <ResponsiveNavbar
-        backLink="/home"
-        backText="⮪ Back To PlayGroup - Prep"
-        homeLink="/home"
-      />
-    );
+    return <ResponsiveNavbar backLink="/home" backText="⮪ Back To PlayGroup - Prep" homeLink="/home" />;
   if (path.startsWith("/quiz/"))
-    return (
-      <ResponsiveNavbar backLink="/quiz" backText="Back To Quiz" homeLink="/home" />
-    );
-  return (
-    <ResponsiveNavbar
-      backLink="/home"
-      backText="⮪ Back To PlayGroup - Prep"
-      homeLink="/home"
-    />
-  );
+    return <ResponsiveNavbar backLink="/quiz" backText="Back To Quiz" homeLink="/home" />;
+  return <ResponsiveNavbar backLink="/home" backText="⮪ Back To PlayGroup - Prep" homeLink="/home" />;
 }
 
 function KidsNavbar2() {
@@ -213,44 +202,14 @@ function KidsNavbar2() {
     path.startsWith("/drawing2");
   if (!isClass12Page) return null;
   if (path === "/class1-2")
-    return (
-      <ResponsiveNavbar
-        backLink="/"
-        backText="⮪ Back To Classes"
-        homeLink="/class1-2"
-      />
-    );
+    return <ResponsiveNavbar backLink="/" backText="⮪ Back To Classes" homeLink="/class1-2" />;
   if (path.startsWith("/learn2/"))
-    return (
-      <ResponsiveNavbar
-        backLink="/learning1-2"
-        backText="⮪ Back To Learning 1–2"
-        homeLink="/class1-2"
-      />
-    );
+    return <ResponsiveNavbar backLink="/learning1-2" backText="⮪ Back To Learning 1–2" homeLink="/class1-2" />;
   if (path === "/drawing2/draw2")
-    return (
-      <ResponsiveNavbar
-        backLink="/class1-2"
-        backText="⮪ Back To Grade 1–2"
-        homeLink="/class1-2"
-      />
-    );
+    return <ResponsiveNavbar backLink="/class1-2" backText="⮪ Back To Grade 1–2" homeLink="/class1-2" />;
   if (path.startsWith("/drawing2/") && path !== "/drawing2/draw2")
-    return (
-      <ResponsiveNavbar
-        backLink="/drawing2/draw2"
-        backText="⮪ Back To Drawing"
-        homeLink="/class1-2"
-      />
-    );
-  return (
-    <ResponsiveNavbar
-      backLink="/class1-2"
-      backText="⮪ Back To Grade 1–2"
-      homeLink="/class1-2"
-    />
-  );
+    return <ResponsiveNavbar backLink="/drawing2/draw2" backText="⮪ Back To Drawing" homeLink="/class1-2" />;
+  return <ResponsiveNavbar backLink="/class1-2" backText="⮪ Back To Grade 1–2" homeLink="/class1-2" />;
 }
 
 function KidsNavbar3() {
@@ -267,124 +226,35 @@ function KidsNavbar3() {
     path.startsWith("/art/");
   if (!isClass34Page) return null;
   if (path === "/class3-4")
-    return (
-      <ResponsiveNavbar
-        backLink="/"
-        backText="⮪ Back To Classes"
-        homeLink="/class3-4"
-      />
-    );
+    return <ResponsiveNavbar backLink="/" backText="⮪ Back To Classes" homeLink="/class3-4" />;
   if (path.startsWith("/env/") && path !== "/env/enviornment")
-    return (
-      <ResponsiveNavbar
-        backLink="/env/enviornment"
-        backText="⮪ Back To Science & Environment"
-        homeLink="/class3-4"
-      />
-    );
+    return <ResponsiveNavbar backLink="/env/enviornment" backText="⮪ Back To Science & Environment" homeLink="/class3-4" />;
   if (path.startsWith("/art/") && path !== "/art/artactivities")
-    return (
-      <ResponsiveNavbar
-        backLink="/art/artactivities"
-        backText="⮪ Back To Creative Activities"
-        homeLink="/class3-4"
-      />
-    );
+    return <ResponsiveNavbar backLink="/art/artactivities" backText="⮪ Back To Creative Activities" homeLink="/class3-4" />;
   if (path.startsWith("/comp/") && path !== "/comp/computer")
-    return (
-      <ResponsiveNavbar
-        backLink="/comp/computer"
-        backText="⮪ Back To Computer Activities"
-        homeLink="/class3-4"
-      />
-    );
+    return <ResponsiveNavbar backLink="/comp/computer" backText="⮪ Back To Computer Activities" homeLink="/class3-4" />;
   if (path.startsWith("/mind/") && path !== "/mind/games")
-    return (
-      <ResponsiveNavbar
-        backLink="/mind/games"
-        backText="⮪ Back To Mind Games"
-        homeLink="/class3-4"
-      />
-    );
-  return (
-    <ResponsiveNavbar
-      backLink="/class3-4"
-      backText="⮪ Back To Grade 3–4"
-      homeLink="/class3-4"
-    />
-  );
+    return <ResponsiveNavbar backLink="/mind/games" backText="⮪ Back To Mind Games" homeLink="/class3-4" />;
+  return <ResponsiveNavbar backLink="/class3-4" backText="⮪ Back To Grade 3–4" homeLink="/class3-4" />;
 }
 
 function KidsNavbar4() {
   const location = useLocation();
   const path = location.pathname;
-  if (
-    !(
-      path.startsWith("/class5-6") ||
-      path.startsWith("/cards") ||
-      path.startsWith("/speak") ||
-      path.startsWith("/story5") ||
-      path.startsWith("/world") ||
-      path.startsWith("/maze") ||
-      path.startsWith("/digital")
-    )
-  )
-    return null;
+  if (!(path.startsWith("/class5-6") || path.startsWith("/cards") || path.startsWith("/speak") || path.startsWith("/story5") || path.startsWith("/world") || path.startsWith("/maze") || path.startsWith("/digital"))) return null;
   if (path === "/class5-6")
-    return (
-      <ResponsiveNavbar
-        backLink="/"
-        backText="⮪ Back To Classes"
-        homeLink="/class5-6"
-      />
-    );
+    return <ResponsiveNavbar backLink="/" backText="⮪ Back To Classes" homeLink="/class5-6" />;
   if (path.startsWith("/cards/"))
-    return (
-      <ResponsiveNavbar
-        backLink="/cards"
-        backText="⮪ Back To Brain Teasers"
-        homeLink="/class5-6"
-      />
-    );
+    return <ResponsiveNavbar backLink="/cards" backText="⮪ Back To Brain Teasers" homeLink="/class5-6" />;
   if (path.startsWith("/speak/"))
-    return (
-      <ResponsiveNavbar
-        backLink="/speak"
-        backText="⮪ Back To Speak & Share"
-        homeLink="/class5-6"
-      />
-    );
+    return <ResponsiveNavbar backLink="/speak" backText="⮪ Back To Speak & Share" homeLink="/class5-6" />;
   if (path.startsWith("/story5/") && path !== "/story5/entertainment")
-    return (
-      <ResponsiveNavbar
-        backLink="/story5/entertainment"
-        backText="⮪ Back To Entertainment"
-        homeLink="/class5-6"
-      />
-    );
+    return <ResponsiveNavbar backLink="/story5/entertainment" backText="⮪ Back To Entertainment" homeLink="/class5-6" />;
   if (path.startsWith("/world/") && path !== "/world/culture")
-    return (
-      <ResponsiveNavbar
-        backLink="/world/culture"
-        backText="⮪ Back To World Of Culture"
-        homeLink="/class5-6"
-      />
-    );
+    return <ResponsiveNavbar backLink="/world/culture" backText="⮪ Back To World Of Culture" homeLink="/class5-6" />;
   if (path.startsWith("/digital/") && path !== "/digital/play")
-    return (
-      <ResponsiveNavbar
-        backLink="/digital/play"
-        backText="⮪ Back To Grid & Find"
-        homeLink="/class5-6"
-      />
-    );
-  return (
-    <ResponsiveNavbar
-      backLink="/class5-6"
-      backText="⮪ Back To Grade 5–6"
-      homeLink="/class5-6"
-    />
-  );
+    return <ResponsiveNavbar backLink="/digital/play" backText="⮪ Back To Grid & Find" homeLink="/class5-6" />;
+  return <ResponsiveNavbar backLink="/class5-6" backText="⮪ Back To Grade 5–6" homeLink="/class5-6" />;
 }
 
 export default function App() {

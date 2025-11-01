@@ -2,14 +2,14 @@ import { useState } from "react";
 import "./Gk.css";
 import SB from "./SB";
 
-import englishImg from "/src/assets/english.jpg";
+import englishImg from "/src/assets/english.png";
 import AImg from "/src/assets/A.jpg";
 import CImg from "/src/assets/catt.jpg";
 import DImg from "/src/assets/dogg.webp";
 import ZImg from "/src/assets/zeb.png";
 import BImg from "/src/assets/ball.jpg";
 
-import mathImg from "/src/assets/math.jpg";
+import mathImg from "/src/assets/math.png";
 import handImg from "/src/assets/hand.jpg";
 import footballImg from "/src/assets/ba.jpg";
 import triImg from "/src/assets/tri.jpg";
@@ -37,7 +37,7 @@ import policeImg from "/src/assets/police.jpg";
 import postmanImg from "/src/assets/postman.jpg";
 import thankImg from "/src/assets/thankyou.jpg";
 
-import geoImg from "/src/assets/geo.jpg";
+import geoImg from "/src/assets/geo.png";
 import earthImg from "/src/assets/earth.jpg";
 import desertImg from "/src/assets/desert.jpg";
 import fishImg from "/src/assets/fishwater.jpg";

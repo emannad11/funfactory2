@@ -43,7 +43,7 @@
 .card-ex img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .card-ex h3 {

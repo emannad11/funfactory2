@@ -24,7 +24,7 @@ export default function ArtActivities() {
       <div className="heading">
         <h2>Creative Activities</h2>
       </div>
-      <div className="container-cards">
+      <div className="container-cards111">
         {cards.map((card) => (
           <Link
             key={card.id}

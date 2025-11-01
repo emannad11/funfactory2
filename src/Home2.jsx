@@ -37,7 +37,7 @@ export default function Home2() {
   return (
     <>
       <div className="heading9"><h2>Grade 1 - 2</h2></div>
-      <div className="home-container">
+      <div className="home-container1">
         {cards.map((card, index) => (
           <Link key={index} to={card.path} className="home-card" onClick={handleCardClick}>
             <img src={card.img} alt={card.title} />

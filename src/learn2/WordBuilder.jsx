@@ -4,7 +4,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./WordBuilder.css";
 
 // ✅ Import all images
-import CatImg from "../assets/Cat2.jpg";
+import CatImg from "../assets/cat.png";
 import DogImg from "../assets/Dog3.webp";
 import SunImg from "../assets/sunn.png";
 import HenImg from "../assets/hen5.jpg";
@@ -148,5 +148,6 @@ export default function WordBuilder() {
 
       <ToastContainer position="top-right" />
     </div>
+    
   );
 }

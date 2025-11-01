@@ -57,6 +57,9 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: black;
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
   cursor: pointer;
 }
 

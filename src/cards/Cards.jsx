@@ -32,7 +32,7 @@ export default function Cards() {
       <div className="heading">
         <h2>Brain Teasers</h2>
       </div>
-      <div className="container-cards">
+      <div className="container-cards9">
         {cards.map((card) => (
           <Link
             key={card.id}

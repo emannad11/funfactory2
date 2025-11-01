@@ -10,9 +10,12 @@
 
 .riddle-container {
   text-align: center;
-  padding: 30px;
+  padding: 2px;
   font-family: "Poppins", sans-serif;
   color: var(--text);
+  height: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 .riddle-intro {
   font-size: 14px;
@@ -29,7 +32,7 @@
 .riddle-question {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   color: var(--nav-dark);
 }
 

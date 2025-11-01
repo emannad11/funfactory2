@@ -42,7 +42,7 @@ export default function Puzzle() {
   }, [nextNumber, numbers]);
 
   return (
-    <div className="puzzle-container">
+    <div className="puzzle-containerr">
       <div className="puzzle-header-row">
         <h1 className="puzzle-heading">Fun Puzzle</h1>
         <button className="restart-btn" onClick={handleRestart}>🔄 Restart</button>

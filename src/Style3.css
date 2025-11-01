@@ -1,12 +1,13 @@
 .home-container3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  justify-items: center;
+  gap: 14px;
+  justify-content: center;
   align-items: stretch;
-  max-width: 950px;
-  margin: 25px auto;
+  max-width: 900px;
+  margin: 12px auto 8px auto;
   padding: 0 12px;
+  box-sizing: border-box;
   background: transparent !important;
 }
 
@@ -37,7 +38,7 @@
   width: 100%;
   height: auto;
   padding-bottom: 12px;
-  padding-top: 16px;
+  padding-top: 14px;
 }
 
 
@@ -87,4 +88,135 @@
 .home-card3 .btn,
 .home-card3 .card-btn {
   display: none !important;
+}
+.home-card3 {
+  position: relative;
+  background: var(--card);
+  border-radius: 15px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transform-origin: center;
+  animation: popIn 0.8s ease both;
+}
+
+.home-card3:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.home-card3:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.home-card33:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.home-card3:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.home-card3:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+.home-card3:active {
+  animation: clickBounce 0.4s ease;
+}
+
+.home-card3[data-clicked="true"] {
+  animation: wiggle 0.4s ease;
+}
+
+.home-card3 img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  animation: floatImage 3s ease-in-out infinite;
+}
+
+.home-card3 h3 {
+  margin: 6px 0 3px;
+  font-size: 16px;
+  color: var(--nav-dark);
+  font-weight: 700;
+  transition: color 0.3s ease;
+  animation: textFadeIn 1s ease forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(30px);
+  }
+  80% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes floatImage {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes textFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes clickBounce {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  25% {
+    transform: scale(0.95) rotate(1deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(-1deg);
+  }
+  75% {
+    transform: scale(0.98) rotate(1deg);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
+.heading9 {
+  text-align: center;
+  font-size: 28px;        
+  font-weight: 500;       
+  margin: 5px 0;         
+  color: var(--nav-dark);            
 }

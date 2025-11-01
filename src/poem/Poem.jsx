@@ -9,7 +9,7 @@ import SoundButton0 from "./SoundButton0";
 import TwinkleImg from "../assets/twinkle.jpeg";
 import RainImg from "../assets/rain.jpeg";
 import SheepImg from "../assets/sheep.jpg";
-import JackImg from "../assets/jack.jpg";
+import JackImg from "../assets/jack.png";
 import HumptyImg from "../assets/humpty.jpg";
 import BeeImg from "../assets/frogg.jpg";
 import RainbowImg from "../assets/rainbow.jpg";

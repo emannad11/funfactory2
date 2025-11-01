@@ -115,6 +115,9 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   animation: popIn 0.8s ease both;
+  height: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
   transform-origin: center;
 }
 

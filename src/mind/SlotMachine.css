@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  min-height: 80vh;
+  min-height: 82vh;
   padding: 1rem;
 }
 
@@ -11,7 +11,10 @@
 .slot-container {
   padding: clamp(1rem, 2vw, 2rem);
   text-align: center;
-  width: clamp(320px, 40%, 500px);
+  width: clamp(340px, 45%, 550px);
+  height: auto;
+  margin-bottom: 60px;
+  margin-top: 60px;
   z-index: 10;
 }
 .slot-intro {

@@ -3,10 +3,11 @@ import { useRef } from "react";
 import "./Class.css";
 
 import clickSound from "/src/assets/sounds/click.mp3";
-import playImg from "/src/assets/play.jpg";
-import gradeImg from "/src/assets/grade.jpg";
+import playImg from "/src/assets/play.png";
+import gradeImg from "/src/assets/grade.png";
 import grade2Img from "/src/assets/grade2.jpg";
 import grade3Img from "/src/assets/grade3.jpg";
+import Footer from "../Footer";
 
 export default function Classes() {
   const navigate = useNavigate();
@@ -31,6 +32,7 @@ export default function Classes() {
   };
 
   return (
+    <>
     <div className="classes-container">
 
       <audio ref={clickSoundRef} src={clickSound} preload="auto"></audio>
@@ -59,5 +61,6 @@ export default function Classes() {
         </div>
       </div>
     </div>
+    </>
   );
 }

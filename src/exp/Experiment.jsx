@@ -37,13 +37,9 @@ export default function Experiment() {
             Pour plain water on top carefully.<br />
             Lower the egg gently into the glass.
           </p>
-          <p>
-            <strong>What happens:</strong><br />
-            The egg sinks in plain water but floats in salty water because salt water is denser.
-          </p>
         </>
       ),
-      text: `Make an Egg Float in Salt Water. You'll need: 1 egg, Water, Salt, A tall glass. Instructions: Fill the glass half with water and stir in lots of salt. Carefully pour plain water on top until the glass is almost full. Gently lower the egg into the glass. What happens: The egg sinks through the plain water but floats on the salty water. Salt water is denser, so it helps objects float.`,
+      text: `Make an Egg Float in Salt Water. You'll need: 1 egg, Water, Salt, A tall glass. Instructions: Fill the glass half with water and stir in lots of salt. Carefully pour plain water on top until the glass is almost full. Gently lower the egg into the glass. `,
     },
     {
       id: 2,
@@ -67,13 +63,10 @@ export default function Experiment() {
             Dip cloth in soapy water, run around bowl edge.<br />
             Step back and watch bubble grow!
           </p>
-          <p>
-            <strong>What happens:</strong><br />
-            Dry ice sublimates creating fog, gas fills bubble until it bursts.
-          </p>
+       
         </>
       ),
-      text: `Make a Big Dry Ice Bubble. You'll need: Water, A large bowl, A strip of cloth, Soapy water, Dry ice. Instructions: Put dry ice in bowl and add water. Dip cloth in soapy water, run around bowl edge. Step back and watch bubble grow! What happens: Dry ice sublimates into gas, creating fog. Gas fills bubble until it bursts.`,
+      text: `Make a Big Dry Ice Bubble. You'll need: Water, A large bowl, A strip of cloth, Soapy water, Dry ice. Instructions: Put dry ice in bowl and add water. Dip cloth in soapy water, run around bowl edge. Step back and watch bubble grow!`,
     },
     {
       id: 3,
@@ -98,13 +91,9 @@ export default function Experiment() {
             Shake well and watch.<br />
             Add detergent and shake again.
           </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Oil and water don't mix; oil floats. Detergent helps mix them by forming an emulsion.
-          </p>
         </>
       ),
-      text: `Mixing Oil and Water. You'll need a bottle, water, food colouring, cooking oil, detergent. Instructions: Add colouring to water, pour water and oil into bottle, shake and watch, add detergent and shake again. What's happening: Oil floats on water. Detergent helps mix them by forming an emulsion.`,
+      text: `Mixing Oil and Water. You'll need a bottle, water, food colouring, cooking oil, detergent. Instructions: Add colouring to water, pour water and oil into bottle, shake and watch, add detergent and shake again.`,
     },
     {
       id: 4,
@@ -127,13 +116,9 @@ export default function Experiment() {
             Pour vinegar on top.<br />
             Watch the fizzing reaction!
           </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Baking soda (a base) reacts with vinegar (an acid) to form carbon dioxide gas, causing fizzing.
-          </p>
         </>
       ),
-      text: `Baking Soda & Vinegar Volcano. You'll need baking soda, vinegar, a container, and paper towels. Instructions: Put baking soda in the container, pour vinegar on top, and watch the fizzing reaction. What's happening: Baking soda reacts with vinegar to produce carbon dioxide gas, creating fizz.`
+      text: `Baking Soda & Vinegar Volcano. You'll need baking soda, vinegar, a container, and paper towels. Instructions: Put baking soda in the container, pour vinegar on top, and watch the fizzing reaction.`
     },
     {
       id: 5,
@@ -157,13 +142,9 @@ export default function Experiment() {
             Stir quickly to make it hard.<br />
             Play outside and stir before use.
           </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Cornflour grains lock when stirred fast, making it thick and hard. Stirring slowly lets water flow, making it runny.
-          </p>
         </>
       ),
-      text: `Make Your Own Quick Sand. You'll need 1 cup maize cornflour, half a cup water, a large plastic container, and a spoon. Instructions: Mix cornflour and water, stir slowly to show liquid, stir quickly to make hard. What's happening: Stirring fast locks cornflour grains, making it thick; stirring slow lets it flow.`,
+      text: `Make Your Own Quick Sand. You'll need 1 cup maize cornflour, half a cup water, a large plastic container, and a spoon. Instructions: Mix cornflour and water, stir slowly to show liquid, stir quickly to make hard.`,
     },
     {
       id: 6,
@@ -185,13 +166,10 @@ export default function Experiment() {
             Repeat in the sun and record changes.<br />
             Try other spots like your bag or mouth. Compare results.
           </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Chocolate melts when it heats up — from solid to liquid. In the mouth, body heat melts it faster!
-          </p>
+         
         </>
       ),
-      text: `Melting Chocolate. You'll need chocolate pieces, paper plates, pen and paper. Instructions: Place chocolate in shade and sun, wait 10 mins, compare softness or melting. Try places like your bag or mouth. What's happening: Heat melts chocolate into liquid. Mouth heat melts it fast!`,
+      text: `Melting Chocolate. You'll need chocolate pieces, paper plates, pen and paper. Instructions: Place chocolate in shade and sun, wait 10 mins, compare softness or melting. Try places like your bag or mouth.`,
     },
     {
       id: 7,
@@ -210,18 +188,10 @@ export default function Experiment() {
             - Lemon juice (or vinegar)<br />
             - 1 tsp baking soda
           </p>
-          <p>
-            <strong>Instructions:</strong><br />
-            Stretch the balloon. Pour water into bottle, add baking soda and stir.<br />
-            Add lemon juice and quickly place balloon over bottle opening.
-          </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            The reaction creates carbon dioxide gas, which fills the balloon!
-          </p>
+        
         </>
       ),
-      text: `Balloon with CO₂. You'll need: balloon, water, bottle, straw, lemon juice, baking soda. Instructions: Pour water in bottle, add baking soda and stir. Add lemon juice and cover with balloon. What's happening: CO₂ gas forms and inflates the balloon.`,
+      text: `Balloon with CO₂. You'll need: balloon, water, bottle, straw, lemon juice, baking soda. Instructions: Pour water in bottle, add baking soda and stir. Add lemon juice and cover with balloon. `,
     },
     {
       id: 8,
@@ -242,13 +212,10 @@ export default function Experiment() {
             <strong>Instructions:</strong><br />
             Fill the bottle with water, turn it upside down in a sink of water, and insert the tube.<br /> Take a deep breath and blow out through the tube into the bottle.
           </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            The air from your lungs replaces the water in the bottle. The amount of water displaced shows your lung capacity!
-          </p>
+        
         </>
       ),
-      text: `Lung Volume Test. You'll need: tubing, bottle, water, sink. Instructions: Fill the bottle with water and turn it upside down in a sink of water. Blow through a tube into the bottle after a deep breath. What's happening: Your breath pushes out water, showing your lung capacity.`,
+      text: `Lung Volume Test. You'll need: tubing, bottle, water, sink. Instructions: Fill the bottle with water and turn it upside down in a sink of water. Blow through a tube into the bottle after a deep breath. `,
     },
     {
       id: 9,
@@ -270,13 +237,9 @@ export default function Experiment() {
             Watch a rainbow appear as sunlight passes through the water.<br />
             Try different angles!
           </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Sunlight bends as it moves through water, separating into colors. This is called refraction — just like when rainbows form in the sky!
-          </p>
         </>
       ),
-      text: `Make Your Own Rainbow. You'll need: a glass of water, white paper, and sunlight. Instructions: Hold the water glass near a window above the paper. Sunlight bends through the water and makes a rainbow. What's happening: Sunlight refracts in water, separating into colors like a real rainbow.`,
+      text: `Make Your Own Rainbow. You'll need: a glass of water, white paper, and sunlight. Instructions: Hold the water glass near a window above the paper. Sunlight bends through the water and makes a rainbow.`,
     },
     {
       id: 10,
@@ -302,13 +265,9 @@ export default function Experiment() {
             Let it dry.<br />
             To reveal, heat the paper under a lamp.
           </p>
-          <p>
-            <strong>What's happening?</strong><br />
-            Lemon juice turns brown when heated due to oxidation, revealing your secret message!
-          </p>
         </>
       ),
-      text: `Invisible Ink with Lemon Juice. You'll need: lemon juice, water, spoon, cotton bud, paper, and a lamp. Instructions: Mix lemon juice and water. Write with a cotton bud. Let dry. Heat under a lamp to reveal the message. What's happening: The lemon juice oxidizes and turns brown when heated, exposing your writing!`,
+      text: `Invisible Ink with Lemon Juice. You'll need: lemon juice, water, spoon, cotton bud, paper, and a lamp. Instructions: Mix lemon juice and water. Write with a cotton bud. Let dry. Heat under a lamp to reveal the message.`,
     },
   ];
   const [selectedExp, setSelectedExp] = useState(null);

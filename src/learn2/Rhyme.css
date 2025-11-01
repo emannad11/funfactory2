@@ -9,10 +9,10 @@
   max-width: clamp(350px, 90%, 800px);
   margin: clamp(5px, 2vw, 15px) auto;
   padding: clamp(15px, 4vw, 30px);
-  background: var(--bg);
-  border-radius: clamp(15px, 3vw, 25px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   text-align: center;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 

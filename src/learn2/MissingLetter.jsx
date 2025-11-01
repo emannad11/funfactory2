@@ -3,14 +3,14 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Missingletter.css";
 
-import catImg from "../assets/cat.jpg";
+import catImg from "../assets/cat.png";
 import ballImg from "../assets/ba.jpg";
 import birdImg from "../assets/birds1.webp";
 import fishImg from "../assets/fishwater.jpg";
 import treeImg from "../assets/tree-cool.webp";
 import sunImg from "../assets/sunn.png";
-import lionImg from "../assets/lion.jpg";
-import duckImg from "../assets/duck4.jpg";
+import lionImg from "../assets/lion.png";
+import duckImg from "../assets/duck1.png";
 import frogImg from "../assets/frog.jpg";
 import shipImg from "../assets/boat.jpg";
 
